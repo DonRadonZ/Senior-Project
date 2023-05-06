@@ -149,14 +149,14 @@ const Login = () => {
     }
 
     return(
-        <LinearGradient colors = {[colors.lime, colors.emerald]}
-         style={{flex:1}}
-        >
-            <ScrollView>
-                {renderHeader()}
+         <LinearGradient colors = {[colors.lime, colors.emerald]}
+          style={{flex:1}}
+         >
+             <ScrollView>
+                 {renderHeader()}
                 {renderForm()}
-                {renderButton()}
-            </ScrollView>
+                 {renderButton()}
+             </ScrollView>
         </LinearGradient>
             
         

@@ -14,7 +14,7 @@ import {
     StyleSheet
 } from "react-native";
 
-import LinearGradient from "react-native-linear-gradient"
+import LinearGradient from "react-native-linear-gradient";
 import Icon from 'react-native-vector-icons/AntDesign';
 
 import axios from 'axios';
@@ -221,9 +221,9 @@ const SignUp = () => {
         </LinearGradient>
             
         
-    )
+     )
 
-}
+ }
 
 
 

@@ -1,21 +1,20 @@
 import React from 'react';
-import { SafeAreaView } from 'react-native-safe-area-context/lib/typescript/SafeAreaView';
 
 import { useFonts } from 'expo-font';
 import AppLoading from 'expo-app-loading';
 
-import {Welcome} from './src/screen/Welcome/Welcome';
+import { Welcome } from './screen/Welcome/Welcome';
 import SignUp from './screen/Signup/Signup';
 
 import { createStackNavigator } from '@react-navigation/stack';
 import {NavigationContainer, DefaultTheme} from "@react-navigation/native";
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { Landingscreen } from './src/screen/Landingscreen/Landingscreen';
-import Tabs from './src/screen/navigation/tab';
-import Login from './src/screen/Login/Login';
+import { Landingscreen } from './screen/Landingscreen/Landingscreen';
+import Tabs from './screen/navigation/tab';
+import Login from './screen/Login/Login';
 import { Home } from './screen/Home/Home';
-import { Transaction } from './src/screen/Transaction/Transaction';
+import { Transaction } from './screen/payment/Payment';
 
 
 
@@ -58,13 +57,13 @@ const SelectStack = createNativeStackNavigator()
           screenOptions={{
             headerShown:false
           }}
-          initialRouteName={'SignUp'}
+          initialRouteName={'Home'}
       >
           <Stack.Screen name="Welcome" component={Welcome} />
 
           <Stack.Screen name="SignUp" component={SignUp} />
 
-          <Stack.Screen name="Login" component={Login} />
+         <Stack.Screen name="Login" component={Login} />
  
           {/* <Stack.Screen name="Home" component={Home} /> */}
           {/* Tabs */}
