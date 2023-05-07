@@ -2,11 +2,13 @@ import React,{FunctionComponent} from 'react';
 
 //styled component
 import styled from 'styled-components/native';
-import { ScreenHeight,StatusBarHeight,ScreenWidth } from '../../component/shared';
+import { ScreenHeight,
+    //StatusBarHeight
+    ScreenWidth } from '../../component/shared';
 import { colors } from '../../component/color';
 import RegularText from '../../component/Text/RegularText';
 import BalanceText from '../../component/Text/BalanceText';
-import SmallText from '../../component/Text/SmallText';
+//import SmallText from '../../component/Text/SmallText';
 
 import { BalanceProps } from './types';
 
@@ -15,8 +17,7 @@ const CardView = styled.View`
     justify-content: space-between;
     align-items: center;
     //width: ${ScreenWidth*0.75}px;
-    height: ${ScreenHeight * 0.2}px;
-    // padding-top: ${StatusBarHeight + 30}px;
+    height: ${ScreenHeight * 0.15}px;
     background-color: ${colors.bluesky};
     border-width: 2px;
     border-color: ${colors.lightgrey};
@@ -36,12 +37,11 @@ const CardSection = styled.View`
      align-items: flex-start;
 `
 
-const InfoCard:FunctionComponent =(props) => {
+const PayCard:FunctionComponent =(props) => {
     return <CardView {...props}>
         <CardSection style={{width: '60%'}}>
             <RegularText>Balance</RegularText>
             <BalanceText>999,999</BalanceText>
-            <SmallText>timestamp</SmallText>
         </CardSection>
         <CardSection style={{width: '40%'}}>
             
@@ -49,4 +49,4 @@ const InfoCard:FunctionComponent =(props) => {
     </CardView>;
 }
 
-export default InfoCard
+export default PayCard

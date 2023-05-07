@@ -13,9 +13,9 @@ import Svg, {
 
 // import {isIphoneX} from 'react-native-iphone-x-helper'
 
-import {Home} from '../Home/Home'
+import {Home} from "../Home/home"
 import {Profile} from "../profile/Profile";
-import { Transaction } from "../payment/Payment";
+import { Transaction } from "../Transaction/Transaction";
 
 import Greeting from "../../component/Header/Greeting";
 import { colors } from "../../component/color";

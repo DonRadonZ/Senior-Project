@@ -1,13 +1,13 @@
 import React, {FunctionComponent} from 'react';
-import {View, Text,} from "react-native";
+
 
 
 import { StatusBar } from 'expo-status-bar';
 import styled from 'styled-components';
 import { colors } from '../../component/color';
 import { Container } from '../../component/shared';
-import CardSection from '../Cards/CardSection';
 import InfoCard from '../Balance/balance';
+import MainContainer from '../../component/Container/MainContainer';
 
 const HomeContainer = styled(Container)`
  background-color: ${colors.lightblue};
@@ -28,10 +28,10 @@ export const Home:FunctionComponent= (props) => {
     return(
         <>
             
-            <HomeContainer>
+            <MainContainer>
                 <StatusBar style='dark'/>
                 <InfoCard/>   
-            </HomeContainer>
+            </MainContainer>
         </>
     )
 
