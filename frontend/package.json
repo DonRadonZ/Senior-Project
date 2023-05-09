@@ -9,13 +9,10 @@
     "web": "expo start --web"
   },
   "dependencies": {
-    "@types/react-native": "~0.70.6",
-    "@types/react-native-vector-icons": "^6.4.13",
     "expo": "~48.0.15",
     "expo-status-bar": "~1.4.4",
     "react": "18.2.0",
-    "react-native": "0.71.7",
-    "styled-components": "^6.0.0-rc.1"
+    "react-native": "0.71.7"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
