@@ -1,20 +1,37 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import * as React from 'react';
+import { Text, View } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
-export default function App() {
+//screen
+import { Home } from './src/Screen/Home/home';
+import { Balance } from './src/Screen/Balance/balance';
+import { QRScan } from './src/Screen/QRScan/qrscan';
+import { Exchange } from './src/Screen/Exchange/exchange';
+import { Profile } from './src/Screen/Profile/profile';
+
+
+
+
+
+const Tab = createBottomTabNavigator();
+
+function MyTabs() {
   return (
-    <View style={styles.container}>
-      <Text>Welcome</Text>
-      <StatusBar style="auto" />
-    </View>
+    <Tab.Navigator>
+      <Tab.Screen name="Home" component={Home} options={{headerShown:false}}/>
+      <Tab.Screen name="Balance" component={Balance}options={{headerShown:false}} />
+      <Tab.Screen name="QRScan" component={QRScan}options={{headerShown:false}} />
+      <Tab.Screen name="Exchange" component={Exchange} options={{headerShown:false}} />
+      <Tab.Screen name="Profile" component={Profile} options={{headerShown:false}} />
+    </Tab.Navigator>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default function App() {
+  return (
+    <NavigationContainer>
+      <MyTabs />
+    </NavigationContainer>
+  );
+}
