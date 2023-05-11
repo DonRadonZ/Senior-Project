@@ -1,8 +1,14 @@
 import React from "react";
-import { Box } from "@react-native-material/core";
+import { Box,Text } from "@react-native-material/core";
 import { colors } from "../Colors/colors";
+import BalanceView from "./styles";
+
 const BalanceCard = () => (
-  <Box w={300} h={150} m={4} style={{ backgroundColor: colors.white }} />
+  <Box style={BalanceView.balanceContainer}>
+    <Text style={BalanceView.BalanceText}>Balance</Text>
+    <Text style={BalanceView.AmountDisplayedText}>999,999</Text>
+    <Text style={BalanceView.TimeStampText}>15/5/2023</Text>
+  </Box>
 );
 
 export default BalanceCard;
