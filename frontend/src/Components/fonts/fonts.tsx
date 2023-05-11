@@ -5,6 +5,7 @@ export const fonts ={
 export const sizes ={
     Regular:15,
     BigText:37,
-    SmallText:13
+    SmallText: 13,
+    BankText: 24
 }
 
