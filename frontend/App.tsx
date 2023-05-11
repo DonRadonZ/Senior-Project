@@ -10,7 +10,8 @@ import { QRScan } from './src/Screen/QRScan/qrscan';
 import { Exchange } from './src/Screen/Exchange/exchange';
 import { Profile } from './src/Screen/Profile/profile';
 
-
+//icon
+//import {FontAwesome} from 'react-native-vector-icons'
 
 
 
