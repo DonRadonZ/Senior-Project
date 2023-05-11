@@ -4,7 +4,8 @@ export const colors = {
     malibu2:"#00f2fe",
     white: "#FFFFFF",
     gray: "#808080",
-    black:"#000000",
+    black: "#000000",
+    navyblue: "#000080",
 
     transparent:"transparent",
 };
