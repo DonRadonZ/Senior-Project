@@ -7,7 +7,7 @@ const Buttonstyles = StyleSheet.create({
     ButtonContainer: {
         flexDirection: "column",
         justifyContent: "center",
-        backgroundColor: colors.malibu1,
+        backgroundColor: colors.navyblue,
         padding: 15,
         width: 300,
         height: "20%",
@@ -18,9 +18,9 @@ const Buttonstyles = StyleSheet.create({
         
     },
     ChoiceText: {
-        color: colors.black,
-        textAlign:"left",
-        fontSize: sizes.SmallText,    
+        color: colors.white,
+        textAlign:"center",
+        fontSize: sizes.Regular,    
     },
     
 
