@@ -12,6 +12,8 @@ export const Balance = () =>{
             colors={[colors.malibu1,colors.malibu2]}
             style={{
                 flex:1,
+                padding: 25,
+                paddingTop:40,
                 justifyContent: 'center',
                 alignItems:'center'
             }}

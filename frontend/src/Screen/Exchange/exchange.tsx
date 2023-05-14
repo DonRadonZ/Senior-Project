@@ -3,7 +3,7 @@ import {Text, TouchableOpacity} from 'react-native';
 // import MainContainer from '../../component/Container/MainContainer';
 import { LinearGradient } from 'expo-linear-gradient';
 import { colors } from '../../Components/Colors/colors';
-
+import SellButton from '../../Components/Button/SellButton';
 
 export const Exchange = () =>{
     return(
@@ -11,11 +11,13 @@ export const Exchange = () =>{
         colors={[colors.malibu1,colors.malibu2]}
         style={{
             flex:1,
+            padding: 25,
+            paddingTop:40,
             justifyContent: 'center',
             alignItems:'center'
         }}
         >
-            <Text>Name: John Doe</Text>
+            <SellButton/>
         </LinearGradient>
         
     )

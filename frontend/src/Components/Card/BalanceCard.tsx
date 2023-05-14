@@ -1,7 +1,7 @@
 import React from "react";
 import { Box,Text } from "@react-native-material/core";
 import { colors } from "../Colors/colors";
-import BalanceView from "./styles";
+import BalanceView from "./Balancestyles";
 
 const BalanceCard = () => (
   <Box style={BalanceView.balanceContainer}>
