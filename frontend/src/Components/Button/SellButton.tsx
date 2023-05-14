@@ -10,7 +10,7 @@ import { ButtonProps } from "./types";
 const SellButton = () => (
     <Pressable 
     style={Buttonstyles.ButtonContainer}
-     ><Text>Press for End User</Text></Pressable>
+     ><Text style={Buttonstyles.ChoiceText}>Press for End User</Text></Pressable>
   );
   
   export default SellButton;
