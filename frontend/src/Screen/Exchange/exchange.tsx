@@ -4,6 +4,7 @@ import {Text, TouchableOpacity} from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import { colors } from '../../Components/Colors/colors';
 import SellButton from '../../Components/Button/SellButton';
+import BuyButton from '../../Components/Button/BuyButton';
 
 export const Exchange = () =>{
     return(
@@ -17,6 +18,7 @@ export const Exchange = () =>{
             alignItems:'center'
         }}
         >
+            <BuyButton/>
             <SellButton/>
         </LinearGradient>
         
