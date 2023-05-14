@@ -1,16 +1,15 @@
-import React,{FunctionComponent} from "react";
-import { Text,Pressable } from "@react-native-material/core";
+import React from "react";
+import { Text, Pressable } from "@react-native-material/core";
 import Buttonstyles from "./style";
-import { colors } from "../Colors/colors";
 
+interface SellButtonProps {
+  onPress: () => void;
+}
 
+const SellButton: React.FC<SellButtonProps> = ({ onPress }) => (
+  <Pressable style={Buttonstyles.ButtonContainer} onPress={onPress}>
+    <Text>Continue</Text>
+  </Pressable>
+);
 
-import { ButtonProps } from "./types";
-
-const SellButton = () => (
-    <Pressable 
-    style={Buttonstyles.ButtonContainer}
-     ><Text style={Buttonstyles.ChoiceText}>Press for End User</Text></Pressable>
-  );
-  
-  export default SellButton;
+export default SellButton;

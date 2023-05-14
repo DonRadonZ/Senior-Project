@@ -11,7 +11,6 @@ const Balancestyles = StyleSheet.create({
         padding: 20,
         width: ScreenWidth*0.8,
         height: ScreenHeight*0.2,
-        marginHorizontal: 13,
         borderWidth:2,
         borderRadius: 15,
         alignItems:"flex-start",
