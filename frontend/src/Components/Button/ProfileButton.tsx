@@ -8,13 +8,13 @@ interface Props{
   onPress: () => void;
 }
 
+import { ButtonProps } from "./types";
 
 
-
-const BuyButton = () => (
+const ProfileButton:FunctionComponent<ButtonProps> = (props) => (
     <Pressable 
     style={Buttonstyles.ButtonContainer}
-     ><Text style={Buttonstyles.ChoiceText}>Button for Buyer</Text></Pressable>
+     ><Text style={Buttonstyles.ChoiceText}>{props.children}</Text></Pressable>
   );
   
-  export default BuyButton;
+  export default ProfileButton;
