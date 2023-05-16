@@ -5,7 +5,7 @@ import Buttonstyles from "./style";
 //const RootStack = createStackNa
 
 import { useNavigation } from "@react-navigation/core";
-import  {Payment}  from "../../Screen/Payment/payment";
+import  Payment  from "../../Screen/Payment/payment";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 
 
