@@ -14,7 +14,7 @@ import { colors } from "../../Components/Colors/colors";
 import { Text } from "@react-native-material/core";
 import ConfirmationPage from "./confirmation";
 
-export const Payment = () => {
+const PaymentScreen = () => {
   const [balance, setBalance] = useState("");
   const [senderNumber, setSenderNumber] = useState("");
   const [accountNumber, setAccountNumber] = useState("");
@@ -106,3 +106,4 @@ const styles = StyleSheet.create({
   },
 });
 
+export default PaymentScreen
