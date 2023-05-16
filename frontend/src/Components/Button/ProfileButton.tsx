@@ -13,7 +13,7 @@ import { ButtonProps } from "./types";
 
 const ProfileButton:FunctionComponent<ButtonProps> = (props) => (
     <Pressable 
-    style={Buttonstyles.ButtonContainer}
+    style={Buttonstyles.ProfileButtonContainer}
      ><Text style={Buttonstyles.ChoiceText}>{props.children}</Text></Pressable>
   );
   
