@@ -16,6 +16,18 @@ const Balancestyles = StyleSheet.create({
         alignItems:"flex-start",
         marginBottom: 40
     },
+    paymentContainer: {
+        flexDirection: "column",
+        justifyContent: "center",
+        backgroundColor: colors.white,
+        padding: 20,
+        width: ScreenWidth*0.8,
+        height: ScreenHeight*0.15,
+        borderWidth:2,
+        borderRadius: 15,
+        alignItems:"flex-start",
+        marginBottom: 40
+    },
     AmountDisplayedText: {
         color: colors.black,
         fontWeight: "bold",
