@@ -1,6 +1,7 @@
 import React,{FunctionComponent} from "react";
 import { Text,Pressable } from "@react-native-material/core";
 import Buttonstyles from "./style";
+import { useNavigation } from "@react-navigation/native";
 
 // interface Props{
 //     label: string;
@@ -11,10 +12,13 @@ import Buttonstyles from "./style";
 
 
 
-const SellChoiceButton = () => (
+const SellChoiceButton = () => {
+    const navigation = useNavigation()
+    return(
     <Pressable 
     style={Buttonstyles.ButtonContainer}
-     ><Text style={Buttonstyles.ChoiceText}>Press for End User</Text></Pressable>
-  );
+     ><Text style={Buttonstyles.ChoiceText} onPress={() => {navigation.navigate()}}>Press for End User</Text></Pressable>
+    )
+};
   
   export default SellChoiceButton;

@@ -7,6 +7,11 @@ import SellButton from '../../Components/Button/SellButton';
 import BuyChoiceButton from '../../Components/Button/BuyChoiceButton';
 import SellChoiceButton from '../../Components/Button/SellChoiceButton';
 import styles from '../../Components/Container/Backgroundstyle';
+import { createStackNavigator } from '@react-navigation/stack';
+
+
+
+const Stack = createStackNavigator()
 
 export const Exchange = () =>{
   return(
@@ -15,8 +20,6 @@ export const Exchange = () =>{
     style={styles.container}
     resizeMode="cover"
   >
-          <BuyChoiceButton/>
-          <SellChoiceButton/>
       </ImageBackground>
       
   )

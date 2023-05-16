@@ -9,12 +9,15 @@ interface Props{
 }
 
 import { ButtonProps } from "./types";
+import { useNavigation } from "@react-navigation/core";
 
 
-const ProfileButton:FunctionComponent<ButtonProps> = (props) => (
+const ProfileButton:FunctionComponent<ButtonProps> = (props) => {
+  const navigation = useNavigation()
+  return(
     <Pressable 
     style={Buttonstyles.ProfileButtonContainer}
      ><Text style={Buttonstyles.ChoiceText}>{props.children}</Text></Pressable>
   );
-  
+}
   export default ProfileButton;
