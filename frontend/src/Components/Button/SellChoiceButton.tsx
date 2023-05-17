@@ -17,7 +17,7 @@ const SellChoiceButton = () => {
     return(
     <Pressable 
     style={Buttonstyles.ButtonContainer}
-     ><Text style={Buttonstyles.ChoiceText} onPress={() => {navigation.navigate()}}>Press for End User</Text></Pressable>
+     ><Text style={Buttonstyles.ChoiceText} onPress={() => {}}>Press for End User</Text></Pressable>
     )
 };
   
