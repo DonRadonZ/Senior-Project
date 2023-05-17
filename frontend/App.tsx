@@ -7,12 +7,15 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Home } from './src/Screen/Home/home';
 import { Balance } from './src/Screen/Balance/balance';
 import { QRScan } from './src/Screen/QRScan/qrscan';
-import {Exchange} from './src/Screen/Exchange/exchange';
+import { Exchange } from './src/Screen/Exchange/exchange';
+import ExchangeScreen from './src/Screen/Exchange';
 import { Profile } from './src/Screen/Profile/profile';
+
 
 
 //icon
 //import {FontAwesome} from 'react-native-vector-icons'
+
 
 
 
