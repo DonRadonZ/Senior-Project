@@ -1,4 +1,4 @@
-import   PaymentScreen  from "../../Screen/Payment/payment";
+import   PaymentScreen  from "../../Screen/Exchange/payment";
 import { IRouteProps } from "../library/RouteProp";
 
 const routes: IRouteProps[] = [
