@@ -1,8 +1,7 @@
 import React from 'react';
 import {ImageBackground} from 'react-native'; 
 // import MainContainer from '../../component/Container/MainContainer';
-import { LinearGradient } from 'expo-linear-gradient';
-import { colors } from '../../Components/Colors/colors';
+
 
 import BalanceCard from '../../Components/Card/BalanceCard';
 
