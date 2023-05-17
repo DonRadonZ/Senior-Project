@@ -15,7 +15,7 @@ import { IStackScreenProps } from '../../Components/library/StackScreenProps';
 
 const Stack = createStackNavigator()
 
-const Exchange: FunctionComponent<IStackScreenProps> = (props) => {
+export const Exchange: FunctionComponent<IStackScreenProps> = (props) => {
   
   const { navigation, route } = props;
 
@@ -31,4 +31,3 @@ const Exchange: FunctionComponent<IStackScreenProps> = (props) => {
   )
 }
 
-export default Exchange
