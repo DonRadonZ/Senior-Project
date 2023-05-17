@@ -5,6 +5,8 @@ import {
   StyleSheet,
   ImageBackground,
   TouchableOpacity,
+  TouchableWithoutFeedback,
+  Keyboard
 } from "react-native";
 
 import PaymentCard from "../../Components/Card/PaymentCard";
@@ -14,7 +16,9 @@ import { colors } from "../../Components/Colors/colors";
 import { Text } from "@react-native-material/core";
 import ConfirmationPage from "./confirmation";
 
-const PaymentScreen = () => {
+import styles from "./style";
+
+const Payment = () => {
   const [balance, setBalance] = useState("");
   const [senderNumber, setSenderNumber] = useState("");
   const [accountNumber, setAccountNumber] = useState("");
@@ -32,6 +36,9 @@ const PaymentScreen = () => {
 //   };
 
   return (
+    <TouchableWithoutFeedback onPress={() => { Keyboard.dismiss() }}
+    
+    > 
     <ImageBackground
       source={require("../../../assets/Background-image.jpg")}
       style={styles.container}
@@ -67,43 +74,10 @@ const PaymentScreen = () => {
         <Text style={styles.confirmButtonText}>Continue</Text>
       </TouchableOpacity>
     </ImageBackground>
+    </TouchableWithoutFeedback>
   );
 };
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    padding: 25,
-    paddingTop: 40,
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  inputContainer: {
-    marginBottom: 20,
-    width: ScreenWidth * 0.8,
-  },
-  input: {
-    height: 60,
-    backgroundColor: "white",
-    borderWidth: 2,
-    borderRadius: 10,
-    marginBottom: 10,
-    padding:15,
-    paddingLeft: 65,
-    paddingRight:55,
-    fontSize:16,
-    paddingHorizontal: 10,
-  },
-  confirmButton: {
-    backgroundColor: colors.orange,
-    paddingVertical: 24,
-    paddingHorizontal: 40,
-    borderRadius: 10,
-  },
-  confirmButtonText: {
-    color: colors.white,
-    fontSize: 18,
-  },
-});
 
-export default PaymentScreen
+
+export default Payment
