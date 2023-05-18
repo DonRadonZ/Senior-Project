@@ -10,33 +10,68 @@ import { QRScan } from './src/Screen/QRScan/qrscan';
 import { Exchange } from './src/Screen/Exchange/exchange';
 import ExchangeScreen from './src/Screen/Exchange';
 import { Profile } from './src/Screen/Profile/profile';
+import Payment from './src/Screen/Exchange/payment';
+import { createStackNavigator } from '@react-navigation/stack';
+import { colors } from './src/Components/Colors/colors';
 
 
 
 //icon
-//import {FontAwesome} from 'react-native-vector-icons'
+import { FontAwesome5 } from '@expo/vector-icons';
+
+export type RootStackParams = {
+  Exchange: any;
+  Payment: any;
+  Confirmation:any;
+  
+}
 
 
-
+const RootStack = createStackNavigator<RootStackParams>();
+const Stack = createStackNavigator();
 
 const Tab = createBottomTabNavigator();
 
 function MyTabs() {
   return (
     <Tab.Navigator>
-      <Tab.Screen name="Home" component={Home} options={{headerShown:false}}/>
-      <Tab.Screen name="Balance" component={Balance}options={{headerShown:false}} />
-      <Tab.Screen name="QRScan" component={QRScan}options={{headerShown:false}} />
-      <Tab.Screen name="Exchange" component={Exchange} options={{headerShown:false}} />
-      <Tab.Screen name="Profile" component={Profile} options={{headerShown:false}} />
+      <Tab.Screen name="Home" component={Home} options={{headerShown:false,
+          tabBarIcon: ({ color, size }) => <FontAwesome5 name="home" color={color} size={size} />,
+          }}/>
+      <Tab.Screen name="Balance" component={Balance}options={{headerShown:false,
+        tabBarIcon: ({ color, size }) => <FontAwesome5 name="wallet" color={color} size={size} />,}} />
+      <Tab.Screen name="QRScan" component={QRScan
+      }options={{headerShown:false,
+        tabBarIcon: ({ color, size }) => <FontAwesome5 name="qrcode" color={color} size={size} />,
+      }} />
+      <Tab.Screen name="Exchange" component={Exchange} 
+      options={{headerShown:false,
+        tabBarIcon: ({ color, size }) => <FontAwesome5 name="exchange-alt" color={color} size={size} />,
+      }} 
+      />
+      {/* <RootStack.Screen name="Payment" component={Payment} options={{headerShown:false}} /> */}
+      <Tab.Screen name="Profile" component={Profile} options={{headerShown:false,
+      tabBarIcon: ({ color, size }) => <FontAwesome5 name="user" color={color} size={size} />
+      }} />
     </Tab.Navigator>
   );
 }
 
+
+
+
 export default function App() {
   return (
     <NavigationContainer>
-      <MyTabs />
+      <Stack.Navigator>
+        <Stack.Screen
+        name='MyTab'
+        component={MyTabs}
+        options={{headerShown:false}}
+        />
+      <Stack.Screen name='Payment' component={Payment} />
+      </Stack.Navigator>
+      
     </NavigationContainer>
   );
 }
