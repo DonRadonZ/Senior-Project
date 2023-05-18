@@ -1,7 +1,7 @@
 import React from "react";
 import { Text, View, StyleSheet } from "react-native";
-import { colors } from "../../Components/Colors/colors";
-import SellButton from "../../Components/Button/SellButton";
+import { colors } from "../../../Components/Colors/colors";
+import SellButton from "../../../Components/Button/SellButton";
 
 interface ConfirmationPageProps {
   accountNumber: string;

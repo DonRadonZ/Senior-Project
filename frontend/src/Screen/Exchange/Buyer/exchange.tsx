@@ -3,18 +3,18 @@ import {TouchableOpacity,ImageBackground} from 'react-native';
 // import MainContainer from '../../component/Container/MainContainer';
 import { Text } from '@react-native-material/core';
 
-import BuyChoiceButton from '../../Components/Button/BuyChoiceButton';
-import SellChoiceButton from '../../Components/Button/SellChoiceButton';
+import BuyChoiceButton from '../../../Components/Button/BuyChoiceButton';
+import SellChoiceButton from '../../../Components/Button/SellChoiceButton';
 
-import styles from '../../Components/Container/Backgroundstyle';
+import styles from '../../../Components/Container/Backgroundstyle';
 import { StackNavigationProp, createStackNavigator } from '@react-navigation/stack';
-import { IStackScreenProps } from '../../Components/library/StackScreenProps';
+//import { IStackScreenProps } from '../../Components/library/StackScreenProps';
 
 import 'react-native-gesture-handler'
 
 //screen
 import { useNavigation } from '@react-navigation/native';
-import { RootStackParams } from '../../../App';
+import { RootStackParams } from '../../../../App';
 
 
 

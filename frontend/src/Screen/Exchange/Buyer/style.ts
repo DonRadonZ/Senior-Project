@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native';
-import { ScreenWidth } from '../../Components/shared';
-import { colors } from '../../Components/Colors/colors';
+import { ScreenWidth } from '../../../Components/shared';
+import { colors } from '../../../Components/Colors/colors';
 
 const styles = StyleSheet.create({
   container: {
