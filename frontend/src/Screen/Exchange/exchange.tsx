@@ -3,16 +3,18 @@ import {TouchableOpacity,ImageBackground} from 'react-native';
 // import MainContainer from '../../component/Container/MainContainer';
 import { Text } from '@react-native-material/core';
 
-//import BuyChoiceButton from '../../Components/Button/BuyChoiceButton';
-//import SellChoiceButton from '../../Components/Button/SellChoiceButton';
+import BuyChoiceButton from '../../Components/Button/BuyChoiceButton';
+import SellChoiceButton from '../../Components/Button/SellChoiceButton';
+
 import styles from '../../Components/Container/Backgroundstyle';
-import { createStackNavigator } from '@react-navigation/stack';
+import { StackNavigationProp, createStackNavigator } from '@react-navigation/stack';
 import { IStackScreenProps } from '../../Components/library/StackScreenProps';
 
 import 'react-native-gesture-handler'
 
 //screen
-import PaymentScreen from './payment';
+import { useNavigation } from '@react-navigation/native';
+import { RootStackParams } from '../../../App';
 
 
 
@@ -25,7 +27,7 @@ const Stack = createStackNavigator()
 
 export const Exchange = () => {
   
- // const { navigation, route } = props;
+  const navigation = useNavigation<StackNavigationProp<RootStackParams>>()
 
   
 
@@ -36,7 +38,12 @@ export const Exchange = () => {
     resizeMode="cover"
     >
       
-      
+      <BuyChoiceButton 
+      onPress={()=>{
+        //go to payment
+        navigation.navigate("Payment")}}
+      >Press for Buyer</BuyChoiceButton>
+      <SellChoiceButton onPress={()=>{alert("List")}}>Press for End User</SellChoiceButton>
       </ImageBackground>
       
   )
