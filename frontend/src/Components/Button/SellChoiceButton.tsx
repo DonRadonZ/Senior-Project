@@ -1,24 +1,19 @@
 import React,{FunctionComponent} from "react";
 import { Text,Pressable } from "@react-native-material/core";
 import Buttonstyles from "./style";
-import { useNavigation } from "@react-navigation/native";
-
-// interface Props{
-//     label: string;
-//   icon: string;
-//   onPress: () => void;
-// }
 
 
 
+import { SellButtonProps } from "./types";
+import { useNavigation } from "@react-navigation/core";
 
-const SellChoiceButton = () => {
-    const navigation = useNavigation()
-    return(
+
+const SellChoiceButton:FunctionComponent<SellButtonProps> = (props) => {
+  const navigation = useNavigation()
+  return(
     <Pressable 
-    style={Buttonstyles.ButtonContainer}
-     ><Text style={Buttonstyles.ChoiceText} onPress={() => {}}>Press for End User</Text></Pressable>
-    )
-};
-  
+    style={Buttonstyles.ButtonContainer} onPress={props.onPress}
+     ><Text style={Buttonstyles.ChoiceText}>{props.children}</Text></Pressable>
+  );
+}
   export default SellChoiceButton;

@@ -8,15 +8,15 @@ interface Props{
   onPress: () => void;
 }
 
-import { ButtonProps } from "./types";
+import { ProfileButtonProps } from "./types";
 import { useNavigation } from "@react-navigation/core";
 
 
-const ProfileButton:FunctionComponent<ButtonProps> = (props) => {
+const ProfileButton:FunctionComponent<ProfileButtonProps> = (props) => {
   const navigation = useNavigation()
   return(
     <Pressable 
-    style={Buttonstyles.ProfileButtonContainer}
+    style={Buttonstyles.ProfileButtonContainer} onPress={props.onPress}
      ><Text style={Buttonstyles.ChoiceText}>{props.children}</Text></Pressable>
   );
 }
