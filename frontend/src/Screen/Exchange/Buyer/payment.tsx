@@ -9,10 +9,10 @@ import {
   Keyboard
 } from "react-native";
 
-import PaymentCard from "../../Components/Card/PaymentCard";
-import { ScreenWidth } from "../../Components/shared";
+import PaymentCard from "../../../Components/Card/PaymentCard";
+import { ScreenWidth } from "../../../Components/shared";
 import { useNavigation } from "@react-navigation/native";
-import { colors } from "../../Components/Colors/colors";
+import { colors } from "../../../Components/Colors/colors";
 import { Text } from "@react-native-material/core";
 import ConfirmationPage from "./confirmation";
 
