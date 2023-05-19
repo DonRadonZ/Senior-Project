@@ -14,6 +14,7 @@ import Payment from './src/Screen/Exchange/Buyer/payment';
 import { createStackNavigator } from '@react-navigation/stack';
 import { colors } from './src/Components/Colors/colors';
 import ConfirmationPage from './src/Screen/Exchange/Buyer/confirmation';
+import EndUserfile from './src/Screen/Exchange/EndUser/SentPic';
 
 
 
@@ -41,7 +42,7 @@ function MyTabs() {
           }}/>
       <Tab.Screen name="Balance" component={Balance}options={{headerShown:false,
         tabBarIcon: ({ color, size }) => <FontAwesome5 name="wallet" color={color} size={size} />,}} />
-      <Tab.Screen name="QRScan" component={QRScan
+      <Tab.Screen name="QRScan" component={EndUserfile
       }options={{headerShown:false,
         tabBarIcon: ({ color, size }) => <FontAwesome5 name="qrcode" color={color} size={size} />,
       }} />
