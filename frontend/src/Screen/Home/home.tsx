@@ -10,9 +10,10 @@ export const Home = () =>{
         <ImageBackground
       source={require("../../../assets/Background-image.jpg")}
       style={styles.container}
-      resizeMode="cover"
-    >
-                <RegularText>Home</RegularText>
+        resizeMode="cover"
+      >
+        
+                <RegularText>Transaction Status</RegularText>
              </ImageBackground>
                 
             

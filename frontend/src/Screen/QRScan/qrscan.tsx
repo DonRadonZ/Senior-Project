@@ -1,10 +1,24 @@
-import React from 'react';
-import {Text, TouchableOpacity} from 'react-native'; 
-// import MainContainer from '../../component/Container/MainContainer';
+import React, { useState, useEffect } from 'react';
+import { Text, View, StyleSheet, Button } from 'react-native';
+import { BarCodeScanner } from 'expo-barcode-scanner';
 
-export const QRScan = () =>{
-    return(
-            <Text>Name: John Doe</Text>
+export const QRScan = () => {
+    const [hasPermission, setHasPermission] = useState<null|boolean>(null)
+    const [scanned, setScanned] = useState(false)
+    
+    const askCameraPermission = async () => {
+        const { status } = await BarCodeScanner.requestPermissionsAsync();
+        console.log(status)
+        if (status === 'granted') {
+            setHasPermission(true)
+        }
+    };
+
+    useEffect(() => { }, []);
+
+    return (
+        
+           <Text>Hello</Text>
         
     )
 }

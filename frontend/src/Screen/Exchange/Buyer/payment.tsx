@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { FunctionComponent,useState } from "react";
 import {
   TextInput,
   View,
@@ -17,6 +17,15 @@ import { Text } from "@react-native-material/core";
 import ConfirmationPage from "./confirmation";
 
 import styles from "./style";
+import { StackNavigationProp } from "@react-navigation/stack";
+import { RootStackParams } from "../../../../App";
+
+interface ConfirmationPageProps {
+  accountNumber: string;
+  amount: string;
+  description: string;
+}
+
 
 const Payment = () => {
   const [balance, setBalance] = useState("");
@@ -25,7 +34,7 @@ const Payment = () => {
   const [amount, setAmount] = useState("");
   const [description, setDescription] = useState("");
 
-  const navigation = useNavigation();
+  const navigation = useNavigation<StackNavigationProp<RootStackParams>>();
   //"ConfirmationPage",
 //   const goToConfirmationPage = () => {
 //     navigation.navigate("ConfirmationPage", {
@@ -40,7 +49,7 @@ const Payment = () => {
     
     > 
     <ImageBackground
-      source={require("../../../assets/Background-image.jpg")}
+      source={require("../../../../assets/Background-image.jpg")}
       style={styles.container}
       resizeMode="cover"
     >
@@ -69,7 +78,7 @@ const Payment = () => {
       </View>
       <TouchableOpacity
         style={styles.confirmButton}
-        //onPress={goToConfirmationPage}
+        onPress={()=>{navigation.navigate('Confirmation')}}
       >
         <Text style={styles.confirmButtonText}>Continue</Text>
       </TouchableOpacity>
