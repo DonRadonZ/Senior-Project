@@ -58,6 +58,13 @@ function MyTabs() {
   );
 }
 
+export function Service(){
+  return (
+    <Stack.Navigator>
+        <Stack.Screen name='Payment' component={Payment} />
+    </Stack.Navigator>
+  )
+}
 
 
 
