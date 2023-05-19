@@ -16,4 +16,5 @@ const SellChoiceButton:FunctionComponent<SellButtonProps> = (props) => {
      ><Text style={Buttonstyles.ChoiceText}>{props.children}</Text></Pressable>
   );
 }
-  export default SellChoiceButton;
+export default SellChoiceButton;
+  
