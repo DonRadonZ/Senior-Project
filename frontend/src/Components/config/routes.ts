@@ -1,10 +1,10 @@
-import   PaymentScreen  from "../../Screen/Exchange/payment";
+import Payment from "../../Screen/Exchange/Buyer/payment";
 import { IRouteProps } from "../library/RouteProp";
 
 const routes: IRouteProps[] = [
     {
         name: "Payment",
-        component: PaymentScreen
+        component: Payment
     }
 ]
 
