@@ -22,7 +22,8 @@ import { RootStackParams } from '../../../App';
 
 const Stack = createStackNavigator()
 
-
+//icons
+import { AntDesign } from '@expo/vector-icons';
 
 
 
@@ -38,7 +39,7 @@ export const Success = () => {
     style={styles.container}
     resizeMode="cover"
     >
-    
+     <AntDesign name="checkcircleo" size={72} color="black" />
       <BuyChoiceButton 
       onPress={()=>{
         //go to payment

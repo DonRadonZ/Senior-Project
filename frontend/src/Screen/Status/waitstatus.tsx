@@ -16,6 +16,9 @@ import 'react-native-gesture-handler'
 import { useNavigation } from '@react-navigation/native';
 import { RootStackParams } from '../../../App';
 
+//icons
+import { AntDesign } from '@expo/vector-icons';
+
 
 
 
@@ -37,7 +40,7 @@ export const Wait = () => {
     style={styles.container}
     resizeMode="cover"
     >
-    
+      <AntDesign name="exclamationcircleo" size={72} color="black" />
       <CheckButton 
       onPress={()=>{
         //go to payment
