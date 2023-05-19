@@ -7,12 +7,13 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Home } from './src/Screen/Home/home';
 import { Balance } from './src/Screen/Balance/balance';
 import { QRScan } from './src/Screen/QRScan/qrscan';
-import { Exchange } from './src/Screen/Exchange/exchange';
-import ExchangeScreen from './src/Screen/Exchange';
+import { Exchange } from './src/Screen/Exchange/Buyer/exchange';
+//import ExchangeScreen from './src/Screen/Exchange';
 import { Profile } from './src/Screen/Profile/profile';
-import Payment from './src/Screen/Exchange/payment';
+import Payment from './src/Screen/Exchange/Buyer/payment';
 import { createStackNavigator } from '@react-navigation/stack';
 import { colors } from './src/Components/Colors/colors';
+import ConfirmationPage from './src/Screen/Exchange/Buyer/confirmation';
 
 
 
@@ -70,6 +71,7 @@ export default function App() {
         options={{headerShown:false}}
         />
       <Stack.Screen name='Payment' component={Payment} />
+      <Stack.Screen name='Confirmation' component={ConfirmationPage} />
       </Stack.Navigator>
       
     </NavigationContainer>
