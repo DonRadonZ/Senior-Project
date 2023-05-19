@@ -11,11 +11,14 @@ import { Balance } from "./src/Screen/Balance/balance";
 import { QRScan } from "./src/Screen/QRScan/qrscan";
 import { Exchange } from "./src/Screen/Exchange/Buyer/exchange";
 //import ExchangeScreen from './src/Screen/Exchange';
-import { Profile } from "./src/Screen/Profile/profile";
-import Payment from "./src/Screen/Exchange/Buyer/payment";
-import { createStackNavigator } from "@react-navigation/stack";
-import { colors } from "./src/Components/Colors/colors";
-import ConfirmationPage from "./src/Screen/Exchange/Buyer/confirmation";
+import { Profile } from './src/Screen/Profile/profile';
+import Payment from './src/Screen/Exchange/Buyer/payment';
+import { createStackNavigator } from '@react-navigation/stack';
+import { colors } from './src/Components/Colors/colors';
+import ConfirmationPage from './src/Screen/Exchange/Buyer/confirmation';
+import EndUserfile from './src/Screen/Exchange/EndUser/SentPic';
+
+
 
 //icon
 import { FontAwesome5 } from "@expo/vector-icons";
@@ -111,45 +114,19 @@ function MyUnlock() {
 function MyTabs() {
   return (
     <Tab.Navigator>
-      <Tab.Screen
-        name="Home"
-        component={Home}
-        options={{
-          headerShown: false,
-          tabBarIcon: ({ color, size }) => (
-            <FontAwesome5 name="home" color={color} size={size} />
-          ),
-        }}
-      />
-      <Tab.Screen
-        name="Balance"
-        component={Balance}
-        options={{
-          headerShown: false,
-          tabBarIcon: ({ color, size }) => (
-            <FontAwesome5 name="wallet" color={color} size={size} />
-          ),
-        }}
-      />
-      <Tab.Screen
-        name="QRScan"
-        component={QRScan}
-        options={{
-          headerShown: false,
-          tabBarIcon: ({ color, size }) => (
-            <FontAwesome5 name="qrcode" color={color} size={size} />
-          ),
-        }}
-      />
-      <Tab.Screen
-        name="Exchange"
-        component={Exchange}
-        options={{
-          headerShown: false,
-          tabBarIcon: ({ color, size }) => (
-            <FontAwesome5 name="exchange-alt" color={color} size={size} />
-          ),
-        }}
+      <Tab.Screen name="Home" component={Home} options={{headerShown:false,
+          tabBarIcon: ({ color, size }) => <FontAwesome5 name="home" color={color} size={size} />,
+          }}/>
+      <Tab.Screen name="Balance" component={Balance}options={{headerShown:false,
+        tabBarIcon: ({ color, size }) => <FontAwesome5 name="wallet" color={color} size={size} />,}} />
+      <Tab.Screen name="QRScan" component={EndUserfile
+      }options={{headerShown:false,
+        tabBarIcon: ({ color, size }) => <FontAwesome5 name="qrcode" color={color} size={size} />,
+      }} />
+      <Tab.Screen name="Exchange" component={Exchange} 
+      options={{headerShown:false,
+        tabBarIcon: ({ color, size }) => <FontAwesome5 name="exchange-alt" color={color} size={size} />,
+      }} 
       />
       {/* <RootStack.Screen name="Payment" component={Payment} options={{headerShown:false}} /> */}
       <Tab.Screen
@@ -165,6 +142,16 @@ function MyTabs() {
     </Tab.Navigator>
   );
 }
+
+export function Service(){
+  return (
+    <Stack.Navigator>
+        <Stack.Screen name='Payment' component={Payment} />
+    </Stack.Navigator>
+  )
+}
+
+
 
 export default function App() {
   return (

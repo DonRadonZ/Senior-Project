@@ -1,19 +1,28 @@
 import React from 'react';
-import {ImageBackground,StyleSheet} from 'react-native'; 
+import {ImageBackground,StyleSheet,SafeAreaView} from 'react-native'; 
 import { Text } from "@react-native-material/core";
 import RegularText from '../../Components/Texts/RegularText';
 // import MainContainer from '../../component/Container/MainContainer';
-import styles from '../../Components/Container/Backgroundstyle';
-
-export const Home = () =>{
+//import styles from '../../Components/Container/Backgroundstyle';
+import ServiceLists from "../../Components/List/ServiceList"
+import services from "../../mock/services.json"
+import { useNavigation } from '@react-navigation/native';
+import { Service } from '../../../App';
+export const Home = () => {
+  
     return(
         <ImageBackground
-      source={require("../../../assets/Background-image.jpg")}
-      style={styles.container}
+        source={require("../../../assets/Background-image.jpg")}
+        style={{flex:1}}
         resizeMode="cover"
       >
-        
-                <RegularText>Transaction Status</RegularText>
+        <SafeAreaView>
+          <RegularText>Friend List</RegularText>
+
+          <RegularText>Service</RegularText>
+          <ServiceLists onPress={()=>{}} list={services}/>
+        </SafeAreaView>
+                
              </ImageBackground>
                 
             

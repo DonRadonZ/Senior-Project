@@ -1,0 +1,10 @@
+[
+    {"name": "send money", "icon": "arrow-up"},
+    {"name": "receive money", "icon": "arrow-down"},
+    {"name": "online service", "icon": "wifi"},
+    {"name": "flight", "icon": "plane-departure"},
+    {"name": "electricity bill", "icon": "lightbulb"},
+    {"name": "food delivery", "icon": "hamburger"},
+    {"name": "foreign goods", "icon": "shopping-cart"},
+    {"name": "more services", "icon": "buromobelexperte"}
+]
