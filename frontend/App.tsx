@@ -17,7 +17,8 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { colors } from './src/Components/Colors/colors';
 import ConfirmationPage from './src/Screen/Exchange/Buyer/confirmation';
 import EndUserfile from './src/Screen/Exchange/EndUser/SentPic';
-
+import BuyList from "./src/Screen/Exchange/Buyer/Order";
+import EndList from "./src/Screen/Exchange/EndUser/Order";
 
 
 //icon
@@ -29,8 +30,13 @@ import { Unlock } from "./src/Screen/Unlock/Unlock";
 
 export type RootStackParams = {
   Exchange: any;
+  Buyer: any;
   Payment: any;
   Confirmation: any;
+  EndUser: any;
+  
+
+
 };
 
 const RootStack = createStackNavigator<RootStackParams>();
@@ -146,7 +152,8 @@ function MyTabs() {
 export function Service(){
   return (
     <Stack.Navigator>
-        <Stack.Screen name='Payment' component={Payment} />
+      <Stack.Screen name='Payment' component={Payment} />
+      <Stack.Screen name="BuyList" component={BuyList} />
     </Stack.Navigator>
   )
 }
@@ -156,7 +163,7 @@ export function Service(){
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="MyTab">
+      <Stack.Navigator initialRouteName="MainPage">
         <Stack.Screen
           name="MyLogin"
           component={MyLogin}
@@ -188,10 +195,12 @@ export default function App() {
           options={{ headerShown: false }}
         />
         <Stack.Screen
-          name="MyTab"
+          name="MainPage"
           component={MyTabs}
           options={{ headerShown: false }}
         />
+        <Stack.Screen name="Buyer" component={BuyList} />
+        <Stack.Screen name="EndUser" component={EndList} />
         <Stack.Screen name="Payment" component={Payment} />
         <Stack.Screen name="Confirmation" component={ConfirmationPage} />
       </Stack.Navigator>
