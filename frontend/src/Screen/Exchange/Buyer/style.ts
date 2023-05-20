@@ -7,16 +7,16 @@ const styles = StyleSheet.create({
     flex: 1,
     padding: 25,
     paddingTop: 40,
-    justifyContent: "center",
+    //justifyContent: "center",
     alignItems: "center",
   },
   slipcontainer: {
      flexDirection: "column",
-        justifyContent: "space-between",
+        justifyContent: "center",
         backgroundColor: colors.white,
         padding: 20,
-        width: ScreenWidth*0.8,
-        height: ScreenHeight*0.2,
+        width: ScreenWidth,
+        height: ScreenHeight*0.4,
         borderWidth:2,
         borderRadius: 15,
         alignItems:"flex-start",
@@ -51,7 +51,7 @@ const styles = StyleSheet.create({
   },
   confirmationText: {
     fontSize: 18,
-    marginBottom: 10,
+    marginBottom: 50,
   },
 
 });
