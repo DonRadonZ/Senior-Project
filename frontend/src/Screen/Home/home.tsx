@@ -21,6 +21,7 @@ export const Home = () => {
 
           <RegularText>Service</RegularText>
           <ServiceLists onPress={()=>{}} list={services}/>
+          <RegularText>Notification</RegularText>
         </SafeAreaView>
                 
              </ImageBackground>
