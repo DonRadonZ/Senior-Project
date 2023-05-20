@@ -12,7 +12,7 @@ import {
 } from "react-native";
 import { FontAwesome5 } from "@expo/vector-icons";
 
-export const registerScanFace = () => {
+export const RegisterScanFace = () => {
 
   const handleRegister = () => {};
   const cameraFrontId = () => {};

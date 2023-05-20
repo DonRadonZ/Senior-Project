@@ -10,7 +10,7 @@ import {
   Alert,
 } from "react-native";
 
-export const registerMail = () => {
+export const RegisterMail = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");

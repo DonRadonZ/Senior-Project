@@ -12,7 +12,7 @@ import {
 } from "react-native";
 import { FontAwesome5 } from "@expo/vector-icons";
 
-export const registerId = () => {
+export const RegisterId = () => {
   const [email, setEmail] = useState("");
 
   const handleRegister = () => {};
@@ -92,7 +92,7 @@ const styles = StyleSheet.create({
   logo: {
     width: 150,
     height: 150,
-    marginBottom: 24,
+    //marginBottom: 5,
   },
   create_struc: {
     marginTop: 10,
