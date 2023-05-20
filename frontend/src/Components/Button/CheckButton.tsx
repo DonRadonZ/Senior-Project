@@ -12,7 +12,7 @@ const CheckButton:FunctionComponent<BuyButtonProps> = (props) => {
   const navigation = useNavigation()
   return(
     <Pressable 
-    style={Buttonstyles.ButtonContainer} onPress={props.onPress}
+    style={Buttonstyles.ProfileButtonContainer} onPress={props.onPress}
      ><Text style={Buttonstyles.ChoiceText}>{props.children}</Text></Pressable>
   );
 }
