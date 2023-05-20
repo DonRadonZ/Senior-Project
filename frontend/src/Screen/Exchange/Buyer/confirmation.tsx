@@ -37,7 +37,7 @@ const ConfirmationPage = ({
       <Text style={styles.confirmationText}>Amount: 5555</Text>
       <Text style={styles.confirmationText}>Note: </Text>
       </Box>
-      <ProfileButton onPress={()=>{navigation.goBack()}} >Continue</ProfileButton>
+      <ProfileButton onPress={()=>{navigation.navigate('Buyer')}} >Continue</ProfileButton>
     </ImageBackground>
   );
 };
