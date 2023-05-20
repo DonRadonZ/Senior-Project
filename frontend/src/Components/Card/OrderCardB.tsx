@@ -6,7 +6,7 @@ import BalanceView from "./Balancestyles";
 
 const OrderCardB = () => (
   <Box style={BalanceView.balanceContainer}>
-    <Text style={BalanceView.BalanceText}>Order1</Text>
+    <Text style={BalanceView.BalanceText}>Order2</Text>
         <TouchableOpacity><Text style={BalanceView.OrderViewText}>View</Text></TouchableOpacity>
     <Text style={BalanceView.TimeStampText}>15/5/2023</Text>
   </Box>
