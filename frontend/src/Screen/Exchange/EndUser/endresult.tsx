@@ -24,10 +24,10 @@ const EndOrder = ({
           <AntDesign name="checkcircleo" size={72} color="black" />
     <View style={styles.container}>
       <Text style={styles.confirmationText}>
-        Account Number: 
+        Account ID: 
       </Text>
-      <Text style={styles.confirmationText}>Amount: 1000</Text>
-      <Text style={styles.confirmationText}>Description: </Text>
+      <Text style={styles.confirmationText}>Date:</Text>
+      <Text style={styles.confirmationText}>Time: </Text>
     </View>
     </ImageBackground>
   );
