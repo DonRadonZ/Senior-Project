@@ -10,7 +10,7 @@ interface ConfirmationPageProps {
   description: string;
 }
 
-const EndResult = ({
+const EndOrder = ({
   // accountNumber,
   // amount,
   // description,
@@ -47,4 +47,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default EndResult;
+export default EndOrder;

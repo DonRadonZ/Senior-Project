@@ -5,19 +5,28 @@ import {ImageBackground} from 'react-native';
 
 import OrderCardA from '../../../Components/Card/OrderCard';
 import OrderCardB from '../../../Components/Card/OrderCard';
+import AddNewButton from '../../../Components/Button/AddNewButton';
 
-import styles from '../../../Components/Container/Backgroundstyle';
-export const Order = () =>{
+import styles from './style';
+import { useNavigation } from '@react-navigation/native';
+import { StackNavigationProp } from '@react-navigation/stack';
+import { RootStackParams } from '../../../../App';
+
+const EndList = () => {
+    const navigation = useNavigation<StackNavigationProp<RootStackParams>>()
     return(
         <ImageBackground
-    source={require("../../../assets/Background-image.jpg")}
+    source={require("../../../../assets/Background-image.jpg")}
     style={styles.container}
     resizeMode="cover"
         >
             
             <OrderCardA />
-            <OrderCardB/>
+            <OrderCardB />
+           
             </ImageBackground>
         
     )
 }
+
+export default EndList
