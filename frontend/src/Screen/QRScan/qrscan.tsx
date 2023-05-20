@@ -14,7 +14,9 @@ export const QRScan = () => {
         }
     };
 
-    useEffect(() => { }, []);
+    useEffect(() => { 
+        
+    }, []);
 
     return (
         
