@@ -17,16 +17,16 @@ const Balancestyles = StyleSheet.create({
         marginBottom: 40
     },
     orderContainer: {
-        flexDirection: "column",
+        flexDirection: "row",
         justifyContent: "space-between",
         backgroundColor: colors.white,
         padding: 20,
         width: ScreenWidth*0.8,
-        height: ScreenHeight*0.2,
+        height: ScreenHeight*0.1,
         borderWidth:2,
         borderRadius: 15,
         alignItems:"flex-start",
-        marginBottom: 40
+        marginBottom: 20
     },
     paymentContainer: {
         flexDirection: "column",
@@ -55,7 +55,8 @@ const Balancestyles = StyleSheet.create({
     },
     OrderViewText: {
         color: colors.black,
-        textAlign:"right",
+        textAlign: "left",
+        position:"relative",
         fontSize: sizes.Regular,
     },
     OrderTimeStampText: {
@@ -66,7 +67,8 @@ const Balancestyles = StyleSheet.create({
     BalanceText: {
         color: colors.black,
         textAlign:"left",
-        fontSize: sizes.SmallText,    
+        fontSize: sizes.SmallText, 
+        marginBottom: 15
     },
     TimeStampText: {
         color: colors.black,
