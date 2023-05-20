@@ -156,7 +156,7 @@ export function Service(){
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Unlock">
+      <Stack.Navigator initialRouteName="MyTab">
         <Stack.Screen
           name="MyLogin"
           component={MyLogin}
