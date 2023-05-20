@@ -16,6 +16,28 @@ const Buttonstyles = StyleSheet.create({
         marginBottom: 40,
         
         
+    },AddNewButtonContainer: {
+        justifyContent: "center",
+        backgroundColor: colors.navyblue,
+        padding: 15,
+        width: 50,
+        height: 50,
+        borderRadius: 25,
+        alignItems:"center",
+        marginTop: ScreenHeight*0.4,
+        
+        
+    },
+    CheckoutButtonContainer: {
+        flexDirection: "column",
+        justifyContent: "center",
+        backgroundColor: colors.orange,
+        padding: 15,
+        width: "25",
+        height: "10%",
+        borderRadius: 15,
+        alignItems:"center",
+        marginBottom: 20,
     },
     ProfileButtonContainer: {
         flexDirection: "column",
