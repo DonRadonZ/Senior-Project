@@ -8,13 +8,18 @@ import {
   Image,
   Text,
   Alert,
+  TouchableWithoutFeedback,
+  Keyboard,
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
+import { ScreenWidth } from "../../Components/shared";
+import { StackNavigationProp } from "@react-navigation/stack";
+import { RootStackParams } from "../../../App";
 
 export const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const navigation = useNavigation();
+  const navigation = useNavigation<StackNavigationProp<RootStackParams>>();
 
   const handleLogin = () => {
     if (email.trim() === "") {
@@ -30,6 +35,9 @@ export const Login = () => {
   };
 
   return (
+    <TouchableWithoutFeedback onPress={() => { Keyboard.dismiss() }}
+  
+    >
     <ImageBackground
       source={require("../../../assets/Background-image.jpg")}
       style={styles.container}
@@ -57,13 +65,15 @@ export const Login = () => {
             onChangeText={(text) => setPassword(text)}
             value={password}
           />
-          <Button color="#77CE13" title="LOGIN" onPress={handleLogin} />
+          <Button color="#77CE13" title="LOGIN" onPress={() => { navigation.navigate('MainPage') }} />
+          <View style={styles.create_struc}>
+          <Button color="" title="Create Account" onPress={()=>{navigation.navigate('MyRegister')}} />
+          </View>
         </View>
-        <View style={styles.create_struc}>
-          <Button color="" title="Create Account" onPress={handleLogin} />
-        </View>
+        
       </View>
-    </ImageBackground>
+      </ImageBackground>
+      </TouchableWithoutFeedback>
   );
 };
 
@@ -88,6 +98,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
+    width: ScreenWidth,
     padding: 16,
     backgroundColor: "#fff",
   },

@@ -9,11 +9,18 @@ import {
   Text,
   Alert,
 } from "react-native";
+import { ScreenWidth } from "../../Components/shared";
+
+import { useNavigation } from "@react-navigation/native";
+import { StackNavigationProp } from "@react-navigation/stack";
+import { RootStackParams } from "../../../App";
 
 export const RegisterMail = () => {
+  
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+  const navigation = useNavigation<StackNavigationProp<RootStackParams>>()
 
   const handleRegister = () => {
     if (email.trim() === "") {
@@ -50,7 +57,7 @@ export const RegisterMail = () => {
           style={styles.logo}
         />
       </View>
-      <View style={{ backgroundColor: "#fff" }}>
+      <View style={{ backgroundColor: "#fff",width: "90%" }}>
         <View
           style={{
             paddingVertical: 15,
@@ -99,7 +106,7 @@ export const RegisterMail = () => {
         </View>
 
         <View style={styles.create_struc}>
-          <Button color="#47BF91" title="NEXT" onPress={handleRegister} />
+          <Button color="#47BF91" title="NEXT" onPress={()=>{navigation.navigate("MyRegisterId")}} />
         </View>
       </View>
     </ImageBackground>

@@ -9,10 +9,18 @@ import {
   Text,
   Alert,
   TouchableOpacity,
+  TouchableWithoutFeedback,
+  Keyboard,
 } from "react-native";
 import { FontAwesome5 } from "@expo/vector-icons";
+import { ScreenWidth } from "../../Components/shared";
+import { useNavigation } from "@react-navigation/native";
+import { StackNavigationProp } from "@react-navigation/stack";
+import { RootStackParams } from "../../../App";
 
 export const RegisterId = () => {
+const navigation = useNavigation<StackNavigationProp<RootStackParams>>()
+
   const [email, setEmail] = useState("");
 
   const handleRegister = () => {};
@@ -20,6 +28,9 @@ export const RegisterId = () => {
   const cameraFrontId = () => {};
 
   return (
+    <TouchableWithoutFeedback onPress={() => { Keyboard.dismiss() }}
+    
+    >
     <ImageBackground
       source={require("../../../assets/Background-image.jpg")}
       style={styles.container}
@@ -31,7 +42,7 @@ export const RegisterId = () => {
           style={styles.logo}
         />
       </View>
-      <View style={{ backgroundColor: "#fff" }}>
+      <View style={{ backgroundColor: "#fff",width:"90%" }}>
         <View
           style={{
             paddingVertical: 15,
@@ -50,7 +61,7 @@ export const RegisterId = () => {
             placeholder="ID"
             placeholderTextColor="gray"
             onChangeText={(text) => setEmail(text)}
-            value={email}
+            
           />
         </View>
         <View style={{ paddingHorizontal: 10 }}>
@@ -60,7 +71,7 @@ export const RegisterId = () => {
             placeholder="Laser ID"
             placeholderTextColor="gray"
             onChangeText={(text) => setEmail(text)}
-            value={email}
+            
           />
         </View>
         <View style={{ paddingHorizontal: 10 }}>
@@ -77,10 +88,11 @@ export const RegisterId = () => {
         </View>
 
         <View style={styles.create_struc}>
-          <Button color="#47BF91" title="NEXT" onPress={handleRegister} />
+          <Button color="#47BF91" title="NEXT" onPress={()=>{navigation.navigate('MyRegisterScanFace')}} />
         </View>
       </View>
     </ImageBackground>
+    </TouchableWithoutFeedback>
   );
 };
 
@@ -129,7 +141,7 @@ const styles = StyleSheet.create({
     paddingLeft: 8,
   },
   buttonCamera: {
-    marginHorizontal:40,
+    marginHorizontal:70,
     padding: 40,
     backgroundColor: "#5E99E4",
     justifyContent: "center",

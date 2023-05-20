@@ -8,9 +8,18 @@ import {
   Image,
   Text,
   Alert,
+  TouchableWithoutFeedback,
+  Keyboard,
 } from "react-native";
+import { ScreenWidth } from "../../Components/shared";
+
+import { useNavigation } from "@react-navigation/native";
+import { StackNavigationProp } from "@react-navigation/stack";
+import { RootStackParams } from "../../../App";
 
 export const Register = () => {
+  const navigation = useNavigation<StackNavigationProp<RootStackParams>>()
+
   const [name, setName] = useState("");
   const [birthDate, setBirthDate] = useState("");
   const [phone, setPhone] = useState("");
@@ -56,6 +65,9 @@ export const Register = () => {
   };
 
   return (
+    <TouchableWithoutFeedback onPress={() => { Keyboard.dismiss() }}
+    
+    >
     <ImageBackground
       source={require("../../../assets/Background-image.jpg")}
       style={styles.container}
@@ -67,13 +79,13 @@ export const Register = () => {
           style={styles.logo}
         />
       </View>
-      <View style={{ backgroundColor: '#fff' }}>
+      <View style={{ backgroundColor: '#fff',width:"90%" }}>
         <View style={{ paddingVertical: 15, alignItems: "center" }}>
           <Text style={{ fontSize: 18, fontWeight:"bold" }}>Create New Account</Text>
         </View>
         <HorizontalLine />
-        <View style={{ paddingHorizontal:10, paddingTop:15 }}>
-          <Text style={{ paddingBottom:10 }}>Fullname</Text>
+        <View style={{ paddingHorizontal:10, paddingTop:5 }}>
+          <Text style={{ paddingBottom:5 }}>Fullname</Text>
           <TextInput
             style={styles.input}
             placeholder="Fullname"
@@ -94,20 +106,21 @@ export const Register = () => {
           />
         </View>
         <HorizontalLine />
-        <View style={{ paddingHorizontal:10, paddingTop:15 }}>
-          <Text style={{ paddingBottom:10 }}>Thailand (+66)</Text>
+        <View style={{ paddingHorizontal:10, paddingTop:5 }}>
+          <Text style={{ paddingBottom:5 }}>Thailand (+66)</Text>
           <TextInput
             style={styles.input}
             placeholder="Phone"
             placeholderTextColor="gray"
             onChangeText={(text) => setPhone(text)}
-            value={phone}
+              value={phone}
+              keyboardType="number-pad"
           />
         </View>
         <HorizontalLine />
         {/*Start Address Section */}
-        <View style={{ paddingHorizontal:10, paddingTop:15 }}>
-          <Text style={{ paddingBottom: 15}}>Address</Text>
+        <View style={{ paddingHorizontal:10, paddingTop: 5 }}>
+          <Text style={{ paddingBottom: 5}}>Address</Text>
           <View style={{ flexDirection: "row", justifyContent: 'space-between' }}>
             <View style={{ flex: 1 }}>
               <TextInput
@@ -192,10 +205,11 @@ export const Register = () => {
         {/*End Address Section */}
 
         <View style={styles.create_struc}>
-          <Button color="#47BF91" title="NEXT" onPress={handleRegister} />
+          <Button color="#47BF91" title="NEXT" onPress={()=>{navigation.navigate('MyRegisterMail')}} />
         </View>
       </View>
-    </ImageBackground>
+      </ImageBackground>
+      </TouchableWithoutFeedback>
   );
 };
 
@@ -205,15 +219,16 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
   },
   logo: {
-    width: 150,
-    height: 150,
-    marginBottom: 24,
+    width: 125,
+    height: 125,
+    marginBottom: 5,
   },
   create_struc: {
     marginTop: 10,
   },
   structure: {
     alignItems: "center",
+    
   },
   text: {
     fontSize: 16,

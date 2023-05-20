@@ -11,9 +11,12 @@ import {
   TouchableOpacity
 } from "react-native";
 import { FontAwesome5 } from "@expo/vector-icons";
+import { useNavigation } from '@react-navigation/native';
+import { StackNavigationProp } from '@react-navigation/stack';
+import { RootStackParams } from '../../../App';
 
 export const RegisterScanFace = () => {
-
+  const navigation = useNavigation<StackNavigationProp<RootStackParams>>()
   const handleRegister = () => {};
   const cameraFrontId = () => {};
 
@@ -49,7 +52,7 @@ export const RegisterScanFace = () => {
         </View>
 
         <View style={styles.create_struc}>
-          <Button color="#47BF91" title="NEXT" onPress={handleRegister} />
+          <Button color="#47BF91" title="NEXT" onPress={()=>{navigation.navigate('RegisterSuccess')}} />
         </View>
       </View>
     </ImageBackground>
