@@ -19,6 +19,9 @@ import ConfirmationPage from './src/Screen/Exchange/Buyer/confirmation';
 import EndUserfile from './src/Screen/Exchange/EndUser/SentPic';
 import BuyList from "./src/Screen/Exchange/Buyer/Order";
 import EndList from "./src/Screen/Exchange/EndUser/Order";
+import EndOrder from "./src/Screen/Exchange/EndUser/endresult";
+import UseCamera from "./src/Screen/Camera/Camera";
+import RegisterSuccess from "./src/Screen/Register/successstatus";
 
 
 //icon
@@ -34,9 +37,15 @@ export type RootStackParams = {
   Payment: any;
   Confirmation: any;
   EndUser: any;
-  
-
-
+  EndOrder: any;
+  EndUserFile: any;
+  MainPage: any;
+  MyRegister: any;
+  MyRegisterMail: any;
+  MyRegisterId: any;
+  MyRegisterScanFace: any;
+  RegisterSuccess:any,
+  MyLogin:any;
 };
 
 const RootStack = createStackNavigator<RootStackParams>();
@@ -84,7 +93,7 @@ function MyRegisterId() {
   return (
     <Tab.Navigator screenOptions={{ tabBarStyle: { display: 'none' } }}>
       <Tab.Screen
-        name="RegisterMail"
+        name="RegisterId"
         component={RegisterId}
         options={{ headerShown: false }}
       ></Tab.Screen>
@@ -125,7 +134,7 @@ function MyTabs() {
           }}/>
       <Tab.Screen name="Balance" component={Balance}options={{headerShown:false,
         tabBarIcon: ({ color, size }) => <FontAwesome5 name="wallet" color={color} size={size} />,}} />
-      <Tab.Screen name="QRScan" component={EndUserfile
+      <Tab.Screen name="QRScan" component={UseCamera
       }options={{headerShown:false,
         tabBarIcon: ({ color, size }) => <FontAwesome5 name="qrcode" color={color} size={size} />,
       }} />
@@ -163,7 +172,7 @@ export function Service(){
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="MainPage">
+      <Stack.Navigator initialRouteName="MyLogin">
         <Stack.Screen
           name="MyLogin"
           component={MyLogin}
@@ -190,6 +199,11 @@ export default function App() {
           options={{ headerShown: false }}
         />
         <Stack.Screen
+          name="RegisterSuccess"
+          component={RegisterSuccess}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
           name="Unlock"
           component={Unlock}
           options={{ headerShown: false }}
@@ -203,6 +217,8 @@ export default function App() {
         <Stack.Screen name="EndUser" component={EndList} />
         <Stack.Screen name="Payment" component={Payment} />
         <Stack.Screen name="Confirmation" component={ConfirmationPage} />
+        <Stack.Screen name="EndOrder" component={EndOrder} />
+        <Stack.Screen name="EndUserFile" component={EndUserfile} />
       </Stack.Navigator>
     </NavigationContainer>
   );
