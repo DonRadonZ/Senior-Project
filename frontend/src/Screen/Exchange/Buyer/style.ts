@@ -7,7 +7,7 @@ const styles = StyleSheet.create({
     flex: 1,
     padding: 25,
     paddingTop: 40,
-    //justifyContent: "center",
+    justifyContent: "center",
     alignItems: "center",
   },
   slipcontainer: {
