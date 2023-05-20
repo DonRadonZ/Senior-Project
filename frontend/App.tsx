@@ -22,9 +22,9 @@ import EndUserfile from './src/Screen/Exchange/EndUser/SentPic';
 
 //icon
 import { FontAwesome5 } from "@expo/vector-icons";
-import { registerMail } from "./src/Screen/Register/registerMail";
-import { registerId } from "./src/Screen/Register/registerId";
-import { registerScanFace } from "./src/Screen/Register/registerScanFace";
+import { RegisterMail } from "./src/Screen/Register/registerMail";
+import { RegisterId } from "./src/Screen/Register/registerId";
+import { RegisterScanFace } from "./src/Screen/Register/registerScanFace";
 import { Unlock } from "./src/Screen/Unlock/Unlock";
 
 export type RootStackParams = {
@@ -67,7 +67,7 @@ function MyRegisterMail() {
     <Tab.Navigator screenOptions={{ tabBarStyle: { display: 'none' } }}>
       <Tab.Screen
         name="RegisterMail"
-        component={registerMail}
+        component={RegisterMail}
         options={{ headerShown: false }}
       ></Tab.Screen>
     </Tab.Navigator>
@@ -79,7 +79,7 @@ function MyRegisterId() {
     <Tab.Navigator screenOptions={{ tabBarStyle: { display: 'none' } }}>
       <Tab.Screen
         name="RegisterMail"
-        component={registerId}
+        component={RegisterId}
         options={{ headerShown: false }}
       ></Tab.Screen>
     </Tab.Navigator>
@@ -91,7 +91,7 @@ function MyRegisterScanFace() {
     <Tab.Navigator screenOptions={{ tabBarStyle: { display: 'none' } }}>
       <Tab.Screen
         name="registerScanFace"
-        component={registerScanFace}
+        component={RegisterScanFace}
         options={{ headerShown: false }}
       ></Tab.Screen>
     </Tab.Navigator>
