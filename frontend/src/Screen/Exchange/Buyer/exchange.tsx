@@ -42,9 +42,9 @@ export const Exchange = () => {
       <BuyChoiceButton 
       onPress={()=>{
         //go to payment
-        navigation.navigate("Payment")}}
+        navigation.navigate("Buyer")}}
       >Press for Buyer</BuyChoiceButton>
-      <SellChoiceButton onPress={()=>{alert("List")}}>Press for End User</SellChoiceButton>
+      <SellChoiceButton onPress={()=>{navigation.navigate("EndUser")}}>Press for End User</SellChoiceButton>
       
       </ImageBackground>
     
