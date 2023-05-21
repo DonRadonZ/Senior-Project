@@ -15,7 +15,7 @@ import { useNavigation } from "@react-navigation/native";
 import { StackNavigationProp } from "@react-navigation/stack";
 import { RootStackParams } from "../../../App";
 
-export const Unlock = () => {
+export const SetOTP = () => {
   const navigation = useNavigation<StackNavigationProp<RootStackParams>>()
   const testPassword = "123456";
   const [password, setPassword] = useState("");
@@ -137,7 +137,7 @@ export const Unlock = () => {
         />
       </View>
       <View style={{ paddingBottom: 25 }}>
-        <FontAwesome5 name={lock} color="#333333" size={30} />
+        <Text>Set your password</Text>
       </View>
       <View
         style={{
@@ -248,7 +248,7 @@ export const Unlock = () => {
         </TouchableOpacity>
       </View>
       <View>
-        <Text>Please enter your password</Text>
+        
       </View>
     </ImageBackground>
   );
