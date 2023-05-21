@@ -10,14 +10,15 @@ interface Props{
 
 import { ProfileButtonProps } from "./types";
 import { useNavigation } from "@react-navigation/core";
+import { TouchableOpacity } from "react-native";
 
 
 const ReportButton:FunctionComponent<ProfileButtonProps> = (props) => {
   const navigation = useNavigation()
   return(
-    <Pressable 
+    <TouchableOpacity 
     style={Buttonstyles.ProfileButtonContainer} onPress={props.onPress}
-     ><Text style={Buttonstyles.ChoiceText}>{props.children}</Text></Pressable>
+     ><Text style={Buttonstyles.ChoiceText}>{props.children}</Text></TouchableOpacity>
   );
 }
   export default ReportButton;
