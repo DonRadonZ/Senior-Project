@@ -33,6 +33,7 @@ import { RegisterScanFace } from "./src/Screen/Register/registerScanFace";
 import { Unlock } from "./src/Screen/Unlock/Unlock";
 
 export type RootStackParams = {
+  Home: any;
   Exchange: any;
   Buyer: any;
   Payment: any;
