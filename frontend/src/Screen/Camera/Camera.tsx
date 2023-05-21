@@ -81,7 +81,7 @@ export const EndConfirm = () => {
                 style={{
                     position: 'absolute',
                     flexDirection: 'row',
-                    justifyContent: 'space-around',
+                    justifyContent: 'flex-start',
                     width: ScreenWidth,
                     alignItems: 'flex-start',
             }}
