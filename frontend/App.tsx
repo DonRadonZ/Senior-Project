@@ -16,7 +16,7 @@ import Payment from './src/Screen/Exchange/Buyer/payment';
 import { createStackNavigator } from '@react-navigation/stack';
 import { colors } from './src/Components/Colors/colors';
 import ConfirmationPage from './src/Screen/Exchange/Buyer/confirmation';
-import EndUserfile from './src/Screen/Exchange/EndUser/SentPic';
+import {EndUserFile} from './src/Screen/Exchange/EndUser/SentPic';
 import BuyList from "./src/Screen/Exchange/Buyer/Order";
 import EndList from "./src/Screen/Exchange/EndUser/Order";
 import EndOrder from "./src/Screen/Exchange/EndUser/endresult";
@@ -25,6 +25,8 @@ import RegisterSuccess from "./src/Screen/Register/successstatus";
 import { SetOTP } from "./src/Screen/setOTP/otp";
 import { VerifiedOTP } from "./src/Screen/setOTP/verifiedotp";
 import { RegisterVerified } from "./src/Screen/Register/registerVerified";
+import { Wait } from "./src/Screen/Status/waitstatus";
+import ReceiverPage from "./src/Screen/Exchange/Buyer/receiver";
 
 
 //icon
@@ -33,6 +35,8 @@ import { RegisterMail } from "./src/Screen/Register/registerMail";
 import { RegisterId } from "./src/Screen/Register/registerId";
 import { RegisterScanFace } from "./src/Screen/Register/registerScanFace";
 import { Unlock } from "./src/Screen/Unlock/Unlock";
+import OwnSlipPage from "./src/Screen/Exchange/Buyer/ownslip";
+import ReceiverSlipPage from "./src/Screen/Exchange/Buyer/receiverslip";
 
 export type RootStackParams = {
   Home: any;
@@ -50,6 +54,9 @@ export type RootStackParams = {
   MyRegisterScanFace: any;
   RegisterSuccess:any,
   MyLogin:any;
+  ReceiverPage: any;
+  MySlip: any;
+  ReceiverSlip: any;
 };
 
 const RootStack = createStackNavigator<RootStackParams>();
@@ -188,7 +195,7 @@ export function Service(){
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="OTPverified">
+      <Stack.Navigator initialRouteName="MyLogin">
         <Stack.Screen
           name="MyLogin"
           component={MyLogin}
@@ -244,13 +251,17 @@ export default function App() {
           component={MyTabs}
           options={{ headerShown: false }}
         />
-
+        <Stack.Screen name="Wait" component={Wait} />
         <Stack.Screen name="Buyer" component={BuyList} />
         <Stack.Screen name="EndUser" component={EndList} />
         <Stack.Screen name="Payment" component={Payment} />
         <Stack.Screen name="Confirmation" component={ConfirmationPage} />
         <Stack.Screen name="EndOrder" component={EndOrder} />
-        <Stack.Screen name="EndUserFile" component={EndUserfile} />
+        <Stack.Screen name="ReceiverPage" component={ReceiverPage} />
+        <Stack.Screen name="EndUserFile" component={EndUserFile} />
+        <Stack.Screen name="MySlip" component={OwnSlipPage} options={{ headerShown: false }} />
+        <Stack.Screen name="ReceiverSlip" component={ReceiverSlipPage}/>
+        
       </Stack.Navigator>
     </NavigationContainer>
   );
