@@ -27,6 +27,17 @@ const Buttonstyles = StyleSheet.create({
         marginTop: ScreenHeight*0.4,
         
         
+    },ReturnButtonContainer: {
+        justifyContent: "center",
+        backgroundColor: colors.navyblue,
+        padding: 15,
+        width: 70,
+        height: 70,
+        borderRadius: 35,
+        alignItems:"center",
+        marginTop: 20,
+        
+        
     },
     CheckoutButtonContainer: {
         flexDirection: "column",
