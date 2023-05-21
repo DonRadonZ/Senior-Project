@@ -20,8 +20,9 @@ import EndUserfile from './src/Screen/Exchange/EndUser/SentPic';
 import BuyList from "./src/Screen/Exchange/Buyer/Order";
 import EndList from "./src/Screen/Exchange/EndUser/Order";
 import EndOrder from "./src/Screen/Exchange/EndUser/endresult";
-import UseCamera from "./src/Screen/Camera/Camera";
+import { EndConfirm } from "./src/Screen/Camera/Camera";
 import RegisterSuccess from "./src/Screen/Register/successstatus";
+
 
 
 //icon
@@ -134,7 +135,7 @@ function MyTabs() {
           }}/>
       <Tab.Screen name="Balance" component={Balance}options={{headerShown:false,
         tabBarIcon: ({ color, size }) => <FontAwesome5 name="wallet" color={color} size={size} />,}} />
-      <Tab.Screen name="QRScan" component={UseCamera
+      <Tab.Screen name="QRScan" component={EndConfirm
       }options={{headerShown:false,
         tabBarIcon: ({ color, size }) => <FontAwesome5 name="qrcode" color={color} size={size} />,
       }} />
