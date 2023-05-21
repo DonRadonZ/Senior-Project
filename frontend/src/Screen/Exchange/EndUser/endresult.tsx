@@ -21,7 +21,7 @@ const EndOrder = ({
     style={styles.container}
     resizeMode="cover"
       >
-          <AntDesign name="checkcircleo" size={72} color="black" />
+          <AntDesign name="checkcircleo" size={72} color= {colors.orange} />
     <View style={styles.container}>
       <Text style={styles.confirmationText}>
         Account ID: 
