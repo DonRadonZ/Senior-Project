@@ -32,10 +32,10 @@ const ConfirmationPage = ({
     >
     <Box style={styles.slipcontainer}>
       <Text style={styles.confirmationText}>
-        Account Number: 
+        Account Number: 123-456-7890
       </Text>
-      <Text style={styles.confirmationText}>Amount: 5555</Text>
-      <Text style={styles.confirmationText}>Note: </Text>
+      <Text style={styles.confirmationText}>Amount: 3000</Text>
+      <Text style={styles.confirmationText}>Note: Help </Text>
       </Box>
       <ProfileButton onPress={()=>{navigation.navigate('Buyer')}} >Continue</ProfileButton>
     </ImageBackground>
