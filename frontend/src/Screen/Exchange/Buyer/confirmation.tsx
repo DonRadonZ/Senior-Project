@@ -1,6 +1,6 @@
 import React from "react";
 import { Text, View, StyleSheet, ImageBackground } from "react-native";
-import { Box } from "@react-native-material/core";
+import { Button,Box } from "@react-native-material/core";
 
 import styles from "./style";
 
@@ -37,6 +37,7 @@ const ConfirmationPage = ({
       <Text style={styles.confirmationText}>Amount: 3000</Text>
       <Text style={styles.confirmationText}>Note: Help </Text>
       </Box>
+      
       <ProfileButton onPress={()=>{navigation.navigate('Buyer')}} >Continue</ProfileButton>
     </ImageBackground>
   );
