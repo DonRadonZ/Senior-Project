@@ -22,7 +22,9 @@ import EndList from "./src/Screen/Exchange/EndUser/Order";
 import EndOrder from "./src/Screen/Exchange/EndUser/endresult";
 import { EndConfirm } from "./src/Screen/Camera/Camera";
 import RegisterSuccess from "./src/Screen/Register/successstatus";
-
+import { SetOTP } from "./src/Screen/setOTP/otp";
+import { VerifiedOTP } from "./src/Screen/setOTP/verifiedotp";
+import { RegisterVerified } from "./src/Screen/Register/registerVerified";
 
 
 //icon
@@ -127,6 +129,18 @@ function MyUnlock() {
   );
 }
 
+function MysetOTP() {
+  return (
+    <Tab.Navigator screenOptions={{ tabBarStyle: { display: 'none' } }}>
+      <Tab.Screen
+        name="setOTP"
+        component={SetOTP}
+        options={{ headerShown: false }}
+      ></Tab.Screen>
+    </Tab.Navigator>
+  );
+}
+
 
 function MyTabs() {
   return (
@@ -148,7 +162,7 @@ function MyTabs() {
       {/* <RootStack.Screen name="Payment" component={Payment} options={{headerShown:false}} /> */}
       <Tab.Screen
         name="Profile"
-        component={EndOrder}
+        component={Profile}
         options={{
           headerShown: false,
           tabBarIcon: ({ color, size }) => (
@@ -174,7 +188,7 @@ export function Service(){
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="MyLogin">
+      <Stack.Navigator initialRouteName="OTPverified">
         <Stack.Screen
           name="MyLogin"
           component={MyLogin}
@@ -201,6 +215,11 @@ export default function App() {
           options={{ headerShown: false }}
         />
         <Stack.Screen
+          name="MyRegisterVerified"
+          component={RegisterVerified}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
           name="RegisterSuccess"
           component={RegisterSuccess}
           options={{ headerShown: false }}
@@ -211,10 +230,21 @@ export default function App() {
           options={{ headerShown: false }}
         />
         <Stack.Screen
+          name="setOTP"
+          component={SetOTP}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="OTPverified"
+          component={VerifiedOTP}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
           name="MainPage"
           component={MyTabs}
           options={{ headerShown: false }}
         />
+
         <Stack.Screen name="Buyer" component={BuyList} />
         <Stack.Screen name="EndUser" component={EndList} />
         <Stack.Screen name="Payment" component={Payment} />
