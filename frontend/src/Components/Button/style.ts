@@ -16,7 +16,48 @@ const Buttonstyles = StyleSheet.create({
         marginBottom: 40,
         
         
-    },AddNewButtonContainer: {
+    },
+    CancelButtonContainer: {
+        flexDirection: "column",
+        justifyContent: "center",
+        backgroundColor: colors.red,
+        padding: 15,
+        width: 200,
+        height: 50,
+        borderRadius: 15,
+        alignItems: "center",
+        marginTop:20,
+        marginBottom: 40,
+        
+        
+    },
+    ReportButtonContainer: {
+        flexDirection: "column",
+        justifyContent: "center",
+        backgroundColor: colors.red,
+        padding: 15,
+        width: 200,
+        height: 50,
+        borderRadius: 15,
+        alignItems: "center",
+        marginTop:20,
+        marginBottom: 40,
+        
+        
+    },
+    ContinueButtonContainer: {
+        flexDirection: "column",
+        justifyContent: "center",
+        backgroundColor: colors.malibu1,
+        padding: 15,
+        width: 200,
+        height: 50,
+        borderRadius: 15,
+        alignItems: "center",
+        marginTop:20,
+        //marginBottom: 40,
+        },
+    AddNewButtonContainer: {
         justifyContent: "center",
         backgroundColor: colors.navyblue,
         padding: 15,
