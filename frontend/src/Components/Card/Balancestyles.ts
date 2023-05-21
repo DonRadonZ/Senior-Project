@@ -72,6 +72,24 @@ const Balancestyles = StyleSheet.create({
         position:"relative",
         fontSize: sizes.Regular,
     },
+    OrderPendingText: {
+        color: colors.orange,
+        textAlign: "left",
+        position:"relative",
+        fontSize: sizes.Regular,
+    },
+    OrderCompleteText: {
+        color: colors.green,
+        textAlign: "left",
+        position:"relative",
+        fontSize: sizes.Regular,
+    },
+    OrderCancelText: {
+        color: colors.red,
+        textAlign: "left",
+        position:"relative",
+        fontSize: sizes.Regular,
+    },
     OrderTimeStampText: {
         color: colors.black,
         textAlign:"left",
