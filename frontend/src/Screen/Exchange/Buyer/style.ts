@@ -10,9 +10,23 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
   },
+  owncontainer: {
+    flex: 1,
+    padding: 25,
+    paddingTop: 40,
+    justifyContent: "center",
+    //alignItems: "center",
+  },
+  receivercontainer: {
+    flex: 1,
+    padding: 25,
+    paddingTop: 40,
+    //justifyContent: "center",
+    alignItems: "center",
+  },
   slipcontainer: {
-     flexDirection: "column",
-        justifyContent: "center",
+     flexDirection: "row",
+        //justifyContent: "center",
         backgroundColor: colors.white,
         padding: 20,
         width: ScreenWidth,
@@ -49,10 +63,27 @@ const styles = StyleSheet.create({
     color: colors.white,
     fontSize: 18,
   },
+  
   confirmationText: {
     fontSize: 18,
     marginBottom: 50,
   },
+  mainText: {
+    fontSize: 18,
+    marginBottom: 50,
+  },
+  strech: {
+    width: 300,
+    height: 600,
+    marginLeft:20
+  },
+  receive: {
+    width: 200,
+    height: 400,
+    //marginLeft: 70,
+    marginBottom:20
+    
+  }
 
 });
 
