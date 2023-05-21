@@ -37,7 +37,7 @@ const EndOrder = ({
         
       <ResultCard/>
       
-      <ReturnButton children={undefined} onPress={()=>{navigation.navigate(('EndOrder'))}}/>
+      <ReturnButton children={undefined} onPress={()=>{navigation.navigate(('EndUser'))}}/>
       
     </ImageBackground>
   );
