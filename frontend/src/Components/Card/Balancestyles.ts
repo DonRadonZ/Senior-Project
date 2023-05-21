@@ -28,6 +28,19 @@ const Balancestyles = StyleSheet.create({
         alignItems:"flex-start",
         marginBottom: 20
     },
+    ResultContainer: {
+        flexDirection: "column",
+        justifyContent: "center",
+        backgroundColor: colors.white,
+        padding: 20,
+        width: ScreenWidth*0.9,
+        height: ScreenHeight*0.4,
+        borderWidth:2,
+        borderRadius: 15,
+        alignItems: "flex-start",
+        marginTop:20,
+        marginBottom: 40
+    },
     paymentContainer: {
         flexDirection: "column",
         justifyContent: "center",
@@ -69,6 +82,23 @@ const Balancestyles = StyleSheet.create({
         textAlign:"left",
         fontSize: sizes.SmallText, 
         marginBottom: 15
+    },
+    IDText: {
+        color: colors.black,
+        textAlign:"left",
+        fontSize: sizes.Regular, 
+        marginBottom: 50
+    },DateText: {
+        color: colors.black,
+        textAlign:"left",
+        fontSize: sizes.Regular, 
+        marginTop: 30,
+        marginBottom: 20
+    },TimeText: {
+        color: colors.black,
+        textAlign:"left",
+        fontSize: sizes.Regular, 
+        marginTop: 50
     },
     TimeStampText: {
         color: colors.black,
