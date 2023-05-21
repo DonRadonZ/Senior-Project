@@ -17,13 +17,16 @@ const OrderCardA = () => {
         <Text
           style={BalanceView.BalanceText}
         >
-          Order1
+          Order:1
         </Text>
         <Text style={BalanceView.TimeStampText}>15/5/2023</Text>
       </View>
+      <View>
       <TouchableOpacity style={{
         alignItems: "center"
-      }} onPress={()=>{navigation.navigate('EndUserFile')}}><Text style={BalanceView.OrderViewText}>View</Text></TouchableOpacity>
+        }} onPress={() => { navigation.navigate('EndUserFile') }}><Text style={BalanceView.OrderViewText}>View</Text></TouchableOpacity>
+      <Text style={BalanceView.OrderPendingText}>Pending</Text>
+      </View>
     </Box>
   );
 }

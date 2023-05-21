@@ -9,21 +9,21 @@ import { StackNavigationProp } from "@react-navigation/stack";
 import { RootStackParams } from "../../../App";
 import { ActivityIndicator } from "react-native-paper";
 
-const OrderCardB = () => {
+const OrderCardC = () => {
   const navigation = useNavigation<StackNavigationProp<RootStackParams>>()
   return(
     <Box style={BalanceView.orderContainer}>
       <View style={{}}>
-    <Text style={BalanceView.BalanceText}>Order:2</Text>
+    <Text style={BalanceView.BalanceText}>Order:3</Text>
         
         <Text style={BalanceView.TimeStampText}>15/5/2023</Text>
       </View>
       <View>
       <TouchableOpacity ><Text style={BalanceView.OrderViewText}>View</Text></TouchableOpacity>
-      <Text style={BalanceView.OrderCompleteText}>Complete</Text>
+      <Text style={BalanceView.OrderCancelText}>Cancel</Text>
     </View>
   </Box>
 );
 }
 
-export default OrderCardB;
+export default OrderCardC;
