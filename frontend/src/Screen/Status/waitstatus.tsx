@@ -40,7 +40,7 @@ export const Wait = () => {
     style={styles.container}
     resizeMode="cover"
     >
-      <AntDesign name="exclamationcircleo" size={72} color="black" />
+      <AntDesign name="exclamationcircleo" size={108} color="black" style={{marginBottom:75}} />
       <CheckButton 
       onPress={()=>{
         //go to payment
