@@ -43,17 +43,17 @@ export const EndConfirm = () => {
         if (!assets || !(assets.length > 0)) {
             return;
         }
-        //         const params: { image?: string; images?: string[]; video?: string } = {};
-        //     if (assets.length === 1) {
-        //       const field = assets[0].type?.startsWith("video") ? "video" : "image";
-        //       params[field] = assets[0].uri;
-        //     } else if (assets.length > 1) {
-        //       params.images = assets.map((asset) => asset.uri);
-        //     }
-        //     //navigate("CreatePost", params);
-        //   };
-        //     
-    };
+         const params: { image?: string; images?: string[]; video?: string } = {};
+        if (assets.length === 1) {
+            const field = assets[0].type?.startsWith("video") ? "video" : "image";
+           params[field] = assets[0].uri;
+             } else if (assets.length > 1) {
+               params.images = assets.map((asset) => asset.uri);
+             }
+             //navigate("CreatePost", params);
+         };
+             
+    
 
     if (!permission?.granted) {
         requestPermission();

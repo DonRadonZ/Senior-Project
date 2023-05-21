@@ -147,7 +147,7 @@ function MyTabs() {
       {/* <RootStack.Screen name="Payment" component={Payment} options={{headerShown:false}} /> */}
       <Tab.Screen
         name="Profile"
-        component={Profile}
+        component={EndOrder}
         options={{
           headerShown: false,
           tabBarIcon: ({ color, size }) => (
