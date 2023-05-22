@@ -16,18 +16,35 @@ import { RegisterVerifiedScreen } from "../Screen/Register/registerVerified";
 import { RootStackParams } from "./navigator-type";
 import { BottomTab } from "./bottom-tab";
 
-//payment
+//buyer
+import { ListScreen } from "../Screen/Exchange/Buyer/buyerlist";
+import { PaymentScreen } from "../Screen/Exchange/Buyer/payment";
+import { BuyerConfirmationScreen } from "../Screen/Exchange/Buyer/confirmation";
+import { ReConfirmationScreen } from "../Screen/Exchange/Buyer/reconfirm";
+import { BuyerResultScreen } from "../Screen/Exchange/Buyer/buyerresult";
+import { BuyerReportScreen } from "../Screen/Exchange/Buyer/buyerreport";
+import { BuyerStatusScreen } from "../Screen/Exchange/Buyer/buyerstatus";
+
+
+
+//receiver
 
 
 //API
 
 
-//ExchangeScreen
+
 
 
 const RootStack = createNativeStackNavigator<RootStackParams>();
 
 
 export const AppNavigator = () => {
-    
+    <>
+        <RootStack.Screen
+            options={{ headerShown: false }}
+            name="Tab"
+            component={BottomTab}
+        />
+    </>
 }

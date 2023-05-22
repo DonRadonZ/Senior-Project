@@ -17,7 +17,7 @@ interface ConfirmationPageProps {
   description: string;
 }
 
-export const ConfirmationScreen = ({
+export const BuyerConfirmationScreen = ({
   // accountNumber,
   // amount,
   // description,

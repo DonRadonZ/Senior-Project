@@ -15,7 +15,7 @@ import { ProfileScreen } from './src/Screen/Profile/profile';
 import {PaymentScreen} from './src/Screen/Exchange/Buyer/payment';
 import { createStackNavigator } from '@react-navigation/stack';
 import { colors } from './src/Components/Colors/colors';
-import {ConfirmationScreen} from './src/Screen/Exchange/Buyer/confirmation';
+import {BuyerConfirmationScreen} from './src/Screen/Exchange/Buyer/confirmation';
 import {ReceiverSentFileScreen} from './src/Screen/Exchange/Receiver/SentPic';
 import {ListScreen} from "./src/Screen/Exchange/Buyer/buyerlist";
 import {ReceiverListScreen} from "./src/Screen/Exchange/Receiver/receiverlist";
@@ -262,7 +262,7 @@ export default function App() {
         <Stack.Screen name="Buyer" component={ListScreen} />
         <Stack.Screen name="EndUser" component={ReceiverListScreen} />
         <Stack.Screen name="Payment" component={PaymentScreen} />
-        <Stack.Screen name="Confirmation" component={ConfirmationScreen} />
+        <Stack.Screen name="Confirmation" component={BuyerConfirmationScreen} />
         <Stack.Screen name="EndOrder" component={ReceiverResultScreen} />
         <Stack.Screen name="ReceiverPage" component={BuyerStatusScreen} />
         <Stack.Screen name="EndUserFile" component={ReceiverSentFileScreen} />
