@@ -1,10 +1,9 @@
 import React from 'react';
 import { ImageBackground,TouchableOpacity, View,Text} from 'react-native'; 
-import { LinearGradient } from 'expo-linear-gradient';
-import { colors } from '../../Components/Colors/colors';
+
 import ProfileButton from '../../Components/Button/ProfileButton';
+import { ProfileHeader } from './profile-header';
 import { Avatar } from '@react-native-material/core';
-// import MainContainer from '../../component/Container/MainContainer';
 
 import styles from '../../Components/Container/Backgroundstyle';
 import { ScreenWidth } from '../../Components/shared';
@@ -16,21 +15,18 @@ export const ProfileScreen = () =>{
       style={styles.profilecontainer}
       resizeMode="cover"
         >
-            <Avatar label="Pimlapat Nakwijit" size={75} />
-            <View
-                style={{
-                    left: 100,
-                    bottom:50
-                }} 
-            >
-            
-                
-                <Text style={{ fontSize: 16 }}>Name: Pimlapat Nakwijit
-                    
-                </Text>
-                 <Text style={{ fontSize: 16 }}> ID:708503922</Text>
-
-            </View>
+            <View style={{ paddingHorizontal: 3 }}>
+        <View style={{flexDirection:'row',alignItems:'center',justifyContent:"space-between"}}>
+            <Avatar label="Pimlapat Nakwijit" size={20} color='green' />
+            <Text style={{fontFamily:"bold"}}>Profile</Text>
+        </View>
+        <View style={{alignItems:'center'}}>
+            <Text style={{fontFamily:"bold"}}>Pimlapat Nakwijit</Text>
+        </View>
+        <View style={{alignItems:'center'}}>
+            <Text style={{fontFamily:"bold"}}>ID: 708503922</Text>
+        </View>
+        </View>
 
            
             <ProfileButton onPress={()=>{}}>Add Account</ProfileButton>
