@@ -6,12 +6,12 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 //screen
 import { Login } from "./src/Screen/Login/login";
 import { Register } from "./src/Screen/Register/register";
-import { Home } from "./src/Screen/Home/home";
-import { Balance } from "./src/Screen/Balance/balance";
-import { QRScan } from "./src/Screen/QRScan/qrscan";
-import { Exchange } from "./src/Screen/Exchange/Buyer/exchange";
-//import ExchangeScreen from './src/Screen/Exchange';
-import { Profile } from './src/Screen/Profile/profile';
+import { HomeScreen } from "./src/Screen/Home/home";
+import { BalanceScreen } from "./src/Screen/Balance/balance";
+import { QRScanScreen } from "./src/Screen/QRScan/qrscan";
+import { ExchangeScreen } from "./src/Screen/Exchange/exchange";
+
+import { ProfileScreen } from './src/Screen/Profile/profile';
 import Payment from './src/Screen/Exchange/Buyer/payment';
 import { createStackNavigator } from '@react-navigation/stack';
 import { colors } from './src/Components/Colors/colors';
@@ -27,6 +27,7 @@ import { VerifiedOTP } from "./src/Screen/setOTP/verifiedotp";
 import { RegisterVerified } from "./src/Screen/Register/registerVerified";
 import { Wait } from "./src/Screen/Status/waitstatus";
 import ReceiverPage from "./src/Screen/Exchange/Buyer/receiver";
+import ReportPage from "./src/Screen/Exchange/Buyer/Report";
 
 
 //icon
@@ -37,6 +38,8 @@ import { RegisterScanFace } from "./src/Screen/Register/registerScanFace";
 import { Unlock } from "./src/Screen/Unlock/Unlock";
 import OwnSlipPage from "./src/Screen/Exchange/Buyer/ownslip";
 import ReceiverSlipPage from "./src/Screen/Exchange/Buyer/receiverslip";
+import BuyerOrder from "./src/Screen/Exchange/Buyer/buyerresult";
+import ReConfirmationPage from "./src/Screen/Exchange/Buyer/confirmagain";
 
 export type RootStackParams = {
   Home: any;
@@ -57,6 +60,8 @@ export type RootStackParams = {
   ReceiverPage: any;
   MySlip: any;
   ReceiverSlip: any;
+  Report: any;
+  BuyerResult: any;
 };
 
 const RootStack = createStackNavigator<RootStackParams>();
@@ -152,16 +157,16 @@ function MysetOTP() {
 function MyTabs() {
   return (
     <Tab.Navigator>
-      <Tab.Screen name="Home" component={Home} options={{headerShown:false,
+      <Tab.Screen name="Home" component={HomeScreen} options={{headerShown:false,
           tabBarIcon: ({ color, size }) => <FontAwesome5 name="home" color={color} size={size} />,
           }}/>
-      <Tab.Screen name="Balance" component={Balance}options={{headerShown:false,
+      <Tab.Screen name="Balance" component={BalanceScreen} options={{headerShown:false,
         tabBarIcon: ({ color, size }) => <FontAwesome5 name="wallet" color={color} size={size} />,}} />
       <Tab.Screen name="QRScan" component={EndConfirm
       }options={{headerShown:false,
         tabBarIcon: ({ color, size }) => <FontAwesome5 name="qrcode" color={color} size={size} />,
       }} />
-      <Tab.Screen name="Exchange" component={Exchange} 
+      <Tab.Screen name="Exchange" component={ExchangeScreen} 
       options={{headerShown:false,
         tabBarIcon: ({ color, size }) => <FontAwesome5 name="exchange-alt" color={color} size={size} />,
       }} 
@@ -169,7 +174,7 @@ function MyTabs() {
       {/* <RootStack.Screen name="Payment" component={Payment} options={{headerShown:false}} /> */}
       <Tab.Screen
         name="Profile"
-        component={Profile}
+        component={ProfileScreen}
         options={{
           headerShown: false,
           tabBarIcon: ({ color, size }) => (
@@ -195,7 +200,7 @@ export function Service(){
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="MyLogin">
+      <Stack.Navigator initialRouteName="MyTab">
         <Stack.Screen
           name="MyLogin"
           component={MyLogin}
@@ -261,7 +266,9 @@ export default function App() {
         <Stack.Screen name="EndUserFile" component={EndUserFile} />
         <Stack.Screen name="MySlip" component={OwnSlipPage} options={{ headerShown: false }} />
         <Stack.Screen name="ReceiverSlip" component={ReceiverSlipPage}/>
-        
+        <Stack.Screen name="Report" component={ReportPage} />
+        <Stack.Screen name="BuyerResult" component={BuyerOrder} />
+        <Stack.Screen name="ReConfirm" component={ReConfirmationPage} />
       </Stack.Navigator>
     </NavigationContainer>
   );
