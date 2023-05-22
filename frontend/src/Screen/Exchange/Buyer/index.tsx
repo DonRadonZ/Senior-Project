@@ -1,7 +1,7 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
-import { Exchange } from './exchange';
+import { Exchange } from '../exchange';
 import Payment from './payment';
 import { useNavigation } from '@react-navigation/native';
 
