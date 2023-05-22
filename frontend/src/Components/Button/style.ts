@@ -56,6 +56,17 @@ const Buttonstyles = StyleSheet.create({
         alignItems: "center",
         marginTop:20,
         //marginBottom: 40,
+        },ChooseFileButtonContainer: {
+        flexDirection: "row",
+        justifyContent: "center",
+        backgroundColor: colors.malibu1,
+        padding: 15,
+        width: 200,
+        height: 60,
+        borderRadius: 15,
+        alignItems: "center",
+        marginTop:20,
+        marginBottom: 200,
         },
     AddNewButtonContainer: {
         justifyContent: "center",
