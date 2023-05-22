@@ -62,6 +62,7 @@ export type RootStackParams = {
   ReceiverSlip: any;
   Report: any;
   BuyerResult: any;
+  ReConfirm: undefined;
 };
 
 const RootStack = createStackNavigator<RootStackParams>();
