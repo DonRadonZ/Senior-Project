@@ -46,7 +46,7 @@ const ReceiverPage = ({
       </Box>
       {/* <Button title="Pending" loading disabled /> */}
       <ExamineButton onPress={()=>{navigation.navigate("ReceiverSlip")}} >Next</ExamineButton> 
-      {/* <CancelButton onPress={()=>{}}>cancel send</CancelButton> */}
+      {/* <CancelButton onPress={()=>{navigation.navigate('Report')}}>cancel send</CancelButton> */}
     </ImageBackground>
   );
 };
