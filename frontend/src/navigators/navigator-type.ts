@@ -22,7 +22,7 @@ export type BottomTabTypes = {
 }
 
 export type AuthStackType = {
-    SignIn: undefined,
+    Login: undefined,
     Signup: undefined,
     ConfirmEmail: { email?: string },
     ForgotPassword: undefined,
