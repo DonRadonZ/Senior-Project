@@ -17,18 +17,21 @@ import { RootStackParams } from "./navigator-type";
 import { BottomTab } from "./bottom-tab";
 
 //buyer
-import { ListScreen } from "../Screen/Exchange/Buyer/buyerlist";
+import { BuyerListScreen } from "../Screen/Exchange/Buyer/buyerlist";
 import { PaymentScreen } from "../Screen/Exchange/Buyer/payment";
 import { BuyerConfirmationScreen } from "../Screen/Exchange/Buyer/confirmation";
 import { ReConfirmationScreen } from "../Screen/Exchange/Buyer/reconfirm";
 import { BuyerResultScreen } from "../Screen/Exchange/Buyer/buyerresult";
 import { BuyerReportScreen } from "../Screen/Exchange/Buyer/buyerreport";
 import { BuyerStatusScreen } from "../Screen/Exchange/Buyer/buyerstatus";
-
+import { ReceiverSlipScreen } from "../Screen/Exchange/Buyer/receiverslip";
+import { BuyerSlipScreen } from "../Screen/Exchange/Buyer/buyerslip";
 
 
 //receiver
-
+import { ReceiverListScreen } from "../Screen/Exchange/Receiver/receiverlist";
+import { ReceiverReportScreen } from "../Screen/Exchange/Receiver/receiverreport";
+import { ReceiverResultScreen } from "../Screen/Exchange/Receiver/receiverresult";
 
 //API
 
