@@ -16,8 +16,8 @@ import {PaymentScreen} from './src/Screen/Exchange/Buyer/payment';
 import { createStackNavigator } from '@react-navigation/stack';
 import { colors } from './src/Components/Colors/colors';
 import {BuyerConfirmationScreen} from './src/Screen/Exchange/Buyer/confirmation';
-import {ReceiverSentFileScreen} from './src/Screen/Exchange/Receiver/SentPic';
-import {ListScreen} from "./src/Screen/Exchange/Buyer/buyerlist";
+import {ReceiverSentFileScreen} from './src/Screen/Exchange/Receiver/receiversent';
+import {BuyerListScreen} from "./src/Screen/Exchange/Buyer/buyerlist";
 import {ReceiverListScreen} from "./src/Screen/Exchange/Receiver/receiverlist";
 import {ReceiverResultScreen} from "./src/Screen/Exchange/Receiver/receiverresult";
 import { EndConfirm } from "./src/Screen/Camera/Camera";
@@ -192,7 +192,7 @@ export function Service(){
   return (
     <Stack.Navigator>
       <Stack.Screen name='Payment' component={PaymentScreen} />
-      <Stack.Screen name="BuyList" component={ListScreen} />
+      <Stack.Screen name="BuyList" component={BuyerListScreen} />
     </Stack.Navigator>
   )
 }
@@ -259,7 +259,7 @@ export default function App() {
           options={{ headerShown: false }}
         />
         <Stack.Screen name="Wait" component={Wait} />
-        <Stack.Screen name="Buyer" component={ListScreen} />
+        <Stack.Screen name="Buyer" component={BuyerListScreen} />
         <Stack.Screen name="EndUser" component={ReceiverListScreen} />
         <Stack.Screen name="Payment" component={PaymentScreen} />
         <Stack.Screen name="Confirmation" component={BuyerConfirmationScreen} />
