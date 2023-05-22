@@ -2,12 +2,12 @@ import React,{FunctionComponent} from 'react';
 import {TouchableOpacity,ImageBackground} from 'react-native'; 
 // import MainContainer from '../../component/Container/MainContainer';
 import { Text } from '@react-native-material/core';
-import { colors } from '../../../Components/Colors/colors';
+import { colors } from '../../Components/Colors/colors';
 import { LinearGradient } from 'expo-linear-gradient';
-import BuyChoiceButton from '../../../Components/Button/BuyChoiceButton';
-import SellChoiceButton from '../../../Components/Button/SellChoiceButton';
+import BuyChoiceButton from '../../Components/Button/BuyChoiceButton';
+import SellChoiceButton from '../../Components/Button/SellChoiceButton';
 
-import styles from '../../../Components/Container/Backgroundstyle';
+import styles from '../../Components/Container/Backgroundstyle';
 import { StackNavigationProp, createStackNavigator } from '@react-navigation/stack';
 //import { IStackScreenProps } from '../../Components/library/StackScreenProps';
 
@@ -15,7 +15,7 @@ import 'react-native-gesture-handler'
 
 //screen
 import { useNavigation } from '@react-navigation/native';
-import { RootStackParams } from '../../../../App';
+import { RootStackParams } from '../../../App';
 
 
 
@@ -26,7 +26,7 @@ const Stack = createStackNavigator()
 
 
 
-export const Exchange = () => {
+export const ExchangeScreen = () => {
   
   const navigation = useNavigation<StackNavigationProp<RootStackParams>>()
 
