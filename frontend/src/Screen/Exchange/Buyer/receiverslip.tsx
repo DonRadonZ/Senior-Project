@@ -20,7 +20,7 @@ interface ConfirmationPageProps {
   description: string;
 }
 
-const ReceiverSlipPage = ({
+export const ReceiverSlipScreen = ({
   // accountNumber,
   // amount,
   // description,
@@ -51,8 +51,3 @@ const ReceiverSlipPage = ({
     </ImageBackground>
   );
 };
-
-
-
-export default ReceiverSlipPage;
-

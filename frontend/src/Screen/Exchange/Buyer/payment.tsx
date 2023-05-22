@@ -29,7 +29,7 @@ interface ConfirmationPageProps {
 }
 
 
-const Payment = () => {
+export const PaymentScreen = () => {
   const [balance, setBalance] = useState("");
   const [senderNumber, setSenderNumber] = useState("");
   const [accountNumber, setAccountNumber] = useState("");
@@ -91,4 +91,3 @@ const Payment = () => {
 
 
 
-export default Payment
