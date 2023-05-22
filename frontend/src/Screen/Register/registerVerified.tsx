@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import {
   ImageBackground,
   View,
-  TextInput,
   Button,
   StyleSheet,
   Image,
@@ -10,6 +9,7 @@ import {
   Alert,
   TouchableOpacity
 } from "react-native";
+import { TextInput } from 'react-native-paper';
 import { FontAwesome5 } from "@expo/vector-icons";
 import { useNavigation } from '@react-navigation/native';
 import { StackNavigationProp } from '@react-navigation/stack';
@@ -23,21 +23,21 @@ export const RegisterVerified = () => {
     const [code, setCode] = useState("");
     const[pinReady,setPinReady] = useState(false);
     const [password, setPassword] = useState("");
-    const codeDigitsArray = new Array(length).fill(0);
+    //const codeDigitsArray = new Array(length).fill(0);
 
-  useEffect(() => {
-    if (password.length === 4) {
-      if (password === testPassword) {
+  // useEffect(() => {
+  //   if (password.length === 4) {
+  //     if (password === testPassword) {
         
-        //Next Solution
-        () =>{navigation.navigate('Home')}
-      } else {
-        console.log("Password Invalid");
-      }
-      setCount(0);
-      setPassword("");
-    }
-  }, [password]);
+  //       //Next Solution
+  //       () =>{navigation.navigate('Home')}
+  //     } else {
+  //       console.log("Password Invalid");
+  //     }
+  //     setCount(0);
+  //     setPassword("");
+  //   }
+  // }, [password]);
 
   return (
     <ImageBackground
@@ -59,11 +59,45 @@ export const RegisterVerified = () => {
             paddingHorizontal: 60,
           }}
         >
+
+          
           <Text style={{ fontSize: 18, fontWeight: "bold" }}>
             Enter Vertification Code
-                  </Text>
-                  
-             <Text style={{ fontSize: 14, marginTop:ScreenHeight*0.25}}>
+          </Text>
+  
+            <View style={{flexDirection:'row',marginTop:40}}>
+            <View
+            style={styles.TextInputView}>
+            <TextInput
+              maxLength={1}
+              style={styles.TextInputText}
+            />
+          </View>
+          <View
+            style={styles.TextInputView}>
+            <TextInput
+              maxLength={1}
+                style={styles.TextInputText}
+                //keyboardType='num-pad'
+            />
+          </View>
+          <View
+            style={styles.TextInputView}>
+            <TextInput
+              maxLength={1}
+              style={styles.TextInputText}
+            />
+          </View>
+          <View
+            style={styles.TextInputView}>
+            <TextInput
+              maxLength={1}
+              style={styles.TextInputText}
+            />
+            </View>
+          </View>
+  
+             <Text style={{ fontSize: 14, marginTop:ScreenHeight*0.1}}>
             SMS was sent to (+66)
                   </Text>
                   <Text style={{ fontSize: 14}}>
@@ -73,6 +107,7 @@ export const RegisterVerified = () => {
         
 
         <View style={styles.create_struc}>
+          <Button color={colors.malibu1} title="Continue" onPress={() => { navigation.navigate('MyLogin') }} />
           <Button color={colors.black} title="Later" onPress={()=>{navigation.navigate('MyLogin')}} />
         </View>
       </View>
@@ -84,6 +119,11 @@ const styles = StyleSheet.create({
   horizontalLine: {
     borderBottomColor: "#ccc",
     borderBottomWidth: 1,
+  },
+  TextInputView: {
+    //borderBottomWidth: 1,
+    width: 50,
+    marginLeft:10
   },
   logo: {
     width: 150,
@@ -101,6 +141,8 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: "bold",
     marginBottom: 24,
+  }, TextInputText: {
+    fontSize:16
   },
   container: {
     flex: 1,
