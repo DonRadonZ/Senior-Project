@@ -21,11 +21,23 @@ const styles = StyleSheet.create({
     flex: 1,
     padding: 25,
     paddingTop: 40,
-    //justifyContent: "center",
+    justifyContent: "center",
     alignItems: "center",
   },
   slipcontainer: {
-     flexDirection: "row",
+     flexDirection: "column",
+        //justifyContent: "center",
+        backgroundColor: colors.white,
+        padding: 20,
+        width: ScreenWidth,
+        height: ScreenHeight*0.4,
+        borderWidth:2,
+        borderRadius: 15,
+        alignItems:"flex-start",
+        marginBottom: 40
+
+  }, Reportcontainer: {
+     flexDirection: "column",
         //justifyContent: "center",
         backgroundColor: colors.white,
         padding: 20,
