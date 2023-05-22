@@ -105,13 +105,13 @@ const Buttonstyles = StyleSheet.create({
     ProfileButtonContainer: {
         flexDirection: "column",
         justifyContent: "center",
-        backgroundColor: colors.navyblue,
-        padding: 15,
+        backgroundColor: colors.malibu1,
+        //padding: 15,
         width: "100%",
         height: "10%",
-        borderRadius: 15,
+        //borderRadius: 15,
         alignItems:"center",
-        marginBottom: 20,
+        //marginBottom: 20,
         
         
     },
