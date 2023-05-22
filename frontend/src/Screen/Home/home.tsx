@@ -9,7 +9,7 @@ import services from "../../mock/services.json"
 import { useNavigation } from '@react-navigation/native';
 import { Service } from '../../../App';
 import HomeText from '../../Components/Texts/HomeText';
-export const Home = () => {
+export const HomeScreen = () => {
   
     return(
         <ImageBackground

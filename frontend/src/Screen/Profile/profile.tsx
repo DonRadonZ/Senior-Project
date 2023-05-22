@@ -9,7 +9,7 @@ import { Avatar } from '@react-native-material/core';
 import styles from '../../Components/Container/Backgroundstyle';
 import { ScreenWidth } from '../../Components/shared';
 
-export const Profile = () =>{
+export const ProfileScreen = () =>{
     return(
         <ImageBackground
       source={require("../../../assets/Background-image.jpg")}
