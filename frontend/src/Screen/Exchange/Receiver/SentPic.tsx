@@ -12,7 +12,7 @@ import { MediaTypeOptions, launchImageLibraryAsync } from 'expo-image-picker';
 import { colors } from '../../../Components/Colors/colors';
 import { ScreenWidth } from '../../../Components/shared';
 
-export const EndUserFile = () => {
+export const ReceiverSentFileScreen = () => {
     const cameraRef = useRef<Camera>(null);
     const { navigate } = useNavigation();
     const [cameraType, setCameraType] = useState(CameraType.back);

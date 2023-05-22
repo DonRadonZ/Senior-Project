@@ -14,7 +14,7 @@ import { StackNavigationProp } from '@react-navigation/stack';
 import { RootStackParams } from '../../../../App';
 
 
-const EndList = () => {
+export const ReceiverListScreen = () => {
     const navigation = useNavigation<StackNavigationProp<RootStackParams>>()
     return(
         <ImageBackground
@@ -30,5 +30,3 @@ const EndList = () => {
         
     )
 }
-
-export default EndList

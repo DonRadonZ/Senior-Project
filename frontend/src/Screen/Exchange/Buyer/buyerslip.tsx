@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, View, StyleSheet, ImageBackground } from "react-native";
+import { Text, View, StyleSheet, ImageBackground,Image } from "react-native";
 import { Button,Box } from "@react-native-material/core";
 
 import styles from "./style";
@@ -10,6 +10,7 @@ import ProfileButton from "../../../Components/Button/ProfileButton";
 import { StackNavigationProp } from "@react-navigation/stack";
 import { RootStackParams } from "../../../../App";
 import { useNavigation } from "@react-navigation/native";
+import RegularText from "../../../Components/Texts/RegularText";
 
 interface ConfirmationPageProps {
   accountNumber: string;
@@ -17,7 +18,7 @@ interface ConfirmationPageProps {
   description: string;
 }
 
-const ReConfirmationPage = ({
+export const BuyerSlipScreen = ({
   // accountNumber,
   // amount,
   // description,
@@ -27,22 +28,25 @@ const ReConfirmationPage = ({
   return (
     <ImageBackground
     source={require("../../../../assets/Background-image.jpg")}
-    style={styles.container}
+    style={styles.owncontainer}
     resizeMode="cover"
-    >
-    {/* <Box style={styles.slipcontainer}>
-      <Text style={styles.confirmationText}>
-        Account Number: 123-456-7890
-      </Text>
-      <Text style={styles.confirmationText}>Amount: 3000</Text>
-      <Text style={styles.confirmationText}>Note: Help </Text>
-      </Box> */}
+      >
+          <View>
+              <RegularText>My Slip</RegularText>
+              </View>
+          <Image
+              style ={styles.strech}
+              source={require("../../../mock/9234.jpg")}
+              resizeMode="cover"
+          />
+   
       
-      <ProfileButton onPress={()=>{navigation.navigate('Buyer')}} >ReConfirm</ProfileButton>
+      {/* <ProfileButton onPress={()=>{}} >Continue</ProfileButton> */}
     </ImageBackground>
   );
 };
 
 
 
-export default ReConfirmationPage;
+
+

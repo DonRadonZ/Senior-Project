@@ -23,6 +23,19 @@ const styles = StyleSheet.create({
         marginBottom: 40
 
   },
+  Reportcontainer: {
+     flexDirection: "column",
+        //justifyContent: "center",
+        backgroundColor: colors.white,
+        padding: 20,
+        width: ScreenWidth,
+        height: ScreenHeight*0.4,
+        borderWidth:2,
+        borderRadius: 15,
+        alignItems:"flex-start",
+        marginBottom: 40
+
+  },
   inputContainer: {
     marginBottom: 20,
     width: ScreenWidth * 0.8,

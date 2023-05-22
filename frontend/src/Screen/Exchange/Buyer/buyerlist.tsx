@@ -14,7 +14,7 @@ import { StackNavigationProp } from '@react-navigation/stack';
 import { RootStackParams } from '../../../../App';
 
 
-const BuyList = () => {
+export const ListScreen = () => {
     
     const navigation = useNavigation<StackNavigationProp<RootStackParams>>();
     return(
@@ -32,4 +32,3 @@ const BuyList = () => {
         
     )
 }
-export default BuyList

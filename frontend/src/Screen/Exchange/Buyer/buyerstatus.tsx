@@ -16,7 +16,7 @@ interface ConfirmationPageProps {
   description: string;
 }
 
-const ReceiverPage = ({
+export const BuyerStatusScreen = ({
   // accountNumber,
   // amount,
   // description,
@@ -53,4 +53,3 @@ const ReceiverPage = ({
 
 
 
-export default ReceiverPage;

@@ -22,7 +22,7 @@ interface ConfirmationPageProps {
   description: string;
 }
 
-const ReportPage = ({
+ export const BuyerReportScreen = ({
   // accountNumber,
   // amount,
   // description,
@@ -67,4 +67,3 @@ const ReportPage = ({
   );
 };
 
-export default ReportPage
