@@ -4,8 +4,8 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
 //screen
-import { Login } from "./src/Screen/Login/login";
-import { Register } from "./src/Screen/Register/register";
+import { LoginScreen } from "./src/Screen/Login/login";
+import { RegisterScreen } from "./src/Screen/Register/register";
 import { HomeScreen } from "./src/Screen/Home/home";
 import { BalanceScreen } from "./src/Screen/Balance/balance";
 import { QRScanScreen } from "./src/Screen/QRScan/qrscan";
@@ -24,7 +24,7 @@ import { EndConfirm } from "./src/Screen/Camera/Camera";
 import RegisterSuccess from "./src/Screen/Register/successstatus";
 import { SetOTP } from "./src/Screen/setOTP/otp";
 import { VerifiedOTP } from "./src/Screen/setOTP/verifiedotp";
-import { RegisterVerified } from "./src/Screen/Register/registerVerified";
+import { RegisterVerifiedScreen } from "./src/Screen/Register/registerVerified";
 import { Wait } from "./src/Screen/Status/waitstatus";
 import ReceiverPage from "./src/Screen/Exchange/Buyer/receiver";
 import ReportPage from "./src/Screen/Exchange/Buyer/Report";
@@ -32,9 +32,9 @@ import ReportPage from "./src/Screen/Exchange/Buyer/Report";
 
 //icon
 import { FontAwesome5 } from "@expo/vector-icons";
-import { RegisterMail } from "./src/Screen/Register/registerMail";
-import { RegisterId } from "./src/Screen/Register/registerId";
-import { RegisterScanFace } from "./src/Screen/Register/registerScanFace";
+import { RegisterMailScreen } from "./src/Screen/Register/registerMail";
+import { RegisterIdScreen } from "./src/Screen/Register/registerId";
+import { RegisterScanFaceScreen } from "./src/Screen/Register/registerScanFace";
 import { Unlock } from "./src/Screen/Unlock/Unlock";
 import OwnSlipPage from "./src/Screen/Exchange/Buyer/ownslip";
 import ReceiverSlipPage from "./src/Screen/Exchange/Buyer/receiverslip";
@@ -75,7 +75,7 @@ function MyLogin() {
     <Tab.Navigator screenOptions={{ tabBarStyle: { display: 'none' } }}>
       <Tab.Screen
         name="Login"
-        component={Login}
+        component={LoginScreen}
         options={{ headerShown: false }}
       ></Tab.Screen>
     </Tab.Navigator>
@@ -87,7 +87,7 @@ function MyRegister() {
     <Tab.Navigator screenOptions={{ tabBarStyle: { display: 'none' } }}>
       <Tab.Screen
         name="Register"
-        component={Register}
+        component={RegisterScreen}
         options={{ headerShown: false }}
       ></Tab.Screen>
     </Tab.Navigator>
@@ -99,7 +99,7 @@ function MyRegisterMail() {
     <Tab.Navigator screenOptions={{ tabBarStyle: { display: 'none' } }}>
       <Tab.Screen
         name="RegisterMail"
-        component={RegisterMail}
+        component={RegisterMailScreen}
         options={{ headerShown: false }}
       ></Tab.Screen>
     </Tab.Navigator>
@@ -111,7 +111,7 @@ function MyRegisterId() {
     <Tab.Navigator screenOptions={{ tabBarStyle: { display: 'none' } }}>
       <Tab.Screen
         name="RegisterId"
-        component={RegisterId}
+        component={RegisterIdScreen}
         options={{ headerShown: false }}
       ></Tab.Screen>
     </Tab.Navigator>
@@ -123,7 +123,7 @@ function MyRegisterScanFace() {
     <Tab.Navigator screenOptions={{ tabBarStyle: { display: 'none' } }}>
       <Tab.Screen
         name="registerScanFace"
-        component={RegisterScanFace}
+        component={RegisterScanFaceScreen}
         options={{ headerShown: false }}
       ></Tab.Screen>
     </Tab.Navigator>
@@ -229,7 +229,7 @@ export default function App() {
         />
         <Stack.Screen
           name="MyRegisterVerified"
-          component={RegisterVerified}
+          component={RegisterVerifiedScreen}
           options={{ headerShown: false }}
         />
         <Stack.Screen
