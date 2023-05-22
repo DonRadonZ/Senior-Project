@@ -12,6 +12,7 @@ import { RootStackParams } from "../../../../App";
 import { useNavigation } from "@react-navigation/native";
 import RegularText from "../../../Components/Texts/RegularText";
 import CancelButton from "../../../Components/Button/CancelButton";
+import SelectButton from "../../../Components/Button/SelectButton";
 
 interface ConfirmationPageProps {
   accountNumber: string;
@@ -33,16 +34,19 @@ const ReceiverSlipPage = ({
     resizeMode="cover"
       >
           <View>
-              <RegularText>Receiver Slip</RegularText>
+              {/* <RegularText>Receiver Slip</RegularText> */}
               </View>
-          <Image
+          {/* <Image
               style={styles.receive}
               source={require("../../../mock/9234.jpg")}
               resizeMode="cover"
-          />
+          /> */}
+        
    
       
-          <ProfileButton onPress={() => { }} >Confirm</ProfileButton>
+      
+      <SelectButton onPress={undefined}>File/Photo</SelectButton>
+      <ProfileButton onPress={() => { navigation.navigate("ReConfirm") }} >Confirm</ProfileButton>
           <CancelButton onPress={()=>{}}>Report</CancelButton>
     </ImageBackground>
   );
