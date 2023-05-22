@@ -15,7 +15,7 @@ import { useNavigation } from '@react-navigation/native';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { RootStackParams } from '../../../App';
 
-export const RegisterScanFace = () => {
+export const RegisterScanFaceScreen = () => {
   const navigation = useNavigation<StackNavigationProp<RootStackParams>>()
   const handleRegister = () => {};
   const cameraFrontId = () => {};

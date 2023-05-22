@@ -16,23 +16,23 @@ import { ScreenWidth } from "../../Components/shared";
 import { StackNavigationProp } from "@react-navigation/stack";
 import { RootStackParams } from "../../../App";
 
-export const Login = () => {
+export const LoginScreen = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigation = useNavigation<StackNavigationProp<RootStackParams>>();
 
-  const handleLogin = () => {
-    if (email.trim() === "") {
-      Alert.alert("Error", "Please enter a value.");
-    } else if (password.trim() === "") {
-      Alert.alert("Error", "Please enter a value.");
-    } else {
-      // Handle login logic here
-      console.log("Email:", email);
-      console.log("Password:", password);
-      // Next Solution
-    }
-  };
+  // const handleLogin = () => {
+  //   if (email.trim() === "") {
+  //     Alert.alert("Error", "Please enter a value.");
+  //   } else if (password.trim() === "") {
+  //     Alert.alert("Error", "Please enter a value.");
+  //   } else {
+  //     // Handle login logic here
+  //     console.log("Email:", email);
+  //     console.log("Password:", password);
+  //     // Next Solution
+  //   }
+  // };
 
   return (
     <TouchableWithoutFeedback onPress={() => { Keyboard.dismiss() }}

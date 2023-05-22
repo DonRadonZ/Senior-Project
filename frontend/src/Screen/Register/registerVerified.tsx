@@ -17,7 +17,7 @@ import { RootStackParams } from '../../../App';
 import { colors } from '../../Components/Colors/colors';
 import { ScreenHeight } from '../../Components/shared';
 
-export const RegisterVerified = () => {
+export const RegisterVerifiedScreen = () => {
     const navigation = useNavigation<StackNavigationProp<RootStackParams>>()
     const testPassword = "1234";
     const [code, setCode] = useState("");

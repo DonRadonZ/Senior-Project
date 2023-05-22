@@ -18,7 +18,7 @@ import { useNavigation } from "@react-navigation/native";
 import { StackNavigationProp } from "@react-navigation/stack";
 import { RootStackParams } from "../../../App";
 
-export const RegisterId = () => {
+export const RegisterIdScreen = () => {
 const navigation = useNavigation<StackNavigationProp<RootStackParams>>()
 
   const [email, setEmail] = useState("");

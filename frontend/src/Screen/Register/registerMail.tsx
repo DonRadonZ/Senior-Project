@@ -15,7 +15,7 @@ import { useNavigation } from "@react-navigation/native";
 import { StackNavigationProp } from "@react-navigation/stack";
 import { RootStackParams } from "../../../App";
 
-export const RegisterMail = () => {
+export const RegisterMailScreen = () => {
   
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");

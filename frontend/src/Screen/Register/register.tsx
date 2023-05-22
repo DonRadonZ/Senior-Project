@@ -17,7 +17,7 @@ import { useNavigation } from "@react-navigation/native";
 import { StackNavigationProp } from "@react-navigation/stack";
 import { RootStackParams } from "../../../App";
 
-export const Register = () => {
+export const RegisterScreen = () => {
   const navigation = useNavigation<StackNavigationProp<RootStackParams>>()
 
   const [name, setName] = useState("");
@@ -32,33 +32,33 @@ export const Register = () => {
   const [province, setProvince] = useState("");
   const [country, setCountry] = useState("");
 
-  const handleRegister = () => {
-    if (name.trim() === "") {
-      Alert.alert("Error", "Please enter a value.");
-    } else if (birthDate.trim() === "") {
-      Alert.alert("Error", "Please enter a value.");
-    } else if (phone.trim() === "") {
-      Alert.alert("Error", "Please enter a value.");
-    } else if (address.trim() === "") {
-      Alert.alert("Error", "Please enter a value.");
-    } else if (mou.trim() === "") {
-      Alert.alert("Error", "Please enter a value.");
-    } else if (soy.trim() === "") {
-      Alert.alert("Error", "Please enter a value.");
-    } else if (road.trim() === "") {
-      Alert.alert("Error", "Please enter a value.");
-    } else if (tambon.trim() === "") {
-      Alert.alert("Error", "Please enter a value.");
-    } else if (district.trim() === "") {
-      Alert.alert("Error", "Please enter a value.");
-    } else if (province.trim() === "") {
-      Alert.alert("Error", "Please enter a value.");
-    } else if (country.trim() === "") {
-      Alert.alert("Error", "Please enter a value.");
-    } else {
-      //Next Solution
-    }
-  };
+  // const handleRegister = () => {
+  //   if (name.trim() === "") {
+  //     Alert.alert("Error", "Please enter a value.");
+  //   } else if (birthDate.trim() === "") {
+  //     Alert.alert("Error", "Please enter a value.");
+  //   } else if (phone.trim() === "") {
+  //     Alert.alert("Error", "Please enter a value.");
+  //   } else if (address.trim() === "") {
+  //     Alert.alert("Error", "Please enter a value.");
+  //   } else if (mou.trim() === "") {
+  //     Alert.alert("Error", "Please enter a value.");
+  //   } else if (soy.trim() === "") {
+  //     Alert.alert("Error", "Please enter a value.");
+  //   } else if (road.trim() === "") {
+  //     Alert.alert("Error", "Please enter a value.");
+  //   } else if (tambon.trim() === "") {
+  //     Alert.alert("Error", "Please enter a value.");
+  //   } else if (district.trim() === "") {
+  //     Alert.alert("Error", "Please enter a value.");
+  //   } else if (province.trim() === "") {
+  //     Alert.alert("Error", "Please enter a value.");
+  //   } else if (country.trim() === "") {
+  //     Alert.alert("Error", "Please enter a value.");
+  //   } else {
+  //     //Next Solution
+  //   }
+  // };
 
   const HorizontalLine = () => {
     return <View style={styles.horizontalLine} />;
