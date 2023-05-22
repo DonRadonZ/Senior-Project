@@ -14,7 +14,7 @@ import { StackNavigationProp } from '@react-navigation/stack';
 import { RootStackParams } from '../../../../App';
 
 
-export const ListScreen = () => {
+export const BuyerListScreen = () => {
     
     const navigation = useNavigation<StackNavigationProp<RootStackParams>>();
     return(
