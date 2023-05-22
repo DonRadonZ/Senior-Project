@@ -12,22 +12,22 @@ import { QRScanScreen } from "./src/Screen/QRScan/qrscan";
 import { ExchangeScreen } from "./src/Screen/Exchange/exchange";
 
 import { ProfileScreen } from './src/Screen/Profile/profile';
-import Payment from './src/Screen/Exchange/Buyer/payment';
+import {PaymentScreen} from './src/Screen/Exchange/Buyer/payment';
 import { createStackNavigator } from '@react-navigation/stack';
 import { colors } from './src/Components/Colors/colors';
-import ConfirmationPage from './src/Screen/Exchange/Buyer/confirmation';
-import {EndUserFile} from './src/Screen/Exchange/EndUser/SentPic';
-import BuyList from "./src/Screen/Exchange/Buyer/Order";
-import EndList from "./src/Screen/Exchange/EndUser/Order";
-import EndOrder from "./src/Screen/Exchange/EndUser/endresult";
+import {ConfirmationScreen} from './src/Screen/Exchange/Buyer/confirmation';
+import {ReceiverSentFileScreen} from './src/Screen/Exchange/Receiver/SentPic';
+import {ListScreen} from "./src/Screen/Exchange/Buyer/buyerlist";
+import {ReceiverListScreen} from "./src/Screen/Exchange/Receiver/receiverlist";
+import {ReceiverResultScreen} from "./src/Screen/Exchange/Receiver/receiverresult";
 import { EndConfirm } from "./src/Screen/Camera/Camera";
 import RegisterSuccess from "./src/Screen/Register/successstatus";
 import { SetOTP } from "./src/Screen/setOTP/otp";
 import { VerifiedOTP } from "./src/Screen/setOTP/verifiedotp";
 import { RegisterVerifiedScreen } from "./src/Screen/Register/registerVerified";
 import { Wait } from "./src/Screen/Status/waitstatus";
-import ReceiverPage from "./src/Screen/Exchange/Buyer/receiver";
-import ReportPage from "./src/Screen/Exchange/Buyer/Report";
+import {BuyerStatusScreen} from "./src/Screen/Exchange/Buyer/buyerstatus";
+import {BuyerReportScreen} from "./src/Screen/Exchange/Buyer/buyerreport";
 
 
 //icon
@@ -36,10 +36,11 @@ import { RegisterMailScreen } from "./src/Screen/Register/registerMail";
 import { RegisterIdScreen } from "./src/Screen/Register/registerId";
 import { RegisterScanFaceScreen } from "./src/Screen/Register/registerScanFace";
 import { Unlock } from "./src/Screen/Unlock/Unlock";
-import OwnSlipPage from "./src/Screen/Exchange/Buyer/ownslip";
-import ReceiverSlipPage from "./src/Screen/Exchange/Buyer/receiverslip";
-import BuyerOrder from "./src/Screen/Exchange/Buyer/buyerresult";
-import ReConfirmationPage from "./src/Screen/Exchange/Buyer/confirmagain";
+import {BuyerSlipScreen} from "./src/Screen/Exchange/Buyer/buyerslip";
+import {ReceiverSlipScreen} from "./src/Screen/Exchange/Buyer/receiverslip";
+import {BuyerResultScreen} from "./src/Screen/Exchange/Buyer/buyerresult";
+import { ReConfirmationScreen } from "./src/Screen/Exchange/Buyer/reconfirm";
+import { ReceiverReportScreen } from "./src/Screen/Exchange/Receiver/receiverreport";
 
 export type RootStackParams = {
   Home: any;
@@ -190,8 +191,8 @@ function MyTabs() {
 export function Service(){
   return (
     <Stack.Navigator>
-      <Stack.Screen name='Payment' component={Payment} />
-      <Stack.Screen name="BuyList" component={BuyList} />
+      <Stack.Screen name='Payment' component={PaymentScreen} />
+      <Stack.Screen name="BuyList" component={ListScreen} />
     </Stack.Navigator>
   )
 }
@@ -258,18 +259,19 @@ export default function App() {
           options={{ headerShown: false }}
         />
         <Stack.Screen name="Wait" component={Wait} />
-        <Stack.Screen name="Buyer" component={BuyList} />
-        <Stack.Screen name="EndUser" component={EndList} />
-        <Stack.Screen name="Payment" component={Payment} />
-        <Stack.Screen name="Confirmation" component={ConfirmationPage} />
-        <Stack.Screen name="EndOrder" component={EndOrder} />
-        <Stack.Screen name="ReceiverPage" component={ReceiverPage} />
-        <Stack.Screen name="EndUserFile" component={EndUserFile} />
-        <Stack.Screen name="MySlip" component={OwnSlipPage} options={{ headerShown: false }} />
-        <Stack.Screen name="ReceiverSlip" component={ReceiverSlipPage}/>
-        <Stack.Screen name="Report" component={ReportPage} />
-        <Stack.Screen name="BuyerResult" component={BuyerOrder} />
-        <Stack.Screen name="ReConfirm" component={ReConfirmationPage} />
+        <Stack.Screen name="Buyer" component={ListScreen} />
+        <Stack.Screen name="EndUser" component={ReceiverListScreen} />
+        <Stack.Screen name="Payment" component={PaymentScreen} />
+        <Stack.Screen name="Confirmation" component={ConfirmationScreen} />
+        <Stack.Screen name="EndOrder" component={ReceiverResultScreen} />
+        <Stack.Screen name="ReceiverPage" component={BuyerStatusScreen} />
+        <Stack.Screen name="EndUserFile" component={ReceiverSentFileScreen} />
+        <Stack.Screen name="MySlip" component={BuyerSlipScreen} options={{ headerShown: false }} />
+        <Stack.Screen name="ReceiverSlip" component={ReceiverSlipScreen}/>
+        <Stack.Screen name="Report" component={BuyerReportScreen} />
+        <Stack.Screen name="BuyerResult" component={BuyerResultScreen} />
+        <Stack.Screen name="ReConfirm" component={ReConfirmationScreen} />
+        <Stack.Screen name="ReceiveReport" component={ReceiverReportScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
