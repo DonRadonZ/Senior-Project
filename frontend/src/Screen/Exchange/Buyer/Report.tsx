@@ -1,15 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
+
+//UI
 import { Text, View, StyleSheet, ImageBackground } from "react-native";
 import { Button,Box } from "@react-native-material/core";
 import { colors } from "../../../Components/Colors/colors";
-import SellButton from "../../../Components/Button/SellButton";
+import {RadioButton} from "react-native-paper";
+
 import styles from "./style";
-import BuyChoiceButton from "../../../Components/Button/BuyChoiceButton";
+
+
+//navigtion
 import {  StackNavigationProp} from "@react-navigation/stack";
 import { RootStackParams } from "../../../../App";
 import { useNavigation } from "@react-navigation/native";
-import CancelButton from "../../../Components/Button/CancelButton";
+
 import ExamineButton from "../../../Components/Button/ExamineButton";
+import CancelButton from "../../../Components/Button/CancelButton";
 interface ConfirmationPageProps {
   accountNumber: string;
   amount: string;
@@ -22,6 +28,7 @@ const ReportPage = ({
   // description,
   
 }) => {
+  const [value,setValue] = useState('')
   const navigation = useNavigation<StackNavigationProp<RootStackParams>>();
   return (
 
@@ -31,15 +38,33 @@ const ReportPage = ({
     resizeMode="cover"
     >
       
-      <Box style={styles.slipcontainer}>  
-        <View>
-      
-        </View>
+      <Box style={styles.Reportcontainer}>  
         
+        <RadioButton.Group onValueChange={newValue => setValue(newValue)} value={value}>
+      
+        
+          <RadioButton.Item label="Account No. not correct" value="first"  />
+       
+        <View>
+        
+        <RadioButton.Item  label="the Amount is not Correct" value="second" />
+      </View>
+      <View>
+       
+              <RadioButton.Item label="There is a problem with the transaction" value="third" />
+          
+            <RadioButton.Item value="other" label="other"/> 
+           
+      </View>
+    </RadioButton.Group>
+
+       
       </Box>
       {/* <Button title="Pending" loading disabled /> */}
-      <ExamineButton onPress={()=>{navigation.navigate("ReceiverSlip")}} >Next</ExamineButton> 
-      {/* <CancelButton onPress={()=>{}}>cancel send</CancelButton> */}
+      {/* <ExamineButton onPress={()=>{navigation.navigate("ReceiverSlip")}} >Report</ExamineButton>  */}
+      {/* <CancelButton onPress={()=>{}}>Confirm</CancelButton> */}
     </ImageBackground>
   );
 };
+
+export default ReportPage
