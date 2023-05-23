@@ -22,9 +22,9 @@ const OrderCardA = () => {
         <Text style={BalanceView.TimeStampText}>15/5/2023</Text>
       </View>
       <View>
-      <TouchableOpacity style={{
-        alignItems: "center"
-        }} onPress={() => { navigation.navigate('EndUserFile') }}><Text style={BalanceView.OrderViewText}>View</Text></TouchableOpacity>
+      <TouchableOpacity 
+      style={{alignItems:'flex-end'}}
+        onPress={() => { navigation.navigate('EndUserFile') }}><Text style={BalanceView.OrderViewText}>View</Text></TouchableOpacity>
       <Text style={BalanceView.OrderPendingText}>Pending</Text>
       </View>
     </Box>
