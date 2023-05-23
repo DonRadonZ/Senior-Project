@@ -14,7 +14,6 @@ import { ExchangeScreen } from "./src/Screen/Exchange/exchange";
 import { ProfileScreen } from './src/Screen/Profile/profile';
 import {PaymentScreen} from './src/Screen/Exchange/Buyer/payment';
 import { createStackNavigator } from '@react-navigation/stack';
-import { colors } from './src/Components/Colors/colors';
 import {BuyerConfirmationScreen} from './src/Screen/Exchange/Buyer/confirmation';
 import {ReceiverSentFileScreen} from './src/Screen/Exchange/Receiver/receiversent';
 import {BuyerListScreen} from "./src/Screen/Exchange/Buyer/buyerlist";
@@ -41,6 +40,7 @@ import {ReceiverSlipScreen} from "./src/Screen/Exchange/Buyer/receiverslip";
 import {BuyerResultScreen} from "./src/Screen/Exchange/Buyer/buyerresult";
 import { ReConfirmationScreen } from "./src/Screen/Exchange/Buyer/reconfirm";
 import { ReceiverReportScreen } from "./src/Screen/Exchange/Receiver/receiverreport";
+import { ReceiverCancelResultScreen } from "./src/Screen/Exchange/Receiver/receivercancelresult";
 
 export type RootStackParams = {
   Home: any;
@@ -202,7 +202,7 @@ export function Service(){
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="MyTab">
+      <Stack.Navigator initialRouteName="ReceiverCancel">
         <Stack.Screen
           name="MyLogin"
           component={MyLogin}
@@ -258,20 +258,71 @@ export default function App() {
           component={MyTabs}
           options={{ headerShown: false }}
         />
-        <Stack.Screen name="Wait" component={Wait} />
-        <Stack.Screen name="Buyer" component={BuyerListScreen} />
-        <Stack.Screen name="EndUser" component={ReceiverListScreen} />
-        <Stack.Screen name="Payment" component={PaymentScreen} />
-        <Stack.Screen name="Confirmation" component={BuyerConfirmationScreen} />
-        <Stack.Screen name="EndOrder" component={ReceiverResultScreen} />
-        <Stack.Screen name="ReceiverPage" component={BuyerStatusScreen} />
-        <Stack.Screen name="EndUserFile" component={ReceiverSentFileScreen} />
-        <Stack.Screen name="MySlip" component={BuyerSlipScreen} options={{ headerShown: false }} />
-        <Stack.Screen name="ReceiverSlip" component={ReceiverSlipScreen}/>
-        <Stack.Screen name="Report" component={BuyerReportScreen} />
-        <Stack.Screen name="BuyerResult" component={BuyerResultScreen} />
-        <Stack.Screen name="ReConfirm" component={ReConfirmationScreen} />
-        <Stack.Screen name="ReceiveReport" component={ReceiverReportScreen} />
+        <Stack.Screen 
+        name="Wait" 
+        component={Wait} 
+        options={{ headerShown: false }}
+        />
+        <Stack.Screen 
+        name="Buyer" 
+        component={BuyerListScreen} 
+        />
+        <Stack.Screen 
+        name="EndUser" 
+        component={ReceiverListScreen} 
+        />
+        <Stack.Screen 
+        name="Payment" 
+        component={PaymentScreen} 
+        />
+        <Stack.Screen 
+        name="Confirmation" 
+        component={BuyerConfirmationScreen} 
+        />
+        <Stack.Screen 
+        name="EndOrder" 
+        component={ReceiverResultScreen} 
+        options={{ headerShown: false }}
+        />
+        <Stack.Screen 
+        name="ReceiverPage" 
+        component={BuyerStatusScreen} 
+        />
+        <Stack.Screen 
+        name="EndUserFile" 
+        component={ReceiverSentFileScreen} 
+        />
+        <Stack.Screen 
+        name="MySlip" 
+        component={BuyerSlipScreen} 
+        options={{ headerShown: false }} 
+        />
+        <Stack.Screen 
+        name="ReceiverSlip" 
+        component={ReceiverSlipScreen}
+        />
+        <Stack.Screen 
+        name="Report" 
+        component={BuyerReportScreen} 
+        />
+        <Stack.Screen 
+        name="BuyerResult" 
+        component={BuyerResultScreen} 
+        options={{ headerShown: false }}
+        />
+        <Stack.Screen 
+        name="ReConfirm" 
+        component={ReConfirmationScreen} 
+        />
+        <Stack.Screen 
+        name="ReceiveReport" 
+        component={ReceiverReportScreen} 
+        />
+        <Stack.Screen
+        name="ReceiverCancel"
+        component={ReceiverCancelResultScreen}
+        options={{headerShown:false}}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
