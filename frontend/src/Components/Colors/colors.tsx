@@ -10,5 +10,7 @@ export const colors = {
   confirm: "#0AAC09",
   red:"#FF0000",
   green:"#00FF00",
+  maingreen:"#3CB043",
+  rose:"#E3242B",
   transparent: "transparent",
 };
