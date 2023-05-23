@@ -1,7 +1,7 @@
 import React from 'react';
 import {ImageBackground} from 'react-native'; 
 // import MainContainer from '../../component/Container/MainContainer';
-import AddNewButton from '../../../Components/Button/AddNewButton';
+import AddNewButton from '../../../Components/add-new-button/AddNewButton';
 
 
 import ListCardA from '../../../Components/Card/ListCard';
@@ -20,7 +20,7 @@ export const BuyerListScreen = () => {
     return(
         <ImageBackground
     source={require("../../../../assets/Background-image.jpg")}
-    style={styles.container}
+    style={styles.listcontainer}
     resizeMode="cover"
         >
             
