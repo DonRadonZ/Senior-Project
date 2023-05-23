@@ -14,7 +14,7 @@ const CheckButton:FunctionComponent<BuyButtonProps> = (props) => {
   return(
     <TouchableOpacity
     style={Buttonstyles.ProfileButtonContainer} onPress={props.onPress}
-     ><Text style={Buttonstyles.ChoiceText}>{props.children}</Text></TouchableOpacity>
+     ><Text style={Buttonstyles.WaitText}>{props.children}</Text></TouchableOpacity>
   );
 }
   export default CheckButton;
