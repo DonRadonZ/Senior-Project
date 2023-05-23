@@ -265,19 +265,23 @@ export default function App() {
         />
         <Stack.Screen 
         name="Buyer" 
-        component={BuyerListScreen} 
+          component={BuyerListScreen}
+        options={{headerShown:false}}  
         />
         <Stack.Screen 
         name="EndUser" 
-        component={ReceiverListScreen} 
+          component={ReceiverListScreen} 
+          options={{headerShown:false}}
         />
         <Stack.Screen 
         name="Payment" 
-        component={PaymentScreen} 
+          component={PaymentScreen} 
+          options={{headerShown:false}}
         />
         <Stack.Screen 
         name="Confirmation" 
-        component={BuyerConfirmationScreen} 
+          component={BuyerConfirmationScreen} 
+          options={{headerShown:false}}
         />
         <Stack.Screen 
         name="EndOrder" 
@@ -286,11 +290,13 @@ export default function App() {
         />
         <Stack.Screen 
         name="ReceiverPage" 
-        component={BuyerStatusScreen} 
+          component={BuyerStatusScreen} 
+          options={{headerShown:false}}
         />
         <Stack.Screen 
         name="EndUserFile" 
-        component={ReceiverSentFileScreen} 
+          component={ReceiverSentFileScreen} 
+          options={{headerShown:false}}
         />
         <Stack.Screen 
         name="MySlip" 
@@ -300,10 +306,12 @@ export default function App() {
         <Stack.Screen 
         name="ReceiverSlip" 
         component={ReceiverSlipScreen}
+        options={{ headerShown: false }} 
         />
         <Stack.Screen 
         name="Report" 
-        component={BuyerReportScreen} 
+        component={BuyerReportScreen}
+        options={{ headerShown: false }}   
         />
         <Stack.Screen 
         name="BuyerResult" 
@@ -312,11 +320,13 @@ export default function App() {
         />
         <Stack.Screen 
         name="ReConfirm" 
-        component={ReConfirmationScreen} 
+          component={ReConfirmationScreen}
+        options={{headerShown:false}}  
         />
         <Stack.Screen 
         name="ReceiveReport" 
-        component={ReceiverReportScreen} 
+          component={ReceiverReportScreen}
+        options={{headerShown:false}}  
         />
         <Stack.Screen
         name="ReceiverCancel"
