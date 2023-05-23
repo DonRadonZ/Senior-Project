@@ -23,7 +23,7 @@ const ListCardA = () => {
       </View>
       <View>
       <TouchableOpacity style={{
-        alignItems: "center"
+        alignItems: "flex-end"
         }} onPress={() => { navigation.navigate('ReceiverPage') }}><Text style={BalanceView.OrderViewText}>View</Text></TouchableOpacity>
       <Text style={BalanceView.OrderPendingText}>Pending</Text>
       </View>

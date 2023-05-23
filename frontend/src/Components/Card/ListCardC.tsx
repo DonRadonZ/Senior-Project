@@ -19,7 +19,7 @@ const ListCardC = () => {
         <Text style={BalanceView.TimeStampText}>15/5/2023</Text>
       </View>
       <View>
-      <TouchableOpacity ><Text style={BalanceView.OrderViewText}>View</Text></TouchableOpacity>
+      <TouchableOpacity style={{alignItems:'flex-end'}}><Text style={BalanceView.OrderViewText}>View</Text></TouchableOpacity>
       <Text style={BalanceView.OrderCancelText}>Cancel</Text>
     </View>
   </Box>
