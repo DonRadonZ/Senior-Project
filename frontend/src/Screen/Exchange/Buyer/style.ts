@@ -10,6 +10,28 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
   },
+  waitcontainer: {
+    flex: 1,
+    padding: 25,
+    paddingTop: 40,
+    //justifyContent: "center",
+    alignItems: "center",
+  },
+  
+  statuscontainer: {
+    flex: 1,
+    padding: 25,
+    paddingTop: 40,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  listcontainer: {
+    flex: 1,
+    padding: 25,
+    paddingTop: 40,
+    //justifyContent: "center",
+    alignItems: "center",
+  },
   owncontainer: {
     flex: 1,
     padding: 25,
