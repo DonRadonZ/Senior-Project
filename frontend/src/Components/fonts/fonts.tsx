@@ -8,7 +8,8 @@ export const sizes ={
     SmallText: 13,
     BankText: 24,
     SignBig:20,
-    SignSmall:18
+    SignSmall:18,
+    WaitText:20
     
 }
 
