@@ -43,17 +43,17 @@ interface ConfirmationPageProps {
         <RadioButton.Group onValueChange={newValue => setValue(newValue)} value={value}>
       
         
-          <RadioButton.Item label="Account No. not correct" value="first"  />
+          <RadioButton.Item label="1.Account No. not correct" value="first"  />
        
         <View>
         
-        <RadioButton.Item  label="the Amount is not Correct" value="second" />
+        <RadioButton.Item  label="2.the Amount is not Correct" value="second" />
       </View>
       <View>
        
-              <RadioButton.Item label="There is a problem with the transaction" value="third" />
+              <RadioButton.Item label="3.There is a problem with the transaction" value="third" />
           
-            <RadioButton.Item value="other" label="other"/> 
+            <RadioButton.Item value="4.other" label="other"/> 
            
       </View>
     </RadioButton.Group>
