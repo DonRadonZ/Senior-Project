@@ -34,7 +34,7 @@ export const ExchangeScreen = () => {
 
   return(
     <ImageBackground
-    source={require("../../../../assets/Background-image.jpg")}
+    source={require("../../../assets/Background-image.jpg")}
     style={styles.container}
     resizeMode="cover"
     >
