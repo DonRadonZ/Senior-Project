@@ -14,7 +14,10 @@ export const HomeScreen = () => {
     return(
         <ImageBackground
         source={require("../../../assets/Background-image.jpg")}
-        style={{flex:1}}
+        style={{flex:1,
+          padding:20,
+          paddingTop:40,
+        }}
         resizeMode="cover"
       >
         <SafeAreaView>
