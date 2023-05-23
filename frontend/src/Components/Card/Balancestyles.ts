@@ -51,7 +51,7 @@ const Balancestyles = StyleSheet.create({
         borderWidth:2,
         borderRadius: 15,
         alignItems:"flex-start",
-        marginBottom: 40
+        marginBottom: 20
     },
     AmountDisplayedText: {
         color: colors.black,

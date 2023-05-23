@@ -10,6 +10,20 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
   },
+  bankcontainer: {
+    flex: 1,
+    padding: 25,
+    paddingTop: 40,
+    //justifyContent: "center",
+    alignItems: "center",
+  },
+  confirmationcontainer: {
+    flex: 1,
+    padding: 25,
+    paddingTop: 40,
+    //justifyContent: "center",
+    alignItems: "center",
+  },
   waitcontainer: {
     flex: 1,
     padding: 25,
@@ -22,7 +36,7 @@ const styles = StyleSheet.create({
     flex: 1,
     padding: 25,
     paddingTop: 40,
-    justifyContent: "center",
+    //justifyContent: "center",
     alignItems: "center",
   },
   listcontainer: {
@@ -35,7 +49,7 @@ const styles = StyleSheet.create({
   owncontainer: {
     flex: 1,
     padding: 25,
-    paddingTop: 40,
+    paddingTop: -15,
     justifyContent: "center",
     //alignItems: "center",
   },
@@ -43,7 +57,7 @@ const styles = StyleSheet.create({
     flex: 1,
     padding: 25,
     paddingTop: 40,
-    justifyContent: "center",
+    justifyContent: "space-between",
     alignItems: "center",
   },
   slipcontainer: {
@@ -109,7 +123,8 @@ const styles = StyleSheet.create({
   strech: {
     width: 300,
     height: 600,
-    marginLeft:20
+    marginLeft: 20,
+    
   },
   receive: {
     width: 200,
