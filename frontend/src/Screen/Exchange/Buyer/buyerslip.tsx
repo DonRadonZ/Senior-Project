@@ -11,6 +11,7 @@ import { StackNavigationProp } from "@react-navigation/stack";
 import { RootStackParams } from "../../../../App";
 import { useNavigation } from "@react-navigation/native";
 import RegularText from "../../../Components/Texts/RegularText";
+import { AntDesign } from "@expo/vector-icons";
 
 interface ConfirmationPageProps {
   accountNumber: string;
@@ -30,10 +31,13 @@ export const BuyerSlipScreen = ({
     source={require("../../../../assets/Background-image.jpg")}
     style={styles.owncontainer}
     resizeMode="cover"
-      >
-          <View>
-              <RegularText>My Slip</RegularText>
-              </View>
+    >
+      <View style={{marginBottom:100,flexDirection:'row',marginRight: 200}}>
+          <AntDesign name="arrowleft" size={24} color="black" style={{right:10,marginTop:7}} />
+          <Text style={{ marginTop: 10,right:10 }}>Back</Text>
+          <Text style={{left:60,top:4,fontSize:25,bottom:20}}>Buyer Slip</Text>
+      </View>
+
           <Image
               style ={styles.strech}
               source={require("../../../mock/9234.jpg")}

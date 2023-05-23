@@ -24,18 +24,22 @@ export const BuyerResultScreen = ({
   return (
     <ImageBackground
     source={require("../../../../assets/Background-image.jpg")}
-    style={styles.container}
+    style={styles.resultcontainer}
     resizeMode="cover"
       >
-          <AntDesign name="checkcircleo" size={72} color= {colors.orange} style={{marginTop:100}} />
+          <View style ={{top:-80,alignItems:'center'}}>
+          <AntDesign name="checkcircleo" size={80} color= {colors.maingreen} style={{marginTop:100}} />
+          <Text style={{marginTop:20,marginBottom:-40,fontSize:30,color:colors.maingreen}}>Success</Text>
+        </View>
     
       {/* <Text style={styles.confirmationText}>
         Account ID: 
       </Text>
       <Text style={styles.confirmationText}>Date:</Text>
         <Text style={styles.confirmationText}>Time: </Text> */}
-        <View style={{alignItems:'flex-end'}}>
-          <Button title="Slip" color="black" onPress={()=>{navigation.navigate("MySlip")}}/>
+         <View style={{left:70,flexDirection:"row"}}>
+        <TouchableOpacity style={{backgroundColor:colors.malibu2,marginRight:20,width:70,height:30,alignItems:'center',justifyContent:"center",borderRadius:5}}><Text>Evidence</Text></TouchableOpacity>
+          <TouchableOpacity style={{backgroundColor:colors.malibu1,width:70,height:30,alignItems:'center',justifyContent:"center",borderRadius:5}}><Text>Slip</Text></TouchableOpacity>
         </View>
       <ResultCard/>
       
@@ -46,10 +50,10 @@ export const BuyerResultScreen = ({
 };
 
 const styles = StyleSheet.create({
-  container: {
+  resultcontainer: {
     flex: 1,
     padding: 25,
-    paddingTop: 40,
+    //paddingTop: 40,
     //justifyContent: "space-between",
     alignItems: "center",
   },

@@ -81,7 +81,7 @@ const navigation = useNavigation<StackNavigationProp<RootStackParams>>()
           </TouchableOpacity>
         </View>
         <View style={{ paddingHorizontal: 10 }}>
-          <Text style={{ paddingVertical: 10 }}>ด้านหน้าบัตรประชาชน</Text>
+          <Text style={{ paddingVertical: 10 }}>ด้านหลังบัตรประชาชน</Text>
           <TouchableOpacity onPress={cameraFrontId} style={styles.buttonCamera}>
             <FontAwesome5 name="camera" color="#333333" size={30} />
           </TouchableOpacity>

@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, View, StyleSheet, ImageBackground } from "react-native";
+import { Text, View, StyleSheet, ImageBackground, TouchableOpacity } from "react-native";
 import { Button,Box } from "@react-native-material/core";
 import { colors } from "../../../Components/Colors/colors";
 import SellButton from "../../../Components/Button/SellButton";
@@ -10,6 +10,7 @@ import { RootStackParams } from "../../../../App";
 import { useNavigation } from "@react-navigation/native";
 import CancelButton from "../../../Components/Button/CancelButton";
 import ExamineButton from "../../../Components/Button/ExamineButton";
+import { AntDesign } from "@expo/vector-icons";
 interface ConfirmationPageProps {
   accountNumber: string;
   amount: string;
@@ -27,11 +28,18 @@ export const BuyerStatusScreen = ({
 
     <ImageBackground
     source={require("../../../../assets/Background-image.jpg")}
-    style={styles.container}
+    style={styles.statuscontainer}
     resizeMode="cover"
-    >
+    ><View style={{marginBottom:50,flexDirection:'row',marginRight:190}}>
+                <AntDesign name="arrowleft" size={24} color="black" />    
+                <Text style={{ marginTop: 3 }}>Back</Text>
+                <Text style={{left:65,top:4,fontSize:20,bottom:20}}>Receiver Status</Text>
+      </View>
       <View style={{alignItems:'flex-end'}}>
-          <Button title="Slip" color="black" onPress={()=>{navigation.navigate("MySlip")}}/>
+        <View style={{left:70,flexDirection:"row",marginBottom:10,marginTop:100}}>
+        {/* <TouchableOpacity style={{backgroundColor:colors.malibu2,marginRight:20,width:70,height:30,alignItems:'center',justifyContent:"center",borderRadius:5}}><Text>Evidence</Text></TouchableOpacity> */}
+          <TouchableOpacity style={{backgroundColor:colors.malibu1,width:70,height:30,alignItems:'center',justifyContent:"center",borderRadius:5}} onPress={() => { navigation.navigate("MySlip") }} ><Text>Slip</Text></TouchableOpacity>
+        </View>
         </View>
       <Box style={styles.slipcontainer}>  
         <View >

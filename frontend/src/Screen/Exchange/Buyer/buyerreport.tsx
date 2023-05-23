@@ -16,6 +16,7 @@ import { useNavigation } from "@react-navigation/native";
 
 import ExamineButton from "../../../Components/Button/ExamineButton";
 import CancelButton from "../../../Components/Button/CancelButton";
+import { AntDesign } from "@expo/vector-icons";
 interface ConfirmationPageProps {
   accountNumber: string;
   amount: string;
@@ -39,7 +40,11 @@ interface ConfirmationPageProps {
     >
       
       <Box style={styles.Reportcontainer}>  
-        
+        <View style={{marginBottom:120,flexDirection:'row',marginRight: 200}}>
+          <AntDesign name="arrowleft" size={24} color="black" style={{right:10,marginTop:7}} />
+          <Text style={{ marginTop: 10,right:10 }}>Back</Text>
+          <Text style={{left:73,top:4,fontSize:25,bottom:20}}>Report</Text>
+      </View>
         <RadioButton.Group onValueChange={newValue => setValue(newValue)} value={value}>
       
         
@@ -53,7 +58,7 @@ interface ConfirmationPageProps {
        
               <RadioButton.Item label="3.There is a problem with the transaction" value="third" />
           
-            <RadioButton.Item value="4.other" label="other"/> 
+            <RadioButton.Item value="4.others" label="other"/> 
            
       </View>
     </RadioButton.Group>

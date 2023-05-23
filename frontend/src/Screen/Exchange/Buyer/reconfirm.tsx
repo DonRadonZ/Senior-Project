@@ -10,6 +10,7 @@ import ProfileButton from "../../../Components/Button/ProfileButton";
 import { StackNavigationProp } from "@react-navigation/stack";
 import { RootStackParams } from "../../../../App";
 import { useNavigation } from "@react-navigation/native";
+import { AntDesign } from "@expo/vector-icons";
 
 interface ConfirmationPageProps {
   accountNumber: string;
@@ -27,9 +28,14 @@ export const ReConfirmationScreen = ({
   return (
     <ImageBackground
     source={require("../../../../assets/Background-image.jpg")}
-    style={styles.container}
+    style={styles.receivercontainer}
     resizeMode="cover"
     >
+      <View style={{marginBottom:100,flexDirection:'row',marginRight: 200}}>
+          <AntDesign name="arrowleft" size={24} color="black" style={{right:10,marginTop:7}} />
+          <Text style={{ marginTop: 10,right:10 }}>Back</Text>
+          <Text style={{left:60,top:4,fontSize:25,bottom:20}}>Buyer Slip</Text>
+      </View>
     {/* <Box style={styles.slipcontainer}>
       <Text style={styles.confirmationText}>
         Account Number: 123-456-7890

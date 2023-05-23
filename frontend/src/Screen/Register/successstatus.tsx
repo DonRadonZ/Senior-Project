@@ -46,7 +46,7 @@ const Stack = createStackNavigator()
       onPress={()=>{
         //go to payment
         navigation.navigate("MyLogin")}}
-      >Go to Login Page</CheckButton>
+      >Go to Home Page</CheckButton>
       
       
       </ImageBackground>

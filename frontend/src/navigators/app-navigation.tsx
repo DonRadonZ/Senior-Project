@@ -32,6 +32,8 @@ import { BuyerSlipScreen } from "../Screen/Exchange/Buyer/buyerslip";
 import { ReceiverListScreen } from "../Screen/Exchange/Receiver/receiverlist";
 import { ReceiverReportScreen } from "../Screen/Exchange/Receiver/receiverreport";
 import { ReceiverResultScreen } from "../Screen/Exchange/Receiver/receiverresult";
+import { ReceiverSentFileScreen } from "../Screen/Exchange/Receiver/receiversent";
+import { ReceiverWaitScreen } from "../Screen/Exchange/Receiver/receiverwait";
 
 //API
 

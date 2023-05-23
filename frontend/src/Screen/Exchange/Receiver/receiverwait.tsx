@@ -30,7 +30,7 @@ const Stack = createStackNavigator()
 
 
 
-export const Wait = () => {
+export const ReceiverWaitScreen = () => {
   
   const navigation = useNavigation<StackNavigationProp<RootStackParams>>()
 

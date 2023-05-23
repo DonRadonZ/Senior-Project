@@ -31,7 +31,7 @@ export const ProfileScreen = () =>{
         </View>
 
            
-            <ProfileButton onPress={()=>{}}>Add Account</ProfileButton>
+            <ProfileButton onPress={()=>{}}>Add Bank Account</ProfileButton>
             <ProfileButton onPress={()=>{}}>Notification</ProfileButton>
             <ProfileButton onPress={()=>{}}>Language Select</ProfileButton>
             <ProfileButton onPress={()=>{}}>Change Password</ProfileButton>

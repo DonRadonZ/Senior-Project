@@ -1,5 +1,5 @@
 import React from 'react';
-import {ImageBackground} from 'react-native'; 
+import {ImageBackground, View,Text} from 'react-native'; 
 // import MainContainer from '../../component/Container/MainContainer';
 
 
@@ -12,6 +12,7 @@ import styles from './style';
 import { useNavigation } from '@react-navigation/native';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { RootStackParams } from '../../../../App';
+import { AntDesign } from '@expo/vector-icons';
 
 
 export const ReceiverListScreen = () => {
@@ -22,6 +23,11 @@ export const ReceiverListScreen = () => {
     style={styles.container}
     resizeMode="cover"
         >
+            <View style={{marginBottom:50,flexDirection:'row',marginRight:190}}>
+                <AntDesign name="arrowleft" size={24} color="black" />    
+                <Text style={{ marginTop: 3 }}>Back</Text>
+                <Text style={{left:70,top:4,fontSize:25,bottom:20}}>Receiver List</Text>
+      </View>
             
             <OrderCardA />
             <OrderCardB />

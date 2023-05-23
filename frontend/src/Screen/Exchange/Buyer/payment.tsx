@@ -21,6 +21,7 @@ import styles from "./style";
 import { useNavigation } from "@react-navigation/native";
 import { StackNavigationProp } from "@react-navigation/stack";
 import { RootStackParams } from "../../../../App";
+import { AntDesign } from "@expo/vector-icons";
 
 interface ConfirmationPageProps {
   accountNumber: string;
@@ -52,9 +53,14 @@ export const PaymentScreen = () => {
     > 
     <ImageBackground
       source={require("../../../../assets/Background-image.jpg")}
-      style={styles.container}
+      style={styles.bankcontainer}
       resizeMode="cover"
-    >
+      >
+        <View style={{marginBottom:120,flexDirection:'row',marginRight: 200}}>
+          <AntDesign name="arrowleft" size={24} color="black" style={{right:10,marginTop:7}} />
+          <Text style={{ marginTop: 10,right:10 }}>Back</Text>
+          <Text style={{left:70,top:4,fontSize:25,bottom:20}}>Payment</Text>
+      </View>
       <View style={styles.inputContainer}>
         <PaymentCard />
         <TextInput
