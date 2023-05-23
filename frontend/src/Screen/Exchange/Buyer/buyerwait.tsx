@@ -29,7 +29,7 @@ const Stack = createStackNavigator()
 
 
 
-export const Wait = () => {
+export const BuyerWaitScreen = () => {
   
   const navigation = useNavigation<StackNavigationProp<RootStackParams>>()
 
