@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, View, StyleSheet,ImageBackground } from "react-native";
+import { Text, View, StyleSheet,ImageBackground, Button } from "react-native";
 import { colors } from "../../../Components/Colors/colors";
 import ReturnButton from "../../../Components/Button/ReturnButton";
 import { AntDesign, MaterialCommunityIcons } from '@expo/vector-icons';
@@ -34,7 +34,9 @@ export const BuyerResultScreen = ({
       </Text>
       <Text style={styles.confirmationText}>Date:</Text>
         <Text style={styles.confirmationText}>Time: </Text> */}
-        
+        <View style={{alignItems:'flex-end'}}>
+          <Button title="Slip" color="black" onPress={()=>{navigation.navigate("MySlip")}}/>
+        </View>
       <ResultCard/>
       
       <ReturnButton children={undefined} onPress={()=>{navigation.navigate(('EndUser'))}}/>
