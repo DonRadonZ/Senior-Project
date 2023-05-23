@@ -21,3 +21,10 @@ export interface ProfileButtonProps{
     textStyle?: StyleProp<TextStyle>;
     onPress: ((event: GestureResponderEvent) => void) | undefined
 }
+
+export interface AddNewButtonProps{
+    children:ReactNode;
+    style?: StyleProp<ViewStyle>;
+    textStyle?: StyleProp<TextStyle>;
+    onPress: ((event: GestureResponderEvent) => void) | undefined
+}

@@ -1,7 +1,15 @@
 import React from "react";
-import { Text, View, StyleSheet,ImageBackground } from "react-native";
-import { colors } from "../../../Components/Colors/colors";
-import SellButton from "../../../Components/Button/SellButton";
+import { Text, View, StyleSheet, ImageBackground } from "react-native";
+import { Button,Box } from "@react-native-material/core";
+
+import styles from "./style";
+
+import ProfileButton from "../../../Components/Button/ProfileButton";
+
+//navigation
+import { StackNavigationProp } from "@react-navigation/stack";
+import { RootStackParams } from "../../../../App";
+import { useNavigation } from "@react-navigation/native";
 
 interface ConfirmationPageProps {
   accountNumber: string;
@@ -9,40 +17,31 @@ interface ConfirmationPageProps {
   description: string;
 }
 
-const ConfirmationPage = ({
+export const BuyerConfirmationScreen = ({
   // accountNumber,
   // amount,
   // description,
 }) => {
+
+  const navigation = useNavigation<StackNavigationProp<RootStackParams>>();
   return (
     <ImageBackground
     source={require("../../../../assets/Background-image.jpg")}
     style={styles.container}
     resizeMode="cover"
     >
-    <View style={styles.container}>
+    <Box style={styles.slipcontainer}>
       <Text style={styles.confirmationText}>
-        Account Number: 
+        Account Number: 123-456-7890
       </Text>
-      <Text style={styles.confirmationText}>Amount: 9999</Text>
-      <Text style={styles.confirmationText}>Description: </Text>
-    </View>
+      <Text style={styles.confirmationText}>Amount: 3000</Text>
+      <Text style={styles.confirmationText}>Note: Help </Text>
+      </Box>
+      
+      <ProfileButton onPress={()=>{navigation.navigate('Buyer')}} >Continue</ProfileButton>
     </ImageBackground>
   );
 };
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    padding: 25,
-    paddingTop: 40,
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  confirmationText: {
-    fontSize: 18,
-    marginBottom: 10,
-  },
-});
 
-export default ConfirmationPage;
+

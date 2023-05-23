@@ -17,15 +17,28 @@ const Balancestyles = StyleSheet.create({
         marginBottom: 40
     },
     orderContainer: {
-        flexDirection: "column",
+        flexDirection: "row",
         justifyContent: "space-between",
         backgroundColor: colors.white,
         padding: 20,
         width: ScreenWidth*0.8,
-        height: ScreenHeight*0.2,
+        height: ScreenHeight*0.1,
         borderWidth:2,
         borderRadius: 15,
         alignItems:"flex-start",
+        marginBottom: 20
+    },
+    ResultContainer: {
+        flexDirection: "column",
+        justifyContent: "center",
+        backgroundColor: colors.white,
+        padding: 20,
+        width: ScreenWidth*0.9,
+        height: ScreenHeight*0.4,
+        borderWidth:2,
+        borderRadius: 15,
+        alignItems: "flex-start",
+        marginTop:20,
         marginBottom: 40
     },
     paymentContainer: {
@@ -55,7 +68,26 @@ const Balancestyles = StyleSheet.create({
     },
     OrderViewText: {
         color: colors.black,
-        textAlign:"right",
+        textAlign: "left",
+        position:"relative",
+        fontSize: sizes.Regular,
+    },
+    OrderPendingText: {
+        color: colors.orange,
+        textAlign: "left",
+        position:"relative",
+        fontSize: sizes.Regular,
+    },
+    OrderCompleteText: {
+        color: colors.green,
+        textAlign: "left",
+        position:"relative",
+        fontSize: sizes.Regular,
+    },
+    OrderCancelText: {
+        color: colors.red,
+        textAlign: "left",
+        position:"relative",
         fontSize: sizes.Regular,
     },
     OrderTimeStampText: {
@@ -66,7 +98,25 @@ const Balancestyles = StyleSheet.create({
     BalanceText: {
         color: colors.black,
         textAlign:"left",
-        fontSize: sizes.SmallText,    
+        fontSize: sizes.SmallText, 
+        marginBottom: 15
+    },
+    IDText: {
+        color: colors.black,
+        textAlign:"left",
+        fontSize: sizes.Regular, 
+        marginBottom: 50
+    },DateText: {
+        color: colors.black,
+        textAlign:"left",
+        fontSize: sizes.Regular, 
+        marginTop: 30,
+        marginBottom: 20
+    },TimeText: {
+        color: colors.black,
+        textAlign:"left",
+        fontSize: sizes.Regular, 
+        marginTop: 50
     },
     TimeStampText: {
         color: colors.black,

@@ -6,7 +6,7 @@ import {ImageBackground} from 'react-native';
 import BalanceCard from '../../Components/Card/BalanceCard';
 
 import styles from '../../Components/Container/Backgroundstyle';
-export const Balance = () =>{
+export const BalanceScreen = () =>{
     return(
         <ImageBackground
     source={require("../../../assets/Background-image.jpg")}

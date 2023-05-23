@@ -11,12 +11,14 @@ import {
 
 import PaymentCard from "../../../Components/Card/PaymentCard";
 import { ScreenWidth } from "../../../Components/shared";
-import { useNavigation } from "@react-navigation/native";
-import { colors } from "../../../Components/Colors/colors";
+
+//import { colors } from "../../../Components/Colors/colors";
 import { Text } from "@react-native-material/core";
-import ConfirmationPage from "./confirmation";
+//import ConfirmationPage from "./confirmation";
 
 import styles from "./style";
+
+import { useNavigation } from "@react-navigation/native";
 import { StackNavigationProp } from "@react-navigation/stack";
 import { RootStackParams } from "../../../../App";
 
@@ -27,7 +29,7 @@ interface ConfirmationPageProps {
 }
 
 
-const Payment = () => {
+export const PaymentScreen = () => {
   const [balance, setBalance] = useState("");
   const [senderNumber, setSenderNumber] = useState("");
   const [accountNumber, setAccountNumber] = useState("");
@@ -89,4 +91,3 @@ const Payment = () => {
 
 
 
-export default Payment

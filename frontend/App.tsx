@@ -4,33 +4,66 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
 //screen
-import { Login } from "./src/Screen/Login/login";
-import { Register } from "./src/Screen/Register/register";
-import { Home } from "./src/Screen/Home/home";
-import { Balance } from "./src/Screen/Balance/balance";
-import { QRScan } from "./src/Screen/QRScan/qrscan";
-import { Exchange } from "./src/Screen/Exchange/Buyer/exchange";
-//import ExchangeScreen from './src/Screen/Exchange';
-import { Profile } from './src/Screen/Profile/profile';
-import Payment from './src/Screen/Exchange/Buyer/payment';
+import { LoginScreen } from "./src/Screen/Login/login";
+import { RegisterScreen } from "./src/Screen/Register/register";
+import { HomeScreen } from "./src/Screen/Home/home";
+import { BalanceScreen } from "./src/Screen/Balance/balance";
+import { QRScanScreen } from "./src/Screen/QRScan/qrscan";
+import { ExchangeScreen } from "./src/Screen/Exchange/exchange";
+
+import { ProfileScreen } from './src/Screen/Profile/profile';
+import {PaymentScreen} from './src/Screen/Exchange/Buyer/payment';
 import { createStackNavigator } from '@react-navigation/stack';
 import { colors } from './src/Components/Colors/colors';
-import ConfirmationPage from './src/Screen/Exchange/Buyer/confirmation';
-import EndUserfile from './src/Screen/Exchange/EndUser/SentPic';
-
+import {BuyerConfirmationScreen} from './src/Screen/Exchange/Buyer/confirmation';
+import {ReceiverSentFileScreen} from './src/Screen/Exchange/Receiver/receiversent';
+import {BuyerListScreen} from "./src/Screen/Exchange/Buyer/buyerlist";
+import {ReceiverListScreen} from "./src/Screen/Exchange/Receiver/receiverlist";
+import {ReceiverResultScreen} from "./src/Screen/Exchange/Receiver/receiverresult";
+import { EndConfirm } from "./src/Screen/Camera/Camera";
+import RegisterSuccess from "./src/Screen/Register/successstatus";
+import { SetOTP } from "./src/Screen/setOTP/otp";
+import { VerifiedOTP } from "./src/Screen/setOTP/verifiedotp";
+import { RegisterVerifiedScreen } from "./src/Screen/Register/registerVerified";
+import { Wait } from "./src/Screen/Status/waitstatus";
+import {BuyerStatusScreen} from "./src/Screen/Exchange/Buyer/buyerstatus";
+import {BuyerReportScreen} from "./src/Screen/Exchange/Buyer/buyerreport";
 
 
 //icon
 import { FontAwesome5 } from "@expo/vector-icons";
-import { RegisterMail } from "./src/Screen/Register/registerMail";
-import { RegisterId } from "./src/Screen/Register/registerId";
-import { RegisterScanFace } from "./src/Screen/Register/registerScanFace";
+import { RegisterMailScreen } from "./src/Screen/Register/registerMail";
+import { RegisterIdScreen } from "./src/Screen/Register/registerId";
+import { RegisterScanFaceScreen } from "./src/Screen/Register/registerScanFace";
 import { Unlock } from "./src/Screen/Unlock/Unlock";
+import {BuyerSlipScreen} from "./src/Screen/Exchange/Buyer/buyerslip";
+import {ReceiverSlipScreen} from "./src/Screen/Exchange/Buyer/receiverslip";
+import {BuyerResultScreen} from "./src/Screen/Exchange/Buyer/buyerresult";
+import { ReConfirmationScreen } from "./src/Screen/Exchange/Buyer/reconfirm";
+import { ReceiverReportScreen } from "./src/Screen/Exchange/Receiver/receiverreport";
 
 export type RootStackParams = {
+  Home: any;
   Exchange: any;
+  Buyer: any;
   Payment: any;
   Confirmation: any;
+  EndUser: any;
+  EndOrder: any;
+  EndUserFile: any;
+  MainPage: any;
+  MyRegister: any;
+  MyRegisterMail: any;
+  MyRegisterId: any;
+  MyRegisterScanFace: any;
+  RegisterSuccess:any,
+  MyLogin:any;
+  ReceiverPage: any;
+  MySlip: any;
+  ReceiverSlip: any;
+  Report: any;
+  BuyerResult: any;
+  ReConfirm: undefined;
 };
 
 const RootStack = createStackNavigator<RootStackParams>();
@@ -43,7 +76,7 @@ function MyLogin() {
     <Tab.Navigator screenOptions={{ tabBarStyle: { display: 'none' } }}>
       <Tab.Screen
         name="Login"
-        component={Login}
+        component={LoginScreen}
         options={{ headerShown: false }}
       ></Tab.Screen>
     </Tab.Navigator>
@@ -55,7 +88,7 @@ function MyRegister() {
     <Tab.Navigator screenOptions={{ tabBarStyle: { display: 'none' } }}>
       <Tab.Screen
         name="Register"
-        component={Register}
+        component={RegisterScreen}
         options={{ headerShown: false }}
       ></Tab.Screen>
     </Tab.Navigator>
@@ -67,7 +100,7 @@ function MyRegisterMail() {
     <Tab.Navigator screenOptions={{ tabBarStyle: { display: 'none' } }}>
       <Tab.Screen
         name="RegisterMail"
-        component={RegisterMail}
+        component={RegisterMailScreen}
         options={{ headerShown: false }}
       ></Tab.Screen>
     </Tab.Navigator>
@@ -78,8 +111,8 @@ function MyRegisterId() {
   return (
     <Tab.Navigator screenOptions={{ tabBarStyle: { display: 'none' } }}>
       <Tab.Screen
-        name="RegisterMail"
-        component={RegisterId}
+        name="RegisterId"
+        component={RegisterIdScreen}
         options={{ headerShown: false }}
       ></Tab.Screen>
     </Tab.Navigator>
@@ -91,7 +124,7 @@ function MyRegisterScanFace() {
     <Tab.Navigator screenOptions={{ tabBarStyle: { display: 'none' } }}>
       <Tab.Screen
         name="registerScanFace"
-        component={RegisterScanFace}
+        component={RegisterScanFaceScreen}
         options={{ headerShown: false }}
       ></Tab.Screen>
     </Tab.Navigator>
@@ -110,20 +143,32 @@ function MyUnlock() {
   );
 }
 
+function MysetOTP() {
+  return (
+    <Tab.Navigator screenOptions={{ tabBarStyle: { display: 'none' } }}>
+      <Tab.Screen
+        name="setOTP"
+        component={SetOTP}
+        options={{ headerShown: false }}
+      ></Tab.Screen>
+    </Tab.Navigator>
+  );
+}
+
 
 function MyTabs() {
   return (
     <Tab.Navigator>
-      <Tab.Screen name="Home" component={Home} options={{headerShown:false,
+      <Tab.Screen name="Home" component={HomeScreen} options={{headerShown:false,
           tabBarIcon: ({ color, size }) => <FontAwesome5 name="home" color={color} size={size} />,
           }}/>
-      <Tab.Screen name="Balance" component={Balance}options={{headerShown:false,
+      <Tab.Screen name="Balance" component={BalanceScreen} options={{headerShown:false,
         tabBarIcon: ({ color, size }) => <FontAwesome5 name="wallet" color={color} size={size} />,}} />
-      <Tab.Screen name="QRScan" component={EndUserfile
+      <Tab.Screen name="QRScan" component={EndConfirm
       }options={{headerShown:false,
         tabBarIcon: ({ color, size }) => <FontAwesome5 name="qrcode" color={color} size={size} />,
       }} />
-      <Tab.Screen name="Exchange" component={Exchange} 
+      <Tab.Screen name="Exchange" component={ExchangeScreen} 
       options={{headerShown:false,
         tabBarIcon: ({ color, size }) => <FontAwesome5 name="exchange-alt" color={color} size={size} />,
       }} 
@@ -131,7 +176,7 @@ function MyTabs() {
       {/* <RootStack.Screen name="Payment" component={Payment} options={{headerShown:false}} /> */}
       <Tab.Screen
         name="Profile"
-        component={Profile}
+        component={ProfileScreen}
         options={{
           headerShown: false,
           tabBarIcon: ({ color, size }) => (
@@ -146,7 +191,8 @@ function MyTabs() {
 export function Service(){
   return (
     <Stack.Navigator>
-        <Stack.Screen name='Payment' component={Payment} />
+      <Stack.Screen name='Payment' component={PaymentScreen} />
+      <Stack.Screen name="BuyList" component={BuyerListScreen} />
     </Stack.Navigator>
   )
 }
@@ -183,17 +229,49 @@ export default function App() {
           options={{ headerShown: false }}
         />
         <Stack.Screen
+          name="MyRegisterVerified"
+          component={RegisterVerifiedScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="RegisterSuccess"
+          component={RegisterSuccess}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
           name="Unlock"
           component={Unlock}
           options={{ headerShown: false }}
         />
         <Stack.Screen
-          name="MyTab"
+          name="setOTP"
+          component={SetOTP}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="OTPverified"
+          component={VerifiedOTP}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="MainPage"
           component={MyTabs}
           options={{ headerShown: false }}
         />
-        <Stack.Screen name="Payment" component={Payment} />
-        <Stack.Screen name="Confirmation" component={ConfirmationPage} />
+        <Stack.Screen name="Wait" component={Wait} />
+        <Stack.Screen name="Buyer" component={BuyerListScreen} />
+        <Stack.Screen name="EndUser" component={ReceiverListScreen} />
+        <Stack.Screen name="Payment" component={PaymentScreen} />
+        <Stack.Screen name="Confirmation" component={BuyerConfirmationScreen} />
+        <Stack.Screen name="EndOrder" component={ReceiverResultScreen} />
+        <Stack.Screen name="ReceiverPage" component={BuyerStatusScreen} />
+        <Stack.Screen name="EndUserFile" component={ReceiverSentFileScreen} />
+        <Stack.Screen name="MySlip" component={BuyerSlipScreen} options={{ headerShown: false }} />
+        <Stack.Screen name="ReceiverSlip" component={ReceiverSlipScreen}/>
+        <Stack.Screen name="Report" component={BuyerReportScreen} />
+        <Stack.Screen name="BuyerResult" component={BuyerResultScreen} />
+        <Stack.Screen name="ReConfirm" component={ReConfirmationScreen} />
+        <Stack.Screen name="ReceiveReport" component={ReceiverReportScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -6,7 +6,15 @@ const styles = StyleSheet.create({
       paddingTop: 40,
       justifyContent: "center",
       alignItems: "center",
-    }
-  });
+  },
+  profilecontainer: {
+      flex: 1,
+      padding: 25,
+      paddingTop: 40,
+      justifyContent: "center",
+      //alignItems: "center",
+  }
+});
+
   
   export default styles

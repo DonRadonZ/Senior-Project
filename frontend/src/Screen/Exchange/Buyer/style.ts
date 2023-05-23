@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import { ScreenWidth } from '../../../Components/shared';
+import { ScreenWidth,ScreenHeight } from '../../../Components/shared';
 import { colors } from '../../../Components/Colors/colors';
 
 const styles = StyleSheet.create({
@@ -9,6 +9,45 @@ const styles = StyleSheet.create({
     paddingTop: 40,
     justifyContent: "center",
     alignItems: "center",
+  },
+  owncontainer: {
+    flex: 1,
+    padding: 25,
+    paddingTop: 40,
+    justifyContent: "center",
+    //alignItems: "center",
+  },
+  receivercontainer: {
+    flex: 1,
+    padding: 25,
+    paddingTop: 40,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  slipcontainer: {
+     flexDirection: "column",
+        //justifyContent: "center",
+        backgroundColor: colors.white,
+        padding: 20,
+        width: ScreenWidth,
+        height: ScreenHeight*0.4,
+        borderWidth:2,
+        borderRadius: 15,
+        alignItems:"flex-start",
+        marginBottom: 40
+
+  }, Reportcontainer: {
+     flexDirection: "column",
+        //justifyContent: "center",
+        backgroundColor: colors.white,
+        padding: 20,
+        width: ScreenWidth,
+        height: ScreenHeight*0.4,
+        borderWidth:2,
+        borderRadius: 15,
+        alignItems:"flex-start",
+        marginBottom: 40
+
   },
   inputContainer: {
     marginBottom: 20,
@@ -36,6 +75,28 @@ const styles = StyleSheet.create({
     color: colors.white,
     fontSize: 18,
   },
+  
+  confirmationText: {
+    fontSize: 18,
+    marginBottom: 50,
+  },
+  mainText: {
+    fontSize: 18,
+    marginBottom: 50,
+  },
+  strech: {
+    width: 300,
+    height: 600,
+    marginLeft:20
+  },
+  receive: {
+    width: 200,
+    height: 400,
+    //marginLeft: 70,
+    marginBottom:20
+    
+  }
+
 });
 
 export default styles

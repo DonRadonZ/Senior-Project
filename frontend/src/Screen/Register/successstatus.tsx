@@ -2,12 +2,11 @@ import React,{FunctionComponent} from 'react';
 import {TouchableOpacity,ImageBackground} from 'react-native'; 
 // import MainContainer from '../../component/Container/MainContainer';
 import { Text } from '@react-native-material/core';
-import { colors } from '../../../Components/Colors/colors';
-import { LinearGradient } from 'expo-linear-gradient';
-import BuyChoiceButton from '../../../Components/Button/BuyChoiceButton';
-import SellChoiceButton from '../../../Components/Button/SellChoiceButton';
 
-import styles from '../../../Components/Container/Backgroundstyle';
+import { LinearGradient } from 'expo-linear-gradient';
+import CheckButton from '../../Components/Button/CheckButton';
+
+import styles from '../Exchange/Buyer/style';
 import { StackNavigationProp, createStackNavigator } from '@react-navigation/stack';
 //import { IStackScreenProps } from '../../Components/library/StackScreenProps';
 
@@ -15,7 +14,11 @@ import 'react-native-gesture-handler'
 
 //screen
 import { useNavigation } from '@react-navigation/native';
-import { RootStackParams } from '../../../../App';
+import { RootStackParams } from '../../../App';
+
+//icons
+import { FontAwesome } from '@expo/vector-icons';
+import { colors } from '../../Components/Colors/colors';
 
 
 
@@ -26,7 +29,7 @@ const Stack = createStackNavigator()
 
 
 
-export const Exchange = () => {
+ const RegisterSuccess = () => {
   
   const navigation = useNavigation<StackNavigationProp<RootStackParams>>()
 
@@ -34,21 +37,21 @@ export const Exchange = () => {
 
   return(
     <ImageBackground
-    source={require("../../../../assets/Background-image.jpg")}
+    source={require("../../../assets/Background-image.jpg")}
     style={styles.container}
     resizeMode="cover"
     >
-    
-      <BuyChoiceButton 
+          <FontAwesome name="check-circle" size={200} color={colors.navyblue} style={{marginBottom:40}} />
+      <CheckButton 
       onPress={()=>{
         //go to payment
-        navigation.navigate("Payment")}}
-      >Press for Buyer</BuyChoiceButton>
-      <SellChoiceButton onPress={()=>{alert("List")}}>Press for End User</SellChoiceButton>
+        navigation.navigate("MyLogin")}}
+      >Go to Login Page</CheckButton>
+      
       
       </ImageBackground>
     
       
   )
 }
-
+export default RegisterSuccess

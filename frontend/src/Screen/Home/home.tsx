@@ -8,7 +8,8 @@ import ServiceLists from "../../Components/List/ServiceList"
 import services from "../../mock/services.json"
 import { useNavigation } from '@react-navigation/native';
 import { Service } from '../../../App';
-export const Home = () => {
+import HomeText from '../../Components/Texts/HomeText';
+export const HomeScreen = () => {
   
     return(
         <ImageBackground
@@ -17,10 +18,11 @@ export const Home = () => {
         resizeMode="cover"
       >
         <SafeAreaView>
-          <RegularText>Friend List</RegularText>
+          <HomeText>Friend List</HomeText>
 
-          <RegularText>Service</RegularText>
+          <HomeText>Service</HomeText>
           <ServiceLists onPress={()=>{}} list={services}/>
+          <HomeText>Notification</HomeText>
         </SafeAreaView>
                 
              </ImageBackground>

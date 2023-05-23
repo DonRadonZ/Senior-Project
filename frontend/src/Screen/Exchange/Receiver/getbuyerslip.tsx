@@ -26,7 +26,7 @@ const Stack = createStackNavigator()
 
 
 
-export const Exchange = () => {
+export const EndReceive = () => {
   
   const navigation = useNavigation<StackNavigationProp<RootStackParams>>()
 
@@ -51,4 +51,3 @@ export const Exchange = () => {
       
   )
 }
-

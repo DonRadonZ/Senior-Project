@@ -8,6 +8,7 @@ export const colors = {
   darkblue: "092147",
   orange: "#ff6a00",
   confirm: "#0AAC09",
-
+  red:"#FF0000",
+  green:"#00FF00",
   transparent: "transparent",
 };

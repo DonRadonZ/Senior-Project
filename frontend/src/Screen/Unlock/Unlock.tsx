@@ -11,8 +11,12 @@ import {
   TouchableOpacity,
 } from "react-native";
 import { FontAwesome5 } from "@expo/vector-icons";
+import { useNavigation } from "@react-navigation/native";
+import { StackNavigationProp } from "@react-navigation/stack";
+import { RootStackParams } from "../../../App";
 
 export const Unlock = () => {
+  const navigation = useNavigation<StackNavigationProp<RootStackParams>>()
   const testPassword = "123456";
   const [password, setPassword] = useState("");
   const [count, setCount] = useState(0);
@@ -26,6 +30,7 @@ export const Unlock = () => {
       if (password === testPassword) {
         setLock("unlock");
         //Next Solution
+        () =>{navigation.navigate('Home')}
       } else {
         console.log("Password Invalid");
       }

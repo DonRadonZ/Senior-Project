@@ -4,8 +4,7 @@ import {TouchableOpacity,ImageBackground} from 'react-native';
 import { Text } from '@react-native-material/core';
 
 import { LinearGradient } from 'expo-linear-gradient';
-import BuyChoiceButton from '../../Components/Button/BuyChoiceButton';
-import SellChoiceButton from '../../Components/Button/SellChoiceButton';
+import CheckButton from '../../Components/Button/CheckButton';
 
 import styles from '../Exchange/Buyer/style';
 import { StackNavigationProp, createStackNavigator } from '@react-navigation/stack';
@@ -17,17 +16,19 @@ import 'react-native-gesture-handler'
 import { useNavigation } from '@react-navigation/native';
 import { RootStackParams } from '../../../App';
 
-
-
-
-const Stack = createStackNavigator()
-
 //icons
 import { AntDesign } from '@expo/vector-icons';
 
 
 
-export const Success = () => {
+
+const Stack = createStackNavigator()
+
+
+
+
+
+export const Wait = () => {
   
   const navigation = useNavigation<StackNavigationProp<RootStackParams>>()
 
@@ -39,13 +40,13 @@ export const Success = () => {
     style={styles.container}
     resizeMode="cover"
     >
-     <AntDesign name="checkcircleo" size={72} color="black" />
-      <BuyChoiceButton 
+      <AntDesign name="exclamationcircleo" size={150} color="black" />
+      <CheckButton 
       onPress={()=>{
-        //go to payment
-        navigation.navigate("Payment")}}
-      >Press for Buyer</BuyChoiceButton>
-      <SellChoiceButton onPress={()=>{alert("List")}}>Press for End User</SellChoiceButton>
+        //go to Login
+        navigation.navigate("MyLogin")}}
+      >Go to Login Page</CheckButton>
+      
       
       </ImageBackground>
     
