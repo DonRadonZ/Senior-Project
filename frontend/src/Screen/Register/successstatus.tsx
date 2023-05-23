@@ -38,10 +38,10 @@ const Stack = createStackNavigator()
   return(
     <ImageBackground
     source={require("../../../assets/Background-image.jpg")}
-    style={styles.container}
+    style={styles.statuscontainer}
     resizeMode="cover"
     >
-          <FontAwesome name="check-circle" size={200} color={colors.navyblue} style={{marginBottom:40}} />
+          <FontAwesome name="check-circle" size={300} color={colors.maingreen} style={{marginBottom:40}} />
       <CheckButton 
       onPress={()=>{
         //go to payment
