@@ -1,11 +1,11 @@
 import React, { FunctionComponent } from "react";
 import { TouchableOpacity } from "react-native";
 import { Text,Pressable } from "@react-native-material/core";
-import Buttonstyles from "./style";
+import Buttonstyles from "../Button/style";
 import { AntDesign } from "@expo/vector-icons";
 
 
-import { AddNewButtonProps } from "./types";
+import { AddNewButtonProps } from "../Button/types";
 import { useNavigation } from "@react-navigation/core";
 import { colors } from "../Colors/colors";
 
