@@ -37,10 +37,10 @@ export const Wait = () => {
   return(
     <ImageBackground
     source={require("../../../assets/Background-image.jpg")}
-    style={styles.container}
+    style={styles.statuscontainer}
     resizeMode="cover"
     >
-      <AntDesign name="exclamationcircleo" size={150} color="black" />
+      <AntDesign name="exclamationcircleo" size={200} color="black" />
       <CheckButton 
       onPress={()=>{
         //go to Login
