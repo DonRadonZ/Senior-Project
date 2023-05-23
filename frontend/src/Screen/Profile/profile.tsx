@@ -15,16 +15,18 @@ export const ProfileScreen = () =>{
       style={styles.profilecontainer}
       resizeMode="cover"
         >
-            <View style={{ paddingHorizontal: 3 }}>
-        <View style={{flexDirection:'row',alignItems:'center',justifyContent:"space-between"}}>
-            <Avatar label="Pimlapat Nakwijit" size={20} color='green' />
-            <Text style={{fontFamily:"bold"}}>Profile</Text>
+        <View style={{ paddingHorizontal: 10 ,flexDirection:"row" }}>
+        <View style={{flexDirection:'column',
+        alignItems:'center',
+        paddingHorizontal:20,
+        marginBottom: 30
+        }}>
+            <Avatar label="Pimlapat Nakwijit" size={80} color='green' />
+            <Text style={{fontSize:20}}>Profile</Text>
         </View>
-        <View style={{alignItems:'center'}}>
-            <Text style={{fontFamily:"bold"}}>Pimlapat Nakwijit</Text>
-        </View>
-        <View style={{alignItems:'center'}}>
-            <Text style={{fontFamily:"bold"}}>ID: 708503922</Text>
+        <View style={{alignItems:'stretch',paddingHorizontal:40,paddingVertical:25}}>
+            <Text style={{fontSize:20}}>Pimlapat Nakwijit</Text>
+            <Text style={{fontSize:20}}>ID: 708503922</Text>
         </View>
         </View>
 
