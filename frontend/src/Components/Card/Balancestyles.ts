@@ -37,7 +37,7 @@ const Balancestyles = StyleSheet.create({
         height: ScreenHeight*0.4,
         borderWidth:2,
         borderRadius: 15,
-        alignItems: "flex-start",
+        //alignItems: "flex-start",
         marginTop:20,
         marginBottom: 40
     },
@@ -101,12 +101,20 @@ const Balancestyles = StyleSheet.create({
         fontSize: sizes.SmallText, 
         marginBottom: 15
     },
+
     IDText: {
         color: colors.black,
         textAlign:"left",
         fontSize: sizes.Regular, 
-        marginBottom: 50
-    },DateText: {
+        marginBottom: 30
+    },
+    HeaderText: {
+        color: colors.black,
+        textAlign:"left",
+        fontSize: 25, 
+        marginBottom: 40
+    },
+    DateText: {
         color: colors.black,
         textAlign:"left",
         fontSize: sizes.Regular, 
@@ -116,7 +124,7 @@ const Balancestyles = StyleSheet.create({
         color: colors.black,
         textAlign:"left",
         fontSize: sizes.Regular, 
-        marginTop: 50
+        marginTop: 30
     },
     TimeStampText: {
         color: colors.black,

@@ -76,7 +76,8 @@ const Buttonstyles = StyleSheet.create({
         height: 50,
         borderRadius: 25,
         alignItems:"center",
-        marginTop: ScreenHeight*0.4,
+        //marginTop: ScreenHeight*0.3,
+        bottom: -200
         
         
     },ReturnButtonContainer: {
@@ -87,7 +88,7 @@ const Buttonstyles = StyleSheet.create({
         height: 70,
         borderRadius: 35,
         alignItems:"center",
-        marginTop: 20,
+        marginTop: 10,
         
         
     },
@@ -121,7 +122,11 @@ const Buttonstyles = StyleSheet.create({
         textAlign:"center",
         fontSize: sizes.Regular,    
     },
-    
+    WaitText: {
+        color: colors.white,
+        textAlign:"center",
+        fontSize: sizes.WaitText,    
+    },
 
 })
 
