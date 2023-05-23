@@ -205,7 +205,7 @@ export const RegisterScreen = () => {
         {/*End Address Section */}
 
         <View style={styles.create_struc}>
-          <Button color="#47BF91" title="NEXT" onPress={()=>{navigation.navigate('MyRegisterMail')}} />
+          <Button color="#47BF91" title="NEXT" onPress={()=>{navigation.navigate('RegisterSuccess')}} />
         </View>
       </View>
       </ImageBackground>
