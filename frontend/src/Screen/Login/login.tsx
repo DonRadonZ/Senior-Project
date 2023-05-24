@@ -21,18 +21,6 @@ export const LoginScreen = () => {
   const [password, setPassword] = useState("");
   const navigation = useNavigation<StackNavigationProp<RootStackParams>>();
 
-  // const handleLogin = () => {
-  //   if (email.trim() === "") {
-  //     Alert.alert("Error", "Please enter a value.");
-  //   } else if (password.trim() === "") {
-  //     Alert.alert("Error", "Please enter a value.");
-  //   } else {
-  //     // Handle login logic here
-  //     console.log("Email:", email);
-  //     console.log("Password:", password);
-  //     // Next Solution
-  //   }
-  // };
 
   return (
     <TouchableWithoutFeedback onPress={() => { Keyboard.dismiss() }}
