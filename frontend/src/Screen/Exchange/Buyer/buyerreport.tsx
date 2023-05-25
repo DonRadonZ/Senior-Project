@@ -17,18 +17,13 @@ import { useNavigation } from "@react-navigation/native";
 import ExamineButton from "../../../Components/Button/ExamineButton";
 import CancelButton from "../../../Components/Button/CancelButton";
 import { AntDesign } from "@expo/vector-icons";
-interface ConfirmationPageProps {
-  accountNumber: string;
-  amount: string;
-  description: string;
-}
 
- export const BuyerReportScreen = ({
-  // accountNumber,
-  // amount,
-  // description,
-  
-}) => {
+
+
+
+
+
+ export const BuyerReportScreen = () => {
   const [value,setValue] = useState('')
   const navigation = useNavigation<StackNavigationProp<RootStackParams>>();
   return (
