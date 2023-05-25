@@ -24,10 +24,10 @@ export const BuyerListScreen = () => {
     style={styles.listcontainer}
     resizeMode="cover"
         >
-            <View style={{marginBottom:50,flexDirection:'row',marginRight:200}}>
+            <View style={{marginBottom:30,flexDirection:'row',marginRight:200}}>
                 <AntDesign name="arrowleft" size={24} color="black" />    
-                <Text style={{ marginTop: 3 }}>Back</Text>
-                <Text style={{left:75,top:4,fontSize:25,bottom:20}}>Buyer List</Text>
+                <Text style={{ marginTop: 2 }}>Back</Text>
+                <Text style={{left:75,fontSize:25,bottom:10}}>Buyer List</Text>
       </View>
             <ListCardA />
             <ListCardB />
