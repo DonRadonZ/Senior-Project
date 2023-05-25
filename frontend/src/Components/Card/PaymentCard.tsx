@@ -1,6 +1,7 @@
 import React from "react";
 import { Box,Text } from "@react-native-material/core";
 import BalanceView from "./Balancestyles";
+import axios from "axios";
 
 const PaymentCard = () => (
   <Box style={BalanceView.paymentContainer}>
