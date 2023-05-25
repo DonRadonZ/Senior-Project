@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import { View, TouchableOpacity } from 'react-native';
+import { View, TouchableOpacity, Alert,Text,ImageBackground } from 'react-native';
 import {
     Camera,
     CameraType,
@@ -16,10 +16,24 @@ export const EndConfirm = () => {
     const cameraRef = useRef<Camera>(null);
     const { navigate } = useNavigation();
     const [cameraType, setCameraType] = useState(CameraType.back);
+    const [previewVisible, setPreviewVisible] = useState(false)
+    const [capturedImage, setCapturedImage] = useState<any>(null)
     const [permission, requestPermission] = Camera.useCameraPermissions();
     const [cameraReady, setCameraReady] = useState(false);
+    const [startCamera,setStartCamera] = useState(false)
 
     const cameraNotReady = !cameraReady || !cameraRef.current;
+
+
+    const __startCamera = async () => {
+        const {status} = await Camera.requestPermissionsAsync()
+        console.log(status)
+        if (status === 'granted') {
+          setStartCamera(true)
+        } else {
+          Alert.alert('Access denied')
+        }
+      }
 
     const snap = async () => {
         if (cameraNotReady) {
@@ -30,9 +44,22 @@ export const EndConfirm = () => {
             skipProcessing: true,
 
         };
-        const result = cameraRef.current.takePictureAsync(options);
+        const result = await cameraRef.current.takePictureAsync(options);
         //navigate("CheckPhoto", params);
+        console.log(result)
+        setPreviewVisible(true)
+        setCapturedImage(true)
+        
     }
+    const __savePhoto = () => {}
+
+    //retake photo
+    const __retakePicture = () => {
+        setCapturedImage(null)
+        setPreviewVisible(false)
+        __startCamera()
+    }
+
 
     const ImageGallery = async () => {
         const { assets } = await launchImageLibraryAsync({
@@ -68,6 +95,7 @@ export const EndConfirm = () => {
 
     return (
         <View style={{ flex: 1, backgroundColor: colors.black }}>
+            {previewVisible && capturedImage}
             <Camera
                 ref={cameraRef}
                 style={{ flex: 1 }}
@@ -119,3 +147,80 @@ export const EndConfirm = () => {
          </View>
     )
 }
+
+const CameraPreview = ({photo, retakePicture, savePhoto}: any) => {
+    console.log('sdsfds', photo)
+    return (
+      <View
+        style={{
+          backgroundColor: 'transparent',
+          flex: 1,
+          width: '100%',
+          height: '100%'
+        }}
+      >
+        <ImageBackground
+          source={{uri: photo && photo.uri}}
+          style={{
+            flex: 1
+          }}
+        >
+          <View
+            style={{
+              flex: 1,
+              flexDirection: 'column',
+              padding: 15,
+              justifyContent: 'flex-end'
+            }}
+          >
+            <View
+              style={{
+                flexDirection: 'row',
+                justifyContent: 'space-between'
+              }}
+            >
+              <TouchableOpacity
+                onPress={retakePicture}
+                style={{
+                  width: 130,
+                  height: 40,
+  
+                  alignItems: 'center',
+                  borderRadius: 4
+                }}
+              >
+                <Text
+                  style={{
+                    color: '#fff',
+                    fontSize: 20
+                  }}
+                >
+                  Re-take
+                </Text>
+              </TouchableOpacity>
+              <TouchableOpacity
+                onPress={savePhoto}
+                style={{
+                  width: 130,
+                  height: 40,
+  
+                  alignItems: 'center',
+                  borderRadius: 4
+                }}
+              >
+                <Text
+                  style={{
+                    color: '#fff',
+                    fontSize: 20
+                  }}
+                >
+                  save photo
+                </Text>
+              </TouchableOpacity>
+            </View>
+          </View>
+        </ImageBackground>
+      </View>
+    )
+  }
+  
