@@ -41,9 +41,7 @@ const Buttonstyles = StyleSheet.create({
         borderRadius: 15,
         alignItems: "center",
         marginTop:20,
-        marginBottom: 40,
-        
-        
+        marginBottom: 40,    
     },
     ContinueButtonContainer: {
         flexDirection: "column",
