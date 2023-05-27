@@ -29,6 +29,7 @@ export const ReceiverListScreen = () => {
                 <Text style={{left:70,top:4,fontSize:25,bottom:20}}>Receiver List</Text>
       </View>
             
+            //request list
             <OrderCardA />
             <OrderCardB />
            <OrderCardC />

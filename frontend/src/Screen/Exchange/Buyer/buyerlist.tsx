@@ -29,6 +29,8 @@ export const BuyerListScreen = () => {
                 <Text style={{ marginTop: 2 }}>Back</Text>
                 <Text style={{left:75,fontSize:25,bottom:10}}>Buyer List</Text>
       </View>
+
+      //request list
             <ListCardA />
             <ListCardB />
             <ListCardC/>
