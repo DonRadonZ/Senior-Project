@@ -51,5 +51,11 @@ export const AppNavigator = () => {
             name="Tab"
             component={BottomTab}
         />
+        {/* <RootStack.Screen name="BuyerList" component={BuyerListScreen} />
+        <RootStack.Screen name="BuyerList" component={BuyerListScreen} />
+        <RootStack.Screen name="BuyerList" component={BuyerListScreen} />
+        <RootStack.Screen name="BuyerList" component={BuyerListScreen} />
+        <RootStack.Screen name="BuyerList" component={BuyerListScreen} />
+        <RootStack.Screen name="BuyerList" component={BuyerListScreen} /> */}
     </>
 }
