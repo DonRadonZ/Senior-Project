@@ -74,7 +74,7 @@ def register():
 
         return 'Registration successful!'
 
-    return render_template('register.html')
+    #return render_template('register.html')
 
 # Route for login page
 @app.route('/login', methods=['GET', 'POST'])
@@ -90,13 +90,13 @@ def login():
         else:
             return 'Login failed!'
 
-    return render_template('login.html')
+    #return render_template('login.html')
 
 # Route to display all user data
 @app.route('/users')
 def display_users():
     users = User.query.all()
-    return render_template('users.html', users=users)
+    #return render_template('users.html', users=users)
 
 
 
@@ -125,7 +125,7 @@ def face_recognition():
 
         return str(verification_result)
 
-    return render_template('upload.html')
+    #return render_template('upload.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
