@@ -46,11 +46,15 @@ export const Wait = () => {
       <AntDesign name="arrowleft" size={24} color="black" />
       <Text>Back</Text>
       </View>
-      <AntDesign name="clockcircle" size={200} color={colors.rose} style={{marginBottom:75}} />
+      <AntDesign name="clockcircle" size={200} color={colors.rose} style={{ marginBottom: 75 }} />
+      
+      // go back to payment
       <CheckButton 
       onPress={()=>{
         //go to payment
-        navigation.navigate("Payment")}}
+          navigation.navigate("Payment")
+        }}
+        
       >Exchange</CheckButton>
       
       
