@@ -10,13 +10,13 @@ import cv2
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-app.config['UPLOAD_FOLDER'] = 'static/imagestore'
-app.config['ALLOWED_EXTENSIONS'] = {'jpg','jpeg','png','gif'}
+app.config['UPLOAD_FOLDER'] = 'static/image_store'
+app.config['ALLOWED_EXTENSIONS'] = {'jpg', 'jpeg', 'png', 'gif'}
 db = SQLAlchemy(app)
 
 # Define the model for the database
 class User(db.Model):
-    id= db.Column(db.Integer, primary_key=True)
+    id = db.Column(db.Integer, primary_key=True)
     id_user = db.Column(db.String(50))
     laser_id = db.Column(db.String(50))
     email = db.Column(db.String(100))
@@ -41,6 +41,21 @@ def create_tables():
     if not getattr(g, '_got_first_request', False):
         db.create_all()
         g._got_first_request = True
+
+
+
+
+##Rout the Payment
+@app.route('/Payment', methods=['GET', 'POST'])
+def Payment():
+    if request.method == 'POST':
+        account_number = request.form['account_number']
+        amount = request.form['amount']
+        description = request.form['description']
+  
+
+    return render_template('Payment.html')
+
 
 # Route for registration page
 # Route for registration page
@@ -76,6 +91,16 @@ def register():
 
     #return render_template('register.html')
 
+# Route for Create new accout page
+@app.route('/Create', methods=[ 'POST'])
+def Create():
+    if request.method == 'POST':
+        full_name = request.form['full_name']
+        birth_date = request.form['birth_date']
+        phone = request.form['phone']
+        address = request.form['address']
+    #return render_template('Create_New_Account.html')
+
 # Route for login page
 @app.route('/login', methods=['GET', 'POST'])
 def login():
@@ -90,14 +115,13 @@ def login():
         else:
             return 'Login failed!'
 
-    #return render_template('login.html')
+    return render_template('login.html')
 
 # Route to display all user data
 @app.route('/users')
 def display_users():
     users = User.query.all()
-    #return render_template('users.html', users=users)
-
+    return render_template('users.html', users=users)
 
 
 @app.route('/face_recognition', methods=['GET', 'POST'])
@@ -125,7 +149,7 @@ def face_recognition():
 
         return str(verification_result)
 
-    #return render_template('upload.html')
+    return render_template('upload.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
