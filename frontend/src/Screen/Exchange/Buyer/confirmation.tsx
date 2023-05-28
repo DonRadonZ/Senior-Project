@@ -18,11 +18,10 @@ interface ConfirmationPageProps {
   description: string;
 }
 
-export const BuyerConfirmationScreen = ({
-  // accountNumber,
-  // amount,
-  // description,
-}) => {
+export const BuyerConfirmationScreen = (props:any) => {
+  const {route} = props;
+  const {account_id} = route.params;
+
 
   const navigation = useNavigation<StackNavigationProp<RootStackParams>>();
   return (
