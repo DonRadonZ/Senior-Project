@@ -1,6 +1,6 @@
 import React,{FunctionComponent} from "react";
 import { Text,Pressable } from "@react-native-material/core";
-import Buttonstyles from "./style";
+import Buttonstyles from "../Button/style";
 
 interface Props{
     label: string;
@@ -8,7 +8,7 @@ interface Props{
   onPress: () => void;
 }
 
-import { ProfileButtonProps } from "./types";
+import { ProfileButtonProps } from "../Button/types";
 import { useNavigation } from "@react-navigation/core";
 import { TouchableOpacity } from "react-native";
 
