@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, View, StyleSheet, ImageBackground } from "react-native";
+import { Text, View, StyleSheet, ImageBackground,TouchableOpacity } from "react-native";
 import { Button,Box } from "@react-native-material/core";
 
 import styles from "./style";
@@ -32,8 +32,10 @@ export const ReConfirmationScreen = ({
     resizeMode="cover"
     >
       <View style={{marginBottom:100,flexDirection:'row',marginRight: 200}}>
-          <AntDesign name="arrowleft" size={24} color="black" style={{right:10,marginTop:7}} />
-          <Text style={{ marginTop: 10,right:10 }}>Back</Text>
+          <TouchableOpacity style={{flexDirection:'row'}} onPress={()=>{navigation.goBack()}}>
+                <AntDesign name="arrowleft" size={24} color="black" />    
+                <Text style={{ marginTop: 2 }}>Back</Text>
+                </TouchableOpacity>
           <Text style={{left:60,top:4,fontSize:25,bottom:20}}>Buyer Slip</Text>
       </View>
     {/* <Box style={styles.slipcontainer}>
@@ -44,7 +46,7 @@ export const ReConfirmationScreen = ({
       <Text style={styles.confirmationText}>Note: Help </Text>
       </Box> */}
       
-      <ProfileButton onPress={()=>{navigation.navigate('Buyer')}} >ReConfirm</ProfileButton>
+      <ProfileButton onPress={()=>{navigation.navigate('BuyerResult')}} >ReConfirm</ProfileButton>
     </ImageBackground>
   );
 };

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Text, View, StyleSheet, ImageBackground,Image, TouchableOpacity } from "react-native";
 import { Button,Box } from "@react-native-material/core";
 
@@ -26,6 +26,7 @@ export const ReceiverSlipScreen = ({
   // amount,
   // description,
 }) => {
+  const[image,setImage] = useState()
 
   const navigation = useNavigation<StackNavigationProp<RootStackParams>>();
   return (
@@ -35,7 +36,7 @@ export const ReceiverSlipScreen = ({
     resizeMode="cover"
     >
       <View style={{marginBottom:100,flexDirection:'row',marginRight: 200}}>
-        <TouchableOpacity style={{flexDirection:'row'}}>
+        <TouchableOpacity style={{flexDirection:'row'}} onPress={()=> navigation.goBack()}>
           <AntDesign name="arrowleft" size={24} color="black" style={{right:-10,marginTop:7}} />
           <Text style={{ marginTop: 10,right:-10 }}>Back</Text>
           </TouchableOpacity>
@@ -54,6 +55,7 @@ export const ReceiverSlipScreen = ({
       
       
       <SelectButton onPress={undefined}>File/Photo</SelectButton>
+      {image && <Image source={{ uri: image }} style={{ width: 200, height: 200 }} />}
       <ProfileButton onPress={() => { navigation.navigate("ReConfirm") }} >Confirm</ProfileButton>
           {/* <CancelButton onPress={()=>{}}>Report</CancelButton> */}
     </ImageBackground>

@@ -12,25 +12,45 @@ import {
   Keyboard,
 } from "react-native";
 import { ScreenWidth } from "../../Components/shared";
+import { useForm } from "react-hook-form";
+import axios from "axios";
 
 import { useNavigation } from "@react-navigation/native";
 import { StackNavigationProp } from "@react-navigation/stack";
 import { RootStackParams } from "../../../App";
 
+type RegisterForm = {
+  full_name: string,
+  birth_date: string,
+  phone: string,
+address: string,
+
+}
 export const RegisterScreen = () => {
   const navigation = useNavigation<StackNavigationProp<RootStackParams>>()
 
-  const [name, setName] = useState("");
-  const [birthDate, setBirthDate] = useState("");
-  const [phone, setPhone] = useState("");
-  const [address, setAddress] = useState("");
-  const [mou, setMou] = useState("");
-  const [soy, setSoy] = useState("");
-  const [road, setRoad] = useState("");
-  const [tambon, setTambon] = useState("");
-  const [district, setDistrict] = useState("");
-  const [province, setProvince] = useState("");
-  const [country, setCountry] = useState("");
+  //const form = useForm()
+  
+
+  const [name, setName] = useState<string>("");
+  const [birthDate, setBirthDate] = useState<string>("");
+  const [phone, setPhone] = useState<string>("");
+  const [address, setAddress] = useState<string>("");
+
+  const data: RegisterForm = {
+    full_name: name,
+    birth_date: birthDate,
+    phone: phone,
+    address:address
+  }
+
+  // const [mou, setMou] = useState("");
+  // const [soy, setSoy] = useState("");
+  // const [road, setRoad] = useState("");
+  // const [tambon, setTambon] = useState("");
+  // const [district, setDistrict] = useState("");
+  // const [province, setProvince] = useState("");
+  // const [country, setCountry] = useState("");
 
   // const handleRegister = () => {
   //   if (name.trim() === "") {
@@ -63,8 +83,22 @@ export const RegisterScreen = () => {
   const HorizontalLine = () => {
     return <View style={styles.horizontalLine} />;
   };
+  
+  const url = "http://127.0.0.1:5000/Create";
+  const { control, handleSubmit } = useForm();
 
-  const url = "http://127.0.0.1:5000/register";
+  const onRegisterPress = () => {
+    axios.post(url, data)
+    console.log(onRegisterPress)
+    //navigation.navigate('MyRegisterMail')
+
+  }
+  
+  
+  const postData = () => {
+    
+    
+  }
   
 
   return (
@@ -92,9 +126,10 @@ export const RegisterScreen = () => {
           <TextInput
             style={styles.input}
             placeholder="Fullname"
-            placeholderTextColor="gray"
-            onChangeText={(text) => setName(text)}
-            value={name}
+              placeholderTextColor="gray"
+              value={name}
+            onChangeText={value=> setName(value)}
+            
           />
         </View>
         <HorizontalLine />
@@ -103,9 +138,10 @@ export const RegisterScreen = () => {
           <TextInput
             style={styles.input}
             placeholder="YY/mm/dd"
-            placeholderTextColor="gray"
-            onChangeText={(text) => setBirthDate(text)}
-            value={birthDate}
+              placeholderTextColor="gray"
+              value={birthDate}
+            onChangeText={value => setBirthDate(value)}
+            
           />
         </View>
         <HorizontalLine />
@@ -114,9 +150,10 @@ export const RegisterScreen = () => {
           <TextInput
             style={styles.input}
             placeholder="Phone"
-            placeholderTextColor="gray"
-            onChangeText={(text) => setPhone(text)}
+              placeholderTextColor="gray"
               value={phone}
+            onChangeText={value => setPhone(value)}
+              
               keyboardType="number-pad"
           />
         </View>
@@ -128,13 +165,14 @@ export const RegisterScreen = () => {
             <View style={{ flex: 1 }}>
               <TextInput
                 style={styles.inputAddress}
-                placeholder="บ้านเลขที่"
-                placeholderTextColor="gray"
-                onChangeText={(text) => setAddress(text)}
-                value={address}
+                placeholder="address"
+                  placeholderTextColor="gray"
+                  value={address}
+                onChangeText={value => setAddress(value)}
+                
               />
             </View>
-            <View style={{ flex: 1 }}>
+            {/* <View style={{ flex: 1 }}>
               <TextInput
                 style={styles.inputAddress}
                 placeholder="หมู่"
@@ -142,9 +180,9 @@ export const RegisterScreen = () => {
                 onChangeText={(text) => setMou(text)}
                 value={mou}
               />
-            </View>
+            </View> */}
           </View>
-          <View style={{ flexDirection: "row" }}>
+          {/* <View style={{ flexDirection: "row" }}>
             <View style={{ flex: 1 }}>
               <TextInput
                 style={styles.inputAddress}
@@ -203,12 +241,12 @@ export const RegisterScreen = () => {
                 value={country}
               />
             </View>
-          </View>
+          </View> */}
         </View>
         {/*End Address Section */}
 
         <View style={styles.create_struc}>
-          <Button color="#47BF91" title="NEXT" onPress={()=>{navigation.navigate('RegisterSuccess')}} />
+          <Button color="#47BF91" title="NEXT" onPress={onRegisterPress} />
         </View>
       </View>
       </ImageBackground>
@@ -256,6 +294,7 @@ const styles = StyleSheet.create({
   inputAddress: {
     width: "95%",
     height: 40,
+    
     borderColor: "gray",
     borderWidth: 1,
     marginBottom: 12,
