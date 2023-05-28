@@ -41,6 +41,8 @@ import {BuyerResultScreen} from "./src/Screen/Exchange/Buyer/buyerresult";
 import { ReConfirmationScreen } from "./src/Screen/Exchange/Buyer/reconfirm";
 import { ReceiverReportScreen } from "./src/Screen/Exchange/Receiver/receiverreport";
 import { ReceiverCancelResultScreen } from "./src/Screen/Exchange/Receiver/receivercancelresult";
+import { Registercam } from "./src/Screen/Register/registercam";
+import { FaceCheck } from "./src/Screen/facedetector/FaceDetector";
 
 export type RootStackParams = {
   Home: any;
@@ -64,6 +66,8 @@ export type RootStackParams = {
   Report: any;
   BuyerResult: any;
   ReConfirm: undefined;
+  RegisCam: undefined;
+  ScanFace: undefined;
 };
 
 const RootStack = createStackNavigator<RootStackParams>();
@@ -164,7 +168,7 @@ function MyTabs() {
           }}/>
       <Tab.Screen name="Balance" component={BalanceScreen} options={{headerShown:false,
         tabBarIcon: ({ color, size }) => <FontAwesome5 name="wallet" color={color} size={size} />,}} />
-      <Tab.Screen name="QRScan" component={EndConfirm
+      <Tab.Screen name="QRScan" component={QRScanScreen
       }options={{headerShown:false,
         tabBarIcon: ({ color, size }) => <FontAwesome5 name="qrcode" color={color} size={size} />,
       }} />
@@ -331,6 +335,16 @@ export default function App() {
         <Stack.Screen
         name="ReceiverCancel"
         component={ReceiverCancelResultScreen}
+        options={{headerShown:false}}
+        />
+        <Stack.Screen
+        name="RegisCam"
+        component={Registercam}
+        options={{headerShown:false}}
+        />
+        <Stack.Screen
+        name="ScanFace"
+        component={FaceCheck}
         options={{headerShown:false}}
         />
       </Stack.Navigator>
