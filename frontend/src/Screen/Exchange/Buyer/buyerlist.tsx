@@ -25,8 +25,8 @@ export const BuyerListScreen = () => {
     style={styles.listcontainer}
     resizeMode="cover"
         >
-            <View style={{marginBottom:30,flexDirection:'row',marginRight:200}}>
-                <TouchableOpacity style={{flexDirection:'row'}}>
+            <View style={{marginBottom:30,flexDirection:'row',marginRight:200,top:10}}>
+                <TouchableOpacity style={{flexDirection:'row'}} onPress={()=>{navigation.goBack()}}>
                 <AntDesign name="arrowleft" size={24} color="black" />    
                 <Text style={{ marginTop: 2 }}>Back</Text>
                 </TouchableOpacity>

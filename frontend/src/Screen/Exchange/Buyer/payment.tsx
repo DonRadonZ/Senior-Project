@@ -56,9 +56,11 @@ export const PaymentScreen = () => {
       style={styles.bankcontainer}
       resizeMode="cover"
       >
-        <View style={{marginBottom:120,flexDirection:'row',marginRight: 200}}>
+        <View style={{ marginBottom: 120, flexDirection: 'row', marginRight: 200 }}>
+          <TouchableOpacity style={{flexDirection:'row'}} onPress={()=>{navigation.goBack()}}>
           <AntDesign name="arrowleft" size={24} color="black" style={{right:10,marginTop:7}} />
-          <Text style={{ marginTop: 10,right:10 }}>Back</Text>
+            <Text style={{ marginTop: 10, right: 10 }}>Back</Text>
+            </TouchableOpacity>
           <Text style={{left:70,top:4,fontSize:25,bottom:20}}>Payment</Text>
       </View>
       <View style={styles.inputContainer}>
@@ -86,7 +88,7 @@ export const PaymentScreen = () => {
       </View>
       <TouchableOpacity
         style={styles.confirmButton}
-        onPress={()=>{navigation.navigate('Confirmation',{ paramKey: accountNumber,amount,description})}}
+        onPress={()=>{navigation.navigate('Confirmation',{ account: accountNumber,amount:amount,note:description})}}
       >
         <Text style={styles.confirmButtonText}>Continue</Text>
       </TouchableOpacity>

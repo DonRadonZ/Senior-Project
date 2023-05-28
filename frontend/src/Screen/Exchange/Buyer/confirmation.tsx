@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, View, StyleSheet, ImageBackground } from "react-native";
+import { Text, View, StyleSheet, ImageBackground, TouchableOpacity } from "react-native";
 import { Button,Box } from "@react-native-material/core";
 
 import styles from "./style";
@@ -31,16 +31,18 @@ export const BuyerConfirmationScreen = (props:any) => {
     resizeMode="cover"
     >
       <View style={{marginBottom:120,flexDirection:'row',marginRight: 200}}>
-          <AntDesign name="arrowleft" size={24} color="black" style={{right:10,marginTop:7}} />
-          <Text style={{ marginTop: 10,right:10 }}>Back</Text>
+          <TouchableOpacity style={{flexDirection:'row'}} onPress={()=>{navigation.goBack()}}>
+                <AntDesign name="arrowleft" size={24} color="black" />    
+                <Text style={{ marginTop: 2 }}>Back</Text>
+                </TouchableOpacity>
           <Text style={{left:70,top:4,fontSize:20,bottom:20}}>Confirmation</Text>
       </View>
     <Box style={styles.slipcontainer}>
       <Text style={styles.confirmationText}>
-        Account Number: 123-456-7890
+        Account Number: {props}
       </Text>
-      <Text style={styles.confirmationText}>Amount: 3000</Text>
-      <Text style={styles.confirmationText}>Note: Help </Text>
+        <Text style={styles.confirmationText}>Amount:{ }</Text>
+        <Text style={styles.confirmationText}>Note: { }</Text>
       </Box>
       
       <ProfileButton onPress={()=>{navigation.navigate('Buyer')}} >Continue</ProfileButton>

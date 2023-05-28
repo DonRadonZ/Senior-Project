@@ -37,7 +37,7 @@ export const BuyerSlipScreen = ({
     
       <SafeAreaView>
       <View style={{marginBottom:50,flexDirection:'row',marginRight: 200}}>
-      <TouchableOpacity style={{flexDirection:'row', right: 20}}>
+      <TouchableOpacity style={{flexDirection:'row', right: 20}} onPress={()=>{navigation.goBack()}}>
           <AntDesign name="arrowleft" size={24} color="black" style={{right:-10,marginTop:7}} />
           <Text style={{ marginTop: 10,right:-10 }}>Back</Text>
           </TouchableOpacity>
