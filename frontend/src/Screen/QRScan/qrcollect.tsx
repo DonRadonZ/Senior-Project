@@ -61,26 +61,7 @@ export const QRScanScreen = () => {
         }
       }
 
-    // scan qr code async
-    // const scanned = async () => {
-    //     if (cameraNotReady) {
-    //         return;
-    //     }
-    //     const options: CameraPictureOptions = {
-    //         quality: 0.5,
-    //         skipProcessing: true,
-
-    //     };
-    //     const result = await cameraRef.current.takePictureAsync(options);
-    //     //navigate("CheckPhoto", params);
-    //     console.log(result)
-    //     setPreviewVisible(true)
-    //     
-        
-    // }
-    // const __savePhoto = () => {}
-
-      // take a picture
+    // take a picture
     // const snap = async () => {
     //     if (cameraNotReady) {
     //         return;
@@ -98,8 +79,7 @@ export const QRScanScreen = () => {
         
     // }
     // const __savePhoto = () => {}
-  
-  
+
     //retake photo
     // const __retakePicture = () => {
     //     setCapturedImage(null)
@@ -154,10 +134,8 @@ export const QRScanScreen = () => {
             /> */}
             <BarCodeScanner
                 barCodeTypes={[BarCodeScanner.Constants.BarCodeType.qr]}
-                style={{flex:1}}
                 onBarCodeScanned={() => {
-                  setStartScanned(true);
-                  
+                    setStartScanned(true);
              }}
             />
             <View
@@ -181,9 +159,9 @@ export const QRScanScreen = () => {
                     alignItems: 'center',
             }}    
             >
-                {/* <TouchableOpacity onPress={ImageGallery}>
+                <TouchableOpacity onPress={ImageGallery}>
                     <Entypo name="image" size={30} color={colors.white} />
-                </TouchableOpacity> */}
+                </TouchableOpacity>
                 {/* {cameraReady && (
                     <TouchableOpacity
                         onPress={snap}
