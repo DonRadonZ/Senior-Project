@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, View, StyleSheet, ImageBackground,Image } from "react-native";
+import { Text, View, StyleSheet, ImageBackground,Image, TouchableOpacity } from "react-native";
 import { Button,Box } from "@react-native-material/core";
 
 import styles from "./style";
@@ -35,8 +35,10 @@ export const ReceiverSlipScreen = ({
     resizeMode="cover"
     >
       <View style={{marginBottom:100,flexDirection:'row',marginRight: 200}}>
+        <TouchableOpacity style={{flexDirection:'row'}}>
           <AntDesign name="arrowleft" size={24} color="black" style={{right:-10,marginTop:7}} />
           <Text style={{ marginTop: 10,right:-10 }}>Back</Text>
+          </TouchableOpacity>
           <Text style={{left:75,top:4,fontSize:25,bottom:20}}>Receiver Slip</Text>
       </View>
           <View>
