@@ -13,6 +13,7 @@ import { useNavigation } from '@react-navigation/native';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { RootStackParams } from '../../../../App';
 import { AntDesign } from '@expo/vector-icons';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 
 
 export const BuyerListScreen = () => {
@@ -25,12 +26,13 @@ export const BuyerListScreen = () => {
     resizeMode="cover"
         >
             <View style={{marginBottom:30,flexDirection:'row',marginRight:200}}>
+                <TouchableOpacity style={{flexDirection:'row'}}>
                 <AntDesign name="arrowleft" size={24} color="black" />    
                 <Text style={{ marginTop: 2 }}>Back</Text>
+                </TouchableOpacity>
                 <Text style={{left:75,fontSize:25,bottom:10}}>Buyer List</Text>
       </View>
-
-      //request list
+            {/* card list */}
             <ListCardA />
             <ListCardB />
             <ListCardC/>
