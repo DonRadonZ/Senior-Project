@@ -46,7 +46,7 @@ export const RegisterScanFaceScreen = () => {
         </View>
         <View style={{ paddingHorizontal: 10 }}>
           <Text style={{ paddingBottom: 20, textAlign:"center" }}>สแกนใบหน้าของคุณ</Text>
-          <TouchableOpacity onPress={cameraFrontId} style={styles.buttonCamera}>
+          <TouchableOpacity onPress={()=>{navigation.navigate('ScanFace')}} style={styles.buttonCamera}>
             <FontAwesome5 name="camera" color="#333333" size={30} />
           </TouchableOpacity>
         </View>

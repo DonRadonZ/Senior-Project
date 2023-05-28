@@ -1,5 +1,5 @@
 import React from 'react';
-import {ImageBackground, View,Text} from 'react-native'; 
+import {ImageBackground, View,Text,TouchableOpacity} from 'react-native'; 
 // import MainContainer from '../../component/Container/MainContainer';
 
 
@@ -24,12 +24,14 @@ export const ReceiverListScreen = () => {
     resizeMode="cover"
         >
             <View style={{marginBottom:50,flexDirection:'row',marginRight:190}}>
+                <TouchableOpacity style={{flexDirection:'row'}} onPress={()=>{navigation.goBack()}}>
                 <AntDesign name="arrowleft" size={24} color="black" />    
-                <Text style={{ marginTop: 3 }}>Back</Text>
+                <Text style={{ marginTop: 2 }}>Back</Text>
+                </TouchableOpacity>
                 <Text style={{left:70,top:4,fontSize:25,bottom:20}}>Receiver List</Text>
       </View>
             
-            //request list
+            {/* request list */}
             <OrderCardA />
             <OrderCardB />
            <OrderCardC />

@@ -18,6 +18,8 @@ import { useNavigation } from "@react-navigation/native";
 import { StackNavigationProp } from "@react-navigation/stack";
 import { RootStackParams } from "../../../App";
 
+ 
+
 export const RegisterIdScreen = () => {
 const navigation = useNavigation<StackNavigationProp<RootStackParams>>()
 
@@ -25,7 +27,9 @@ const navigation = useNavigation<StackNavigationProp<RootStackParams>>()
 
   const handleRegister = () => {};
 
-  const cameraFrontId = () => {};
+  const cameraFrontId = () => {navigation.navigate("RegisCam")};
+
+  const url = "http://127.0.0.1:5000/register";
 
   return (
     <TouchableWithoutFeedback onPress={() => { Keyboard.dismiss() }}
