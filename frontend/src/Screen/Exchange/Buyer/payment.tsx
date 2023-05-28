@@ -86,7 +86,7 @@ export const PaymentScreen = () => {
       </View>
       <TouchableOpacity
         style={styles.confirmButton}
-        onPress={()=>{navigation.navigate('Confirmation')}}
+        onPress={()=>{navigation.navigate('Confirmation',{ paramKey: accountNumber,amount,description})}}
       >
         <Text style={styles.confirmButtonText}>Continue</Text>
       </TouchableOpacity>
