@@ -11,6 +11,8 @@ import { useNavigation } from '@react-navigation/native';
 import { MediaTypeOptions, launchImageLibraryAsync } from 'expo-image-picker';
 import { colors } from '../../Components/Colors/colors';
 import { ScreenWidth } from '../../Components/shared';
+import { StackNavigationProp } from '@react-navigation/stack';
+import { RootStackParams } from '../../../App';
 
 export const EndConfirm = () => {
     const cameraRef = useRef<Camera>(null);
@@ -24,7 +26,8 @@ export const EndConfirm = () => {
 
     const cameraNotReady = !cameraReady || !cameraRef.current;
 
-
+   const navigation = useNavigation<StackNavigationProp<RootStackParams>>()
+    
     const __startCamera = async () => {
         const {status} = await Camera.requestPermissionsAsync()
         console.log(status)
@@ -45,10 +48,13 @@ export const EndConfirm = () => {
 
         };
         const result = await cameraRef.current.takePictureAsync(options);
-        //navigate("CheckPhoto", params);
+      navigation.navigate("MyRegisterId", {
+          image:result.uri
+        });
         console.log(result)
         setPreviewVisible(true)
-        setCapturedImage(true)
+        setCapturedImage(result)
+        //navigate(CameraPreview)
         
     }
     const __savePhoto = () => {}
@@ -95,7 +101,8 @@ export const EndConfirm = () => {
 
     return (
         <View style={{ flex: 1, backgroundColor: colors.black }}>
-            {previewVisible && capturedImage}
+        {previewVisible && capturedImage}
+
             <Camera
                 ref={cameraRef}
                 style={{ flex: 1 }}
@@ -105,6 +112,7 @@ export const EndConfirm = () => {
                     setCameraReady(true);
                 }}
             />
+        
             <View
                 style={{
                     position: 'absolute',
@@ -143,7 +151,8 @@ export const EndConfirm = () => {
                 <TouchableOpacity onPress={toggleCameraType}>
                     <Ionicons name='ios-camera-reverse' size={30} color={colors.white} />
                 </TouchableOpacity>
-            </View>
+        </View>
+        
          </View>
     )
 }

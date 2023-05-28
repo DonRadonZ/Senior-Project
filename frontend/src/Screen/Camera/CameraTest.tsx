@@ -62,7 +62,7 @@ export default function App() {
           ) : (
             <Camera
               type={cameraType}
-              flashMode={flashMode}
+              //flashMode={flashMode}
               style={{flex: 1}}
               ref={(r) => {
                 camera = r
