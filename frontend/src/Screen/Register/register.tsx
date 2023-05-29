@@ -88,9 +88,9 @@ export const RegisterScreen = () => {
   const { control, handleSubmit } = useForm();
 
   const onRegisterPress = () => {
-    axios.post(url, data)
+    //axios.post(url, data) // request.data.data
     console.log(onRegisterPress)
-    //navigation.navigate('MyRegisterMail')
+    navigation.navigate('MyRegisterMail')
 
   }
   
