@@ -24,7 +24,7 @@ const OrderCardA = () => {
       <View>
       <TouchableOpacity 
       style={{alignItems:'flex-end'}}
-        onPress={() => { navigation.navigate('EndUserFile') }}><Text style={BalanceView.OrderViewText}>View</Text></TouchableOpacity>
+        onPress={() => { navigation.navigate('ReceiverSlip') }}><Text style={BalanceView.OrderViewText}>View</Text></TouchableOpacity>
       <Text style={BalanceView.OrderPendingText}>Pending</Text>
       </View>
     </Box>
