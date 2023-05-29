@@ -1,5 +1,27 @@
-import React,{ useState } from "react";
-import {Alert,Text,Image,TextInput,View} from "react-native";
+import React from 'react';
+import { StyleSheet, Image, ImageSourcePropType } from 'react-native';
 
-import { RootStackScreenProps } from "../src/navigators/navigator-type";
-import axios from "axios"
+interface ImageViewerProps {
+  placeholderImageSource: ImageSourcePropType;
+  selectedImage: string | null;
+}
+
+const ImageViewer: React.FC<ImageViewerProps> = ({
+  placeholderImageSource,
+  selectedImage,
+}) => {
+  const imageSource: ImageSourcePropType =
+    selectedImage !== null ? { uri: selectedImage } : placeholderImageSource;
+
+  return <Image source={imageSource} style={styles.image} />;
+};
+
+const styles = StyleSheet.create({
+  image: {
+    width: 320,
+    height: 440,
+    borderRadius: 18,
+  },
+});
+
+export default ImageViewer;
