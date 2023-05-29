@@ -36,13 +36,17 @@ import { RegisterIdScreen } from "./src/Screen/Register/registerId";
 import { RegisterScanFaceScreen } from "./src/Screen/Register/registerScanFace";
 import { Unlock } from "./src/Screen/Unlock/Unlock";
 import {BuyerSlipScreen} from "./src/Screen/Exchange/Buyer/buyerslip";
-import {ReceiverSlipScreen} from "./src/Screen/Exchange/Buyer/receiverslip";
+
 import {BuyerResultScreen} from "./src/Screen/Exchange/Buyer/buyerresult";
 import { ReConfirmationScreen } from "./src/Screen/Exchange/Buyer/reconfirm";
 import { ReceiverReportScreen } from "./src/Screen/Exchange/Receiver/receiverreport";
 import { ReceiverCancelResultScreen } from "./src/Screen/Exchange/Receiver/receivercancelresult";
 import { Registercam } from "./src/Screen/Register/registercam";
 import { FaceCheck } from "./src/Screen/facedetector/FaceDetector";
+
+//receiver
+import { ReceiverSlipScreen } from "./src/Screen/Exchange/Buyer/receiverslip";
+import { ReceiverSlipReceiveScreen } from "./src/Screen/Exchange/Receiver/reveiverslipreceive";
 
 export type RootStackParams = {
   Home: any;
@@ -345,6 +349,11 @@ export default function App() {
         <Stack.Screen
         name="ScanFace"
         component={FaceCheck}
+        options={{headerShown:false}}
+        />
+        <Stack.Screen
+          name="ReceiveSlipBuyer"
+          component={ReceiverSlipReceiveScreen}
         options={{headerShown:false}}
         />
       </Stack.Navigator>
