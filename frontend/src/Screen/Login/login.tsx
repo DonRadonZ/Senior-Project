@@ -36,22 +36,25 @@ export const LoginScreen = () => {
           source={require("../../../assets/logo.png")} // Replace with the path to your logo image
           style={styles.logo}
         />
+        
         <Text style={styles.text}>Welcome to SaveBuy!</Text>
-        <View style={styles.container}>
+        
           <TextInput
             style={styles.input}
             placeholder="Email"
             placeholderTextColor="gray"
-            onChangeText={(text) => setEmail(text)}
             value={email}
+            onChangeText={(text) => setEmail(text)}
+           
           />
           <TextInput
             style={styles.input}
             placeholder="Password"
             placeholderTextColor="gray"
             secureTextEntry={true}
-            onChangeText={(text) => setPassword(text)}
             value={password}
+            onChangeText={(text) => setPassword(text)}
+            
           />
           <Button color="#77CE13" title="LOGIN" onPress={() => { navigation.navigate('MainPage') }} />
           <View style={styles.create_struc}>
@@ -59,7 +62,7 @@ export const LoginScreen = () => {
           </View>
         </View>
         
-      </View>
+      
       </ImageBackground>
       </TouchableWithoutFeedback>
   );
@@ -69,7 +72,8 @@ const styles = StyleSheet.create({
   logo: {
     width: 150,
     height: 150,
-    marginBottom: 24,
+    marginBottom: 20,
+    bottom:50,
   },
   create_struc: {
     marginTop: 10,
@@ -91,11 +95,16 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
   },
   input: {
-    width: "100%",
-    height: 40,
-    borderColor: "gray",
-    borderWidth: 1,
-    marginBottom: 12,
-    paddingLeft: 8,
+    height: 60,
+    width: 350,
+    backgroundColor: "white",
+    borderWidth: 2,
+    borderRadius: 10,
+    marginBottom: 10,
+    padding:15,
+    paddingLeft: 65,
+    paddingRight:55,
+    fontSize:16,
+    paddingHorizontal: 10,
   },
 });
