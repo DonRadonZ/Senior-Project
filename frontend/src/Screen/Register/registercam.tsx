@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import { View, TouchableOpacity, Alert,Text,ImageBackground } from 'react-native';
+import { View, TouchableOpacity, Alert,Text,ImageBackground,Image } from 'react-native';
 import {
     Camera,
     CameraType,
@@ -11,10 +11,12 @@ import { useNavigation } from '@react-navigation/native';
 import { MediaTypeOptions, launchImageLibraryAsync } from 'expo-image-picker';
 import { colors } from '../../Components/Colors/colors';
 import { ScreenWidth } from '../../Components/shared';
+import { StackNavigationProp } from '@react-navigation/stack';
+import { RootStackParams } from '../../../App';
 
 export const Registercam = () => {
     const cameraRef = useRef<Camera>(null);
-    const { navigate } = useNavigation();
+    const  navigation  = useNavigation<StackNavigationProp<RootStackParams>>();
     const [cameraType, setCameraType] = useState(CameraType.back);
     const [previewVisible, setPreviewVisible] = useState(false)
     const [capturedImage, setCapturedImage] = useState<any>(null)
@@ -47,7 +49,7 @@ export const Registercam = () => {
 
         };
         const result = await cameraRef.current.takePictureAsync(options);
-        //navigate("RegisterId");
+        navigation.navigate("MyRegisterId",result.uri);
         console.log(result)
         setPreviewVisible(true)
         setCapturedImage(true)
@@ -141,7 +143,9 @@ export const Registercam = () => {
                             borderRadius:30
                             }}
                     />
+                    
                 )}
+                
                 <TouchableOpacity onPress={toggleCameraType}>
                     <Ionicons name='ios-camera-reverse' size={30} color={colors.white} />
                 </TouchableOpacity>
