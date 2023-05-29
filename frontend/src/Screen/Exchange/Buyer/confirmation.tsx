@@ -39,10 +39,10 @@ export const BuyerConfirmationScreen = (props:any) => {
       </View>
     <Box style={styles.slipcontainer}>
       <Text style={styles.confirmationText}>
-        Account Number: {props}
+        Account Number: 
       </Text>
-        <Text style={styles.confirmationText}>Amount:{ }</Text>
-        <Text style={styles.confirmationText}>Note: { }</Text>
+        <Text style={styles.confirmationText}>Amount:</Text>
+        <Text style={styles.confirmationText}>Note: </Text>
       </Box>
       
       <ProfileButton onPress={()=>{navigation.navigate('Buyer')}} >Continue</ProfileButton>
