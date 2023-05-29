@@ -1,53 +1,63 @@
-import React,{FunctionComponent} from 'react';
-import {TouchableOpacity,ImageBackground} from 'react-native'; 
-// import MainContainer from '../../component/Container/MainContainer';
-import { Text } from '@react-native-material/core';
-import { colors } from '../../../Components/Colors/colors';
-import { LinearGradient } from 'expo-linear-gradient';
-import BuyChoiceButton from '../../../Components/Button/BuyChoiceButton';
-import SellChoiceButton from '../../../Components/Button/SellChoiceButton';
+import React, { useState } from "react";
+import { Text, View, StyleSheet, ImageBackground,Image, TouchableOpacity } from "react-native";
+import { Button,Box } from "@react-native-material/core";
 
-import styles from '../../../Components/Container/Backgroundstyle';
-import { StackNavigationProp, createStackNavigator } from '@react-navigation/stack';
-//import { IStackScreenProps } from '../../Components/library/StackScreenProps';
+import styles from "../Buyer/style";
 
-import 'react-native-gesture-handler'
+import ProfileButton from "../../../Components/Button/ProfileButton";
 
-//screen
-import { useNavigation } from '@react-navigation/native';
-import { RootStackParams } from '../../../../App';
+//navigation
+import { StackNavigationProp } from "@react-navigation/stack";
+import { RootStackParams } from "../../../../App";
+import { useNavigation } from "@react-navigation/native";
+import RegularText from "../../../Components/Texts/RegularText";
+import CancelButton from "../../../Components/Button/CancelButton";
+import SelectButton from "../../../Components/Button/SelectButton";
+import { AntDesign } from "@expo/vector-icons";
 
+interface ConfirmationPageProps {
+  accountNumber: string;
+  amount: string;
+  description: string;
+}
 
+export const ReceiverSlipScreen = ({
+  // accountNumber,
+  // amount,
+  // description,
+}) => {
+  const[image,setImage] = useState()
 
-
-const Stack = createStackNavigator()
-
-
-
-
-
-export const EndReceive = () => {
-  
-  const navigation = useNavigation<StackNavigationProp<RootStackParams>>()
-
-  
-
-  return(
+  const navigation = useNavigation<StackNavigationProp<RootStackParams>>();
+  return (
     <ImageBackground
     source={require("../../../../assets/Background-image.jpg")}
-    style={styles.container}
+    style={styles.receivercontainer}
     resizeMode="cover"
     >
-    
-      <BuyChoiceButton 
-      onPress={()=>{
-        //go to payment
-        navigation.navigate("Payment")}}
-      >Press for Buyer</BuyChoiceButton>
-      <SellChoiceButton onPress={()=>{alert("List")}}>Press for End User</SellChoiceButton>
+      <View style={{marginBottom:100,flexDirection:'row',marginRight: 200}}>
+        <TouchableOpacity style={{flexDirection:'row'}} onPress={()=> navigation.goBack()}>
+          <AntDesign name="arrowleft" size={24} color="black" style={{right:-10,marginTop:7}} />
+          <Text style={{ marginTop: 10,right:-10 }}>Back</Text>
+          </TouchableOpacity>
+          <Text style={{left:75,top:4,fontSize:25,bottom:20}}>Receiver Slip</Text>
+      </View>
+          <View>
+              {/* <RegularText>Receiver Slip</RegularText> */}
+              </View>
+          {/* <Image
+              style={styles.receive}
+              source={require("../../../mock/9234.jpg")}
+              resizeMode="cover"
+          /> */}
+        
+   
       
-      </ImageBackground>
-    
       
-  )
-}
+      <SelectButton onPress={undefined}>File/Photo</SelectButton>
+      {image && <Image source={{ uri: image }} style={{ width: 200, height: 200 }} />}
+      <ProfileButton onPress={() => { navigation.navigate("ReConfirm") }} >Confirm</ProfileButton>
+          {/* <CancelButton onPress={()=>{}}>Report</CancelButton> */}
+    </ImageBackground>
+  );
+};
