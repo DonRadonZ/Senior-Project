@@ -9,6 +9,8 @@ import services from "../../mock/services.json"
 import { useNavigation } from '@react-navigation/native';
 import { Service } from '../../../App';
 import HomeText from '../../Components/Texts/HomeText';
+import UserList from '../../Components/List/UserList';
+import users from '../../mock/user.json'
 export const HomeScreen = () => {
   
     return(
@@ -22,7 +24,7 @@ export const HomeScreen = () => {
       >
         <SafeAreaView>
           <HomeText>Friend List</HomeText>
-
+          <UserList list={users} onPress={()=>{}}/>
           <HomeText>Service</HomeText>
           <ServiceLists onPress={()=>{}} list={services}/>
           <HomeText>Notification</HomeText>
