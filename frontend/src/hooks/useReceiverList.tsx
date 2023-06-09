@@ -1,5 +1,5 @@
-import React from 'react'
-import {useQuery} from '@apollo/cilent'
+import React from 'react';
+import { useQuery } from '@apollo/client';
 
 const useReceiverList =() => {
   return (
