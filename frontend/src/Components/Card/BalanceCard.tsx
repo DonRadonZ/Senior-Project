@@ -3,6 +3,8 @@ import { Box,Text } from "@react-native-material/core";
 import { colors } from "../Colors/colors";
 import BalanceView from "./Balancestyles";
 
+
+
 const BalanceCard = () => (
   <Box style={BalanceView.balanceContainer}>
     <Text style={BalanceView.BalanceText}>Balance</Text>

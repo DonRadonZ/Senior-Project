@@ -53,9 +53,9 @@ import { ReceiverSentSlipScreen } from "./src/Screen/Exchange/Receiver/receivers
 import { ReceiverCancelResultScreen } from "./src/Screen/Exchange/Receiver/receivercancelresult"; 
 
 export type RootStackParams = {
-  Home: any;
-  Exchange: any;
-  Buyer: any;
+  Home: undefined;
+  Exchange: undefined;
+  Buyer: undefined;
   Payment: any;
   Confirmation: any;
   EndUser: any;

@@ -13,6 +13,7 @@ export const BalanceScreen = () =>{
     style={styles.container}
     resizeMode="cover"
   >
+            
             <BalanceCard/>
             </ImageBackground>
         
