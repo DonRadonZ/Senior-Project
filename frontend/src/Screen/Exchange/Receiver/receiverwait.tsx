@@ -38,8 +38,8 @@ export const ReceiverWaitScreen = () => {
 
   return(
     <ImageBackground
-    source={require("../../../assets/Background-image.jpg")}
-    style={styles.container}
+    source={require("../../../../assets/Background-image.jpg")}
+    style={styles.waitcontainer}
     resizeMode="cover"
     >
       <AntDesign name="exclamationcircleo" size={108} color="black" style={{marginBottom:75}} />

@@ -10,6 +10,13 @@ const styles = StyleSheet.create({
     //justifyContent: "center",
     alignItems: "center",
   },
+  waitcontainer: {
+    flex: 1,
+    padding: 25,
+    paddingTop: 40,
+    justifyContent: "center",
+    alignItems: "center",
+  },
   slipcontainer: {
      flexDirection: "column",
         justifyContent: "center",

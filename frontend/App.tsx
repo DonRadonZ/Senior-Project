@@ -8,14 +8,14 @@ import { LoginScreen } from "./src/Screen/Login/login";
 import { RegisterScreen } from "./src/Screen/Register/register";
 import { HomeScreen } from "./src/Screen/Home/home";
 import { BalanceScreen } from "./src/Screen/Balance/balance";
-import { QRScanScreen } from "./src/Screen/QRScan/qrscan";
+import  QRScanScreen  from "./src/Screen/QRScan/qrscan";
 import { ExchangeScreen } from "./src/Screen/Exchange/exchange";
 
 import { ProfileScreen } from './src/Screen/Profile/profile';
 import {PaymentScreen} from './src/Screen/Exchange/Buyer/payment';
 import { createStackNavigator } from '@react-navigation/stack';
 import {BuyerConfirmationScreen} from './src/Screen/Exchange/Buyer/confirmation';
-import {ReceiverSentFileScreen} from './src/Screen/Exchange/Receiver/receiversent';
+
 import {BuyerListScreen} from "./src/Screen/Exchange/Buyer/buyerlist";
 import {ReceiverListScreen} from "./src/Screen/Exchange/Receiver/receiverlist";
 import {ReceiverResultScreen} from "./src/Screen/Exchange/Receiver/receiverresult";
@@ -39,14 +39,18 @@ import {BuyerSlipScreen} from "./src/Screen/Exchange/Buyer/buyerslip";
 
 import {BuyerResultScreen} from "./src/Screen/Exchange/Buyer/buyerresult";
 import { ReConfirmationScreen } from "./src/Screen/Exchange/Buyer/reconfirm";
-import { ReceiverReportScreen } from "./src/Screen/Exchange/Receiver/receiverreport";
-import { ReceiverCancelResultScreen } from "./src/Screen/Exchange/Receiver/receivercancelresult";
+
+
 import { Registercam } from "./src/Screen/Register/registercam";
 import { FaceCheck } from "./src/Screen/facedetector/FaceDetector";
 
 //receiver
 import { ReceiverSlipScreen } from "./src/Screen/Exchange/Buyer/receiverslip";
-import { ReceiverSlipReceiveScreen } from "./src/Screen/Exchange/Receiver/reveiverslipreceive";
+import { ReceiveBuyerSlipScreen } from "./src/Screen/Exchange/Receiver/getbuyerslip";
+import { ReceiverReportScreen } from "./src/Screen/Exchange/Receiver/receiverreport";
+import { ReceiverWaitScreen } from "./src/Screen/Exchange/Receiver/receiverwait";
+import { ReceiverSentSlipScreen } from "./src/Screen/Exchange/Receiver/receiverslip";
+import { ReceiverCancelResultScreen } from "./src/Screen/Exchange/Receiver/receivercancelresult"; 
 
 export type RootStackParams = {
   Home: any;
@@ -72,6 +76,11 @@ export type RootStackParams = {
   ReConfirm: undefined;
   RegisCam: undefined;
   ScanFace: undefined;
+  ReceiveSlipBuyer: undefined;
+  ReceiverCancel: undefined;
+  ReceiveWait: any;
+  ReceiveSentSlip: any;
+  GetBuyerSlip: any;
 };
 
 const RootStack = createStackNavigator<RootStackParams>();
@@ -301,11 +310,7 @@ export default function App() {
           component={BuyerStatusScreen} 
           options={{headerShown:false}}
         />
-        <Stack.Screen 
-        name="EndUserFile" 
-          component={ReceiverSentFileScreen} 
-          options={{headerShown:false}}
-        />
+      
         <Stack.Screen 
         name="MySlip" 
         component={BuyerSlipScreen} 
@@ -352,8 +357,18 @@ export default function App() {
         options={{headerShown:false}}
         />
         <Stack.Screen
-          name="ReceiveSlipBuyer"
-          component={ReceiverSlipReceiveScreen}
+          name="ReceiveWait"
+          component={ReceiverWaitScreen}
+        options={{headerShown:false}}
+        />
+        <Stack.Screen
+          name="ReceiveSentSlip"
+          component={ReceiverSentSlipScreen}
+        options={{headerShown:false}}
+        />
+        <Stack.Screen
+          name="GetBuyerSlip"
+          component={ReceiveBuyerSlipScreen}
         options={{headerShown:false}}
         />
       </Stack.Navigator>

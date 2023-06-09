@@ -21,7 +21,7 @@ interface ConfirmationPageProps {
   description: string;
 }
 
-export const ReceiveBuyerSlipScreen = ({
+export const ReceiverSlipScreen = ({
   // accountNumber,
   // amount,
   // description,
@@ -45,18 +45,18 @@ export const ReceiveBuyerSlipScreen = ({
           <View>
               {/* <RegularText>Receiver Slip</RegularText> */}
               </View>
-          <Image
+          {/* <Image
               style={styles.receive}
               source={require("../../../mock/9234.jpg")}
               resizeMode="cover"
-          />
+          /> */}
         
    
       
       
       <SelectButton onPress={undefined}>File/Photo</SelectButton>
-      {/* {image && <Image source={{ uri: image }} style={{ width: 200, height: 200 }} />} */}
-      <ProfileButton onPress={() => { navigation.navigate("ReceiverSlip") }} >Confirm</ProfileButton>
+      {image && <Image source={{ uri: image }} style={{ width: 200, height: 200 }} />}
+      <ProfileButton onPress={() => { navigation.navigate("ReceiveWait") }} >Confirm</ProfileButton>
           {/* <CancelButton onPress={()=>{}}>Report</CancelButton> */}
     </ImageBackground>
   );

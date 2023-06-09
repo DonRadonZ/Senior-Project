@@ -20,8 +20,8 @@ const OrderCardC = () => {
       </View>
       <View>
       <TouchableOpacity
-      style={{alignItems:'flex-end'}}
-       ><Text style={BalanceView.OrderViewText}>View</Text></TouchableOpacity>
+          style={{ alignItems: 'flex-end' }} onPress={() => { navigation.navigate('ReceiverCancel') }}
+  ><Text style={BalanceView.OrderViewText}>View</Text></TouchableOpacity>
       <Text style={BalanceView.OrderCancelText}>Cancel</Text>
     </View>
   </Box>
