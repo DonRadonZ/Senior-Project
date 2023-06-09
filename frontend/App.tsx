@@ -49,9 +49,9 @@ import { ReceiverSlipScreen } from "./src/Screen/Exchange/Buyer/receiverslip";
 import { ReceiverSlipReceiveScreen } from "./src/Screen/Exchange/Receiver/reveiverslipreceive";
 
 export type RootStackParams = {
-  Home: any;
-  Exchange: any;
-  Buyer: any;
+  Home: undefined;
+  Exchange: undefined;
+  Buyer: undefined;
   Payment: any;
   Confirmation: any;
   EndUser: any;

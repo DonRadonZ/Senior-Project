@@ -9,7 +9,7 @@ import ProfileButton from "../../../Components/Button/ProfileButton";
 //navigation
 import { StackNavigationProp } from "@react-navigation/stack";
 import { RootStackParams } from "../../../../App";
-import { useNavigation } from "@react-navigation/native";
+import { useNavigation, useRoute } from "@react-navigation/native";
 import { AntDesign } from "@expo/vector-icons";
 
 interface ConfirmationPageProps {
@@ -18,9 +18,9 @@ interface ConfirmationPageProps {
   description: string;
 }
 
-export const BuyerConfirmationScreen = (props:any) => {
-  const {route} = props;
-  const {account_id} = route.params;
+export const BuyerConfirmationScreen = () => {
+  const route = useRoute()
+  //const input = route.params?.input || '';
 
 
   const navigation = useNavigation<StackNavigationProp<RootStackParams>>();
