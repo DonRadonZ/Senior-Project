@@ -21,18 +21,19 @@ import { BuyerListScreen } from "../Screen/Exchange/Buyer/buyerlist";
 import { PaymentScreen } from "../Screen/Exchange/Buyer/payment";
 import { BuyerConfirmationScreen } from "../Screen/Exchange/Buyer/confirmation";
 import { ReConfirmationScreen } from "../Screen/Exchange/Buyer/reconfirm";
+import { BuyerWaitScreen } from "../Screen/Exchange/Buyer/buyerwait";
 import { BuyerResultScreen } from "../Screen/Exchange/Buyer/buyerresult";
 import { BuyerReportScreen } from "../Screen/Exchange/Buyer/buyerreport";
 import { BuyerStatusScreen } from "../Screen/Exchange/Buyer/buyerstatus";
-import { ReceiverSlipScreen } from "../Screen/Exchange/Buyer/receiverslip";
 import { BuyerSlipScreen } from "../Screen/Exchange/Buyer/buyerslip";
 
 
 //receiver
 import { ReceiverListScreen } from "../Screen/Exchange/Receiver/receiverlist";
+import { ReceiverSlipScreen } from "../Screen/Exchange/Buyer/receiverslip";
 import { ReceiverReportScreen } from "../Screen/Exchange/Receiver/receiverreport";
 import { ReceiverResultScreen } from "../Screen/Exchange/Receiver/receiverresult";
-import { ReceiverSentFileScreen } from "../Screen/Exchange/Receiver/receiversent";
+import { ReceiverSentSlipScreen } from "../Screen/Exchange/Receiver/receiverslip";
 import { ReceiverWaitScreen } from "../Screen/Exchange/Receiver/receiverwait";
 
 //API
@@ -51,11 +52,24 @@ export const AppNavigator = () => {
             name="Tab"
             component={BottomTab}
         />
-        {/* <RootStack.Screen name="BuyerList" component={BuyerListScreen} />
-        <RootStack.Screen name="BuyerList" component={BuyerListScreen} />
-        <RootStack.Screen name="BuyerList" component={BuyerListScreen} />
-        <RootStack.Screen name="BuyerList" component={BuyerListScreen} />
-        <RootStack.Screen name="BuyerList" component={BuyerListScreen} />
-        <RootStack.Screen name="BuyerList" component={BuyerListScreen} /> */}
+        {/* Buyer Part */}
+        <RootStack.Screen name="Buyer" component={BuyerListScreen} options={{ headerShown: false }}/>
+        <RootStack.Screen name="Payment" component={PaymentScreen} />
+        <RootStack.Screen name="Confirmation" component={BuyerConfirmationScreen} options={{ headerShown: false }} />
+        <RootStack.Screen name="BuyerWait" component={BuyerWaitScreen} options={{ headerShown: false }}/>
+        <RootStack.Screen name="BuyerSlip" component={BuyerSlipScreen} options={{ headerShown: false }}/>
+        <RootStack.Screen name="Reconfirm" component={ReConfirmationScreen} options={{ headerShown: false }}/>
+        <RootStack.Screen name="BuyerReport" component={BuyerReportScreen} options={{ headerShown: false }}/>
+        <RootStack.Screen name="BuyerStatus" component={BuyerStatusScreen} options={{ headerShown: false }}/>
+        <RootStack.Screen name="BuyerResult" component={BuyerResultScreen} options={{ headerShown: false }}/>
+
+        {/* Receiver Part */}
+        <RootStack.Screen name="Receiver" component={ReceiverListScreen} options={{ headerShown: false }}/>
+        <RootStack.Screen name="ReceiverSlip" component={ReceiverSlipScreen} options={{ headerShown: false }} />
+        <RootStack.Screen name="ReceiverReport" component={ReceiverReportScreen} options={{ headerShown: false }} />
+        <RootStack.Screen name="ReceiverSentSlip" component={ReceiverSentSlipScreen} options={{ headerShown: false }} />
+        <RootStack.Screen name="ReceiverResult" component={ReceiverResultScreen} options={{ headerShown: false }} />
+        <RootStack.Screen name="ReceiverWait" component={ReceiverWaitScreen} options={{ headerShown: false }} />
     </>
+
 }

@@ -8,28 +8,56 @@ import type { BottomTabScreenProps } from "@react-navigation/bottom-tabs"
 
 export type RootStackParams = {
     Tab: NavigatorScreenParams<BottomTabTypes>
+
+    //Buyer Part
+    Buyer: {listId:number; Timestamps:string; userId: string; amount:number; status:string; }
+    Payment: {accountId:string; amount:number; note:string;}
+    Confirmation:{accountId:string; amount:number; note:string;} | undefined;
+    Getstatus:{accountId:string; amount:number; note:string;}
+    BuyerWait: undefined;
+    BuyerSlip: undefined;
+    Reconfirm: undefined;
+    BuyerReport: undefined;
+    BuyerStatus: undefined;
+    BuyerResult: undefined;
+
+
+
+    // Receiver part
+    Receiver: {listId:number; Timestamps:string; userId: string; status:string; amount:number;}
+    ReceiverSlip: undefined;
+    ReceiverReport: undefined;
+    ReceiverSentSlip: undefined;
+    ReceiverResult: undefined;
+    ReceiverWait: undefined;
+
+
+
+
 }
 
 export type RootStackScreenProps<T extends keyof RootStackParams> =
     NativeStackScreenProps<RootStackParams, T>;
 
 export type BottomTabTypes = {
-    Home: undefined,
-    Balance: undefined,
-    QRScan: undefined,
-    Exchange: undefined,
-    Profile: undefined,
+    Home: undefined;
+    Balance: undefined;
+    QRScan: undefined;
+    Exchange: undefined;
+    Profile: {
+        id:string
+    } | undefined;
 }
 
 export type AuthStackType = {
-    Login: undefined,
-    Signup: undefined,
-    SignupEmail: undefined,
-    SignupId: undefined,
-    SignupFace: undefined,
-    ConfirmEmail: { email?: string },
-    ForgotPassword: undefined,
-    NewPassword: undefined,
+    Login: undefined;
+    Signup: undefined;
+    SignupEmail: undefined;
+    SignupId: undefined;
+    SignupFace: undefined;
+    ConfirmEmail: { email?: string };
+    ForgotPassword: undefined;
+    NewPassword: undefined;
 
 }
 

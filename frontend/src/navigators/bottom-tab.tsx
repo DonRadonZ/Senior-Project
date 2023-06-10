@@ -9,7 +9,7 @@ import {
 //screen
 import { HomeScreen } from "../Screen/Home/home";
 import { BalanceScreen } from "../Screen/Balance/balance";
-import { QRScanScreen } from "../Screen/QRScan/qrscan";
+import QRScanScreen from "../Screen/QRScan/qrscan";
 import { ProfileScreen } from "../Screen/Profile/profile";
 import { ExchangeScreen } from "../Screen/Exchange/exchange";
 
