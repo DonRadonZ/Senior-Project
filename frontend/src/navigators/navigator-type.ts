@@ -5,12 +5,13 @@ import {
 } from "@react-navigation/native"
 import type { NativeStackScreenProps } from "@react-navigation/native-stack"
 import type { BottomTabScreenProps } from "@react-navigation/bottom-tabs"
+import { Timestamp } from "firebase/firestore"
 
 export type RootStackParams = {
     Tab: NavigatorScreenParams<BottomTabTypes>
 
     //Buyer Part
-    Buyer: {listId:number; Timestamps:string; userId: string; amount:number; status:string; }
+    Buyer: {listId:number; name:string; email:string; createdAt:Timestamp; amount:number; status:string; }
     Payment: {accountId:string; amount:number; note:string;}
     Confirmation:{accountId:string; amount:number; note:string;} | undefined;
     Getstatus:{accountId:string; amount:number; note:string;}
@@ -24,7 +25,7 @@ export type RootStackParams = {
 
 
     // Receiver part
-    Receiver: {listId:number; Timestamps:string; userId: string; status:string; amount:number;}
+    Receiver: {listId:number; name:string; email:string; createdAt:Timestamp; amount:number;}
     ReceiverSlip: undefined;
     ReceiverReport: undefined;
     ReceiverSentSlip: undefined;
