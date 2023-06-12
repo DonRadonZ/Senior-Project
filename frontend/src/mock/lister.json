@@ -1,0 +1,71 @@
+{
+    "buyer": {
+        "-N6rOmxa7vOOTpZZSllL": {
+            "email": "lucas.bill@example.com",
+            "name": "Lucas Bill",
+            "createdAt": "2023-05-04",
+            "amount": "2500.00"
+          },
+          "-N6rQgCkbLPB1xElUchT": {
+            "email": "mandy.jones@example.com",
+            "name": "Mandy Jones",
+            "createdAt": "2023-05-20",
+            "amount": "4000.00"
+          },
+          "-N6rSJ4xI3_Cq7u58Wh_": {
+            "email": "salim.ali@example.com",
+            "name": "Salim Ali",
+            "createdAt": "2023-05-18",
+            "amount": "6000.00"
+          },
+          "-N6rSZB4AoMAwrDnm2jF": {
+            "email": "jane.xiu@example.com",
+            "name": "Jane Xiu",
+            "createdAt": "2023-04-16",
+            "amount": "3000.00",
+            "status": "pending"
+          },
+          "-N6rTRzW_JrkHQMdt5QA": {
+            "email": "john.doe@example.com",
+            "name": "John Doe",
+            "createdAt": "2023-04-04",
+            "amount": "5000.00",
+            "status": "pending"
+          }
+    },
+    "receiver":{
+        "-N6rOvLXK2t39x-Bp0UP": {
+            "email": "john.deo@example.com",
+            "name": "John Deo",
+            "createdAt": "2023-05-15",
+            "amount": "5000.00"        
+      },
+      "-N6rQ_YDMNTjq_mCbhZN": {
+        "email": "lucu.dou@example.com",
+            "name": "Lucu Dou",
+            "createdAt": "2023-05-04",
+            "amount": "4000.00"
+        
+      },
+      "-N6rQsEqX4vt-0cBA336": {
+        "email": "salim.ali@example.com",
+            "name": "Salim Ali",
+            "createdAt": "2023-01-12",
+            "amount": "4000.00"
+      },
+      "-N6rQvnBSkz2kglMvr5H": {
+        "email": "jane.liu@example.com",
+            "name": "Jane Liu",
+            "createdAt": "2023-05-15",
+            "amount": "4000.00"
+      },
+      "-N6rSQz62DlXFPbd32CD": {
+        "email": "Zu.sou@example.com",
+            "name": "Lucu Dou",
+            "createdAt": "2023-05-04",
+            "amount": "4000.00"
+      }
+    
+
+    }
+}
