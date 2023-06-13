@@ -1,0 +1,19 @@
+type Buyer {
+  amount: String,
+  createdAt: Date,
+  email: String,
+  name: String,
+  status: String
+
+
+}
+
+type Query {
+  """
+  Result typed as JSON since it has fields ["-N6rOmxa7vOOTpZZSllL", "-N6rQgCkbLPB1xElUchT", "-N6rSJ4xI3_Cq7u58Wh_", "-N6rSZB4AoMAwrDnm2jF", "-N6rTRzW_JrkHQMdt5QA"] that are invalid graphql identifiers
+  """
+  getBuyer: JSON
+    @rest(
+      endpoint: "https://security-shopping-default-rtdb.asia-southeast1.firebasedatabase.app/buyer.json"
+    )
+}
