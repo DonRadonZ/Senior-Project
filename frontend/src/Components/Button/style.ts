@@ -74,8 +74,9 @@ const Buttonstyles = StyleSheet.create({
         height: 50,
         borderRadius: 25,
         alignItems:"center",
-        //marginTop: ScreenHeight*0.3,
-        bottom: -200
+        marginTop: ScreenHeight*0.3,
+        left:150,
+        //buttom:
         
         
     },ReturnButtonContainer: {
