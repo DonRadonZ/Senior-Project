@@ -7,27 +7,36 @@ import BalanceView from "./Balancestyles";
 import { useNavigation } from "@react-navigation/native";
 import { StackNavigationProp } from "@react-navigation/stack";
 import { RootStackParams } from "../../../App";
+import Balancestyles from "./Balancestyles";
+import { redA200 } from "react-native-paper/lib/typescript/src/styles/themes/v2/colors";
 
 
-const ListCardA = () => {
+
+type Props = {
+  userId:string;
+  name:string;
+  email:string;
+
+}
+
+const ListCardA = ({userId,name,email}:Props) => {
   const navigation = useNavigation<StackNavigationProp<RootStackParams>>()
   return (
-    <Box style={BalanceView.orderContainer}>
-      <View style={{}}>
-        <Text
-          style={BalanceView.BalanceText}
-        >
-          List: 1
-        </Text>
-        <Text style={BalanceView.TimeStampText}>15/5/2023</Text>
-      </View>
-      <View>
-      <TouchableOpacity style={{
-        alignItems: "flex-end"
-        }} onPress={() => { navigation.navigate('ReceiverPage') }}><Text style={BalanceView.OrderViewText}>View</Text></TouchableOpacity>
-      <Text style={BalanceView.OrderPendingText}>Pending</Text>
-      </View>
-    </Box>
+    <TouchableOpacity>
+        <Box style = {Balancestyles.Buyer}>
+          <View>
+            <View style={{flexDirection:"row",justifyContent:"space-between"}}> 
+              <View>
+                <Text style={Balancestyles.Name}>{name}</Text>
+                <Text>ID:{userId}</Text>
+              </View>
+            </View>
+            <View>
+              <Text>{email}</Text>
+            </View>
+          </View>
+        </Box>
+    </TouchableOpacity>
   );
 }
 export default ListCardA;
