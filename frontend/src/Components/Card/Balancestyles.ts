@@ -16,6 +16,18 @@ const Balancestyles = StyleSheet.create({
         alignItems:"flex-start",
         marginBottom: 40
     },
+    Buyer: {
+        flexDirection: "row",
+        justifyContent: "space-between",
+        backgroundColor: colors.white,
+        padding: 5,
+        width: ScreenWidth*0.8,
+        height: ScreenHeight*0.15,
+        borderWidth:2,
+        borderRadius: 8,
+        alignItems:"flex-start",
+        marginBottom: 20
+    },
     orderContainer: {
         flexDirection: "row",
         justifyContent: "space-between",
@@ -100,6 +112,12 @@ const Balancestyles = StyleSheet.create({
         textAlign:"left",
         fontSize: sizes.SmallText, 
         marginBottom: 15
+    },
+    Name: {
+        color: colors.black,
+        textAlign:"left",
+        fontSize: sizes.Large, 
+        //marginBottom: 30
     },
 
     IDText: {
