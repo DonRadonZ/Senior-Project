@@ -1,0 +1,17 @@
+type Receiver {
+  amount: String,
+  createdAt: Date,
+  email: String,
+  name: String
+}
+
+
+type Query {
+  """
+  Result typed as JSON since it has fields ["-N6rOvLXK2t39x-Bp0UP", "-N6rQ_YDMNTjq_mCbhZN", "-N6rQsEqX4vt-0cBA336", "-N6rQvnBSkz2kglMvr5H", "-N6rSQz62DlXFPbd32CD"] that are invalid graphql identifiers
+  """
+  getReceiver: JSON
+    @rest(
+      endpoint: "https://security-shopping-default-rtdb.asia-southeast1.firebasedatabase.app/receiver.json"
+    )
+}
