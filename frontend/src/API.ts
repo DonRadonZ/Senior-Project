@@ -23,3 +23,7 @@ export type User = {
 
 }
 
+export type Buyer = {
+    
+}
+
