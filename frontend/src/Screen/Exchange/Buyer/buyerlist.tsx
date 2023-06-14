@@ -4,9 +4,8 @@ import {ImageBackground, View,Text} from 'react-native';
 import AddNewButton from '../../../Components/add-new-button/AddNewButton';
 
 
-import ListCardA from '../../../Components/Card/ListCard';
-import ListCardB from '../../../Components/Card/ListCardB';
-import ListCardC from '../../../Components/Card/ListCardC';
+import ListCard from '../../../Components/Card/ListCard';
+
 
 import styles from './style';
 import { useNavigation } from '@react-navigation/native';
@@ -31,11 +30,10 @@ export const BuyerListScreen = () => {
                 <Text style={{ marginTop: 2 }}>Back</Text>
                 </TouchableOpacity>
                 <Text style={{left:75,fontSize:25,bottom:10}}>Buyer List</Text>
+                
       </View>
             {/* card list */}
-            <ListCardA />
-            <ListCardB />
-            <ListCardC/>
+            {/* <ListCard email={email} name={name} userId={ID}/> */}
             <AddNewButton onPress={() => {navigation.navigate("Payment")}} children={undefined} />
             </ImageBackground>
         
