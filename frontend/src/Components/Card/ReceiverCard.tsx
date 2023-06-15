@@ -7,12 +7,24 @@ import BalanceView from "./Balancestyles";
 import { useNavigation } from "@react-navigation/native";
 import { StackNavigationProp } from "@react-navigation/stack";
 import { RootStackParams } from "../../../App";
+import axios from "axios";
 
-type Props = {
+type ReceiverList = {
   userId:string;
   name:string;
   email:string;
+  amount:string;
 
+};
+async function getReceiver(): Promise<ReceiverList[]> {
+  // try {
+  const url = "https://security-shopping-default-rtdb.asia-southeast1.firebasedatabase.app/receiver.json";
+  const response = await axios.get<ReceiverList[]>(url);
+  return response.data;
+  // } catch (err) {
+  //   console.log(err);
+  //   return [];
+  // }
 }
 
 
