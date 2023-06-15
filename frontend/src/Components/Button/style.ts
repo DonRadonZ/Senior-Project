@@ -76,7 +76,7 @@ const Buttonstyles = StyleSheet.create({
         alignItems:"center",
         marginTop: ScreenHeight*0.3,
         left:150,
-        //buttom:
+        top: 150
         
         
     },ReturnButtonContainer: {

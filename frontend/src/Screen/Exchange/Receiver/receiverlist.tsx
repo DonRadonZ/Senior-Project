@@ -3,7 +3,7 @@ import {ImageBackground, View,Text,TouchableOpacity} from 'react-native';
 // import MainContainer from '../../component/Container/MainContainer';
 
 
-import OrderCard from '../../../Components/Card/OrderCard';
+import OrderCard from '../../../Components/Card/ReceiverCard';
 
 
 

@@ -4,7 +4,7 @@ import {ImageBackground, View,Text} from 'react-native';
 import AddNewButton from '../../../Components/add-new-button/AddNewButton';
 
 
-import ListCard from '../../../Components/Card/ListCard';
+import ListCard from '../../../Components/Card/BuyerCard';
 
 
 import styles from './style';
@@ -33,7 +33,7 @@ export const BuyerListScreen = () => {
                 
       </View>
             {/* card list */}
-            {/* <ListCard email={email} name={name} userId={ID}/> */}
+            <ListCard/>
             <AddNewButton onPress={() => {navigation.navigate("Payment")}} children={undefined} />
             </ImageBackground>
         
