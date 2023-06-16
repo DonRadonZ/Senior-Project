@@ -49,15 +49,17 @@ const ListCardA = () => {
 
   return (
     <TouchableOpacity>
-        <Box style = {Balancestyles.Buyer}>
-          {/* { buyer.map(buyer =>{
-            return(
-              <Text>{buyer.name}</Text>
-            )
-          })
 
-          } */}
-        </Box>
+          {Object.entries(buyer).map(([key,value])=>(
+            <View key={key}>
+              <Text>{value.name}</Text>
+              <Text>{value.email}</Text>
+              <Text>{value.amount}</Text>
+              <Text>{value.status}</Text>
+            </View>
+
+          ))}
+         
     </TouchableOpacity>
   );
 }

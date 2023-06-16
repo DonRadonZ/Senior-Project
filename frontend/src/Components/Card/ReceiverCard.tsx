@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { TouchableOpacity } from "react-native";
 import { View } from "react-native";
 import { Box,Text } from "@react-native-material/core";
@@ -28,12 +28,31 @@ async function getReceiver(): Promise<ReceiverList[]> {
 }
 
 
+
 const OrderCardA = () => {
+  const [receiver,setReceiver] = useState<[]|ReceiverList[]>([]);
   const navigation = useNavigation<StackNavigationProp<RootStackParams>>()
+
+  useEffect(()=>{(async()=>{
+    const receiver = await getReceiver();
+    console.log(receiver)
+    setReceiver(receiver)
+
+  })();
+},[]);
   return (
-    <Box style={BalanceView.orderContainer}>
-    </Box>
-  );
+    <TouchableOpacity>
+      {Object.entries(receiver).map(([key,value])=>(
+        <View key={key}>
+              <Text>{value.name}</Text>
+              <Text>{value.email}</Text>
+              <Text>{value.amount}</Text>
+        </View>
+      ))}
+    </TouchableOpacity>
+
+    )
+  
 }
 export default OrderCardA;
 
