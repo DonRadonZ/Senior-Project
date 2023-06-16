@@ -51,11 +51,12 @@ import { ReceiverReportScreen } from "./src/Screen/Exchange/Receiver/receiverrep
 import { ReceiverWaitScreen } from "./src/Screen/Exchange/Receiver/receiverwait";
 import { ReceiverSentSlipScreen } from "./src/Screen/Exchange/Receiver/receiverslip";
 import { ReceiverCancelResultScreen } from "./src/Screen/Exchange/Receiver/receivercancelresult"; 
+import { Timestamp } from "firebase/firestore";
 
 export type RootStackParams = {
   Home: undefined;
   Exchange: undefined;
-  Buyer: undefined;
+  Buyer: {listId:number; name:string; email:string; createdAt:Timestamp; amount:number; status:string; };
   Payment: any;
   Confirmation: any;
   EndUser: any;
@@ -219,7 +220,7 @@ export function Service(){
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="MyTab">
+      <Stack.Navigator initialRouteName="Receiver">
         <Stack.Screen
           name="MyLogin"
           component={MyLogin}
